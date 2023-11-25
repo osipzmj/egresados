@@ -1,0 +1,131 @@
+{
+    "empresas": [
+      {
+        "nombre": "NAD",
+        "imagen": "../img/nad5.jpeg",
+        "vacantes": [
+          {
+            "nombre": "desarrollador java",
+            "requisitos": "Experiencia en desarrollo de aplicaciones Java, conocimientos de frameworks como Spring, Hibernate, etc.",
+            "imagen": "../img/nad5.jpeg"
+          },
+          {
+            "nombre": "tester",
+            "requisitos": "Conocimientos en pruebas de software, herramientas de automatización, manejo de casos de prueba, etc.",
+            "imagen": "../img/nad5.jpeg"
+          },
+          {
+            "nombre": "proyect manager",
+            "requisitos": "Experiencia en gestión de proyectos, habilidades de liderazgo, conocimientos de metodologías ágiles, etc.",
+            "imagen": "../img/nad5.jpeg"
+          }
+        ]
+      },
+      {
+        "nombre": "EY",
+        "imagen": "../img/EY.jpeg",
+        "vacantes": [
+          {
+            "nombre": "desarrollador java",
+            "requisitos": "Experiencia en desarrollo de aplicaciones Java, conocimientos de frameworks como Spring, Hibernate, etc.",
+            "imagen": "../img/EY.jpeg"
+          },
+          {
+            "nombre": "tester",
+            "requisitos": "Conocimientos en pruebas de software, herramientas de automatización, manejo de casos de prueba, etc.",
+            "imagen": "../img/EY.jpeg"
+          },
+          {
+            "nombre": "proyect manager",
+            "requisitos": "Experiencia en gestión de proyectos, habilidades de liderazgo, conocimientos de metodologías ágiles, etc.",
+            "imagen": "../img/EY.jpeg"
+          }
+        ]
+      },
+      {
+        "nombre": "Santander",
+        "imagen":"../img/Santander.jpeg",
+        "vacantes": [
+          {
+            "nombre": "desarrollador java",
+            "requisitos": "Experiencia en desarrollo de aplicaciones Java, conocimientos de frameworks como Spring, Hibernate, etc.",
+            "imagen": "../img/Santander.jpeg"
+          },
+          {
+            "nombre": "tester",
+            "requisitos": "Conocimientos en pruebas de software, herramientas de automatización, manejo de casos de prueba, etc.",
+            "imagen": "../img/Santander.jpeg"
+          },
+          {
+            "nombre": "proyect manager",
+            "requisitos": "Experiencia en gestión de proyectos, habilidades de liderazgo, conocimientos de metodologías ágiles, etc.",
+            "imagen": "../img/Santander.jpeg"
+          }
+        ]
+      },
+      {
+        "nombre": "Optimen",
+        "imagen":"../img/optimen.jpeg",
+        "vacantes": [
+          {
+            "nombre": "desarrollador java",
+            "requisitos": "Experiencia en desarrollo de aplicaciones Java, conocimientos de frameworks como Spring, Hibernate, etc.",
+            "imagen": "../img/optimen.jpeg"
+          },
+          {
+            "nombre": "tester",
+            "requisitos": "Conocimientos en pruebas de software, herramientas de automatización, manejo de casos de prueba, etc.",
+            "imagen": "../img/optimen.jpeg"
+          },
+          {
+            "nombre": "proyect manager",
+            "requisitos": "Experiencia en gestión de proyectos, habilidades de liderazgo, conocimientos de metodologías ágiles, etc.",
+            "imagen": "../img/optimen.jpeg"
+          }
+        ]
+      },
+      {
+        "nombre": "Groupm",
+        "imagen":"../img/Gmexico.jpeg",
+        "vacantes": [
+          {
+            "nombre": "desarrollador java",
+            "requisitos": "Experiencia en desarrollo de aplicaciones Java, conocimientos de frameworks como Spring, Hibernate, etc.",
+            "imagen": "../img/Gmexico.jpeg"
+          },
+          {
+            "nombre": "tester",
+            "requisitos": "Conocimientos en pruebas de software, herramientas de automatización, manejo de casos de prueba, etc.",
+            "imagen": "../img/Gmexico.jpeg"
+          },
+          {
+            "nombre": "proyect manager",
+            "requisitos": "Experiencia en gestión de proyectos, habilidades de liderazgo, conocimientos de metodologías ágiles, etc.",
+            "imagen": "../img/Gmexico.jpeg"
+          }
+        ]
+      },
+      {
+        "nombre": "Google",
+        "imagen":"../img/google.jpeg",
+        "vacantes": [
+          {
+            "nombre": "desarrollador java",
+            "requisitos": "Experiencia en desarrollo de aplicaciones Java, conocimientos de frameworks como Spring, Hibernate, etc.",
+            "imagen": "../img/google.jpeg"
+          },
+          {
+            "nombre": "tester",
+            "requisitos": "Conocimientos en pruebas de software, herramientas de automatización, manejo de casos de prueba, etc.",
+            "imagen": "../img/google.jpeg"
+          },
+          {
+            "nombre": "proyect manager",
+            "requisitos": "Experiencia en gestión de proyectos, habilidades de liderazgo, conocimientos de metodologías ágiles, etc.",
+            "imagen": "../img/google.jpeg"
+          }
+        ]
+      }
+    ]
+  }
+  

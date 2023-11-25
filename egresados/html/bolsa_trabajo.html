@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EGRESADOS</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/EstyleBolsadeTrabajo.css">
+</head>
+<body>
+    <script src="../js/modal.js"></script>
+    <header class="top-bar">
+        <div class="logo">
+            <img src="../img/logo.png" alt="Logo">
+            <div class="unv">
+            <span id="logo1">Universidad Tecnológica <br> del Norte de Guanajuato</span>
+            </div>
+        </div>
+        <div class="search-bar">
+            <button id="accessibility-btn" class="boton-accesibilidad">
+                <span class="contenido-boton">
+                  <img src="../img/acess.png" alt="Accesibilidad" class="icono-accesibilidad">
+                  <span class="texto-accesibilidad">Accesibilidad</span>
+                </span>
+              </button>
+              <button id="egresados-btn" class="boton-egresados">
+                <span class="contenido-boton">
+                  <img src="../img/egresados.png" alt="Egresados" class="icono-egresados">
+                  <span class="texto-egresados"> <a  style="color: white; font-family: 'Montserrat', sans-serif; text-decoration: none;" href="index.html">Egresados</a></span>
+                 
+                </span>
+              </button>
+            <ul id="accessibility-list">
+                <li>Opción 1</li>
+                <li>Opción 2</li>
+                <li>Opción 3</li>
+            </ul>
+            <input type="text" placeholder="  Buscar">
+        </div>
+    </header>
+    <div class="side-menu">
+        <button onclick="location.href='seguimiento.html'">Seguimiento</button>
+        <button onclick="location.href='bolsa_trabajo.html'">Bolsa de trabajo</button>
+        <button onclick="location.href='educacion_continua.html'">Educación continua</button>
+    </div>
+    <div class="content">
+        <h1 id="egs">EGRESADOS</h1>
+
+    <section class="empresas">
+        <table>
+            <tbody id="empresas-list">
+            </tbody>
+        </table>
+    </section>
+
+    <!-- Modal -->
+    <div class="modal" id="miModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="modalTitle"></h4>
+                    <button type="button" class="close" data-dismiss="modal" id="closeButton">&times;</button>
+                </div>
+                <div class="modal-body" style="display: block; text-align: justify;">
+                    <table style="width: 100%;">                   
+                    <tbody>
+                        <tr>
+                            <td>
+                                <img id="modalImagen"  alt="Imagen de la vacante" style="width: 200px; height: auto;">
+                            </td>
+                            <td>
+                                <p id="modalRequisitos"></p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../js/Codigo.js"></script>
+    <script>document.addEventListener("DOMContentLoaded", function() {
+        fetch('../datos.json')
+            .then(response => response.json())
+            .then(data => {
+                const empresasList = document.getElementById('empresas-list');
+                let empresaHTML = ''; // Inicializamos una cadena vacía para almacenar el HTML de las empresas
+    
+                data.empresas.forEach((empresa, index) => {
+                    if (index % 3 === 0) {
+                        // Si el índice es un múltiplo de 3, cerramos la fila anterior y comenzamos una nueva fila
+                        if (index !== 0) {
+                            empresaHTML += '</tr>'; // Cerramos la fila anterior
+                        }
+                        empresaHTML += '<tr>'; // Comenzamos una nueva fila
+                    }
+    
+                    // Agregamos la celda con la información de la empresa a la fila actual
+                    empresaHTML += `
+                        <td>
+                            <div class="${empresa.nombre.toLowerCase().replace(' ', '')}" data-teme="${empresa.nombre.toLowerCase().replace(' ', '')}">
+                                <img src="${empresa.imagen}" alt="${empresa.nombre}" style="width: 200px; height: auto;">
+                                <h3>${empresa.nombre}</h3>
+                                <section class="filter">
+                                    <label for="Emmpreza-select"></label>
+                                    <select class="size-select" onchange="obtenerEmpresaSeleccionada(this)">
+                                        <option value="all">Ver vacantes</option>
+                                        ${empresa.vacantes.map((vacante, index) => `<option value="${index}">${vacante.nombre}</option>`).join('')}
+                                    </select>
+                                </section>
+                            </div>
+                        </td>
+                    `;
+    
+                    if (index === data.empresas.length - 1) {
+                        // Si es la última empresa, cerramos la última fila
+                        empresaHTML += '</tr>';
+                    }
+                });
+    
+                empresasList.insertAdjacentHTML('beforeend', empresaHTML); // Insertamos el HTML generado en el contenedor de empresas
+            });
+    });
+    
+    
+    function obtenerEmpresaSeleccionada(selectedEmpresa) {
+        var empresa = selectedEmpresa.parentNode.parentNode.classList[0];
+        var selectedVacante = selectedEmpresa.value;
+        var vacante = obtenerVacante(empresa, selectedVacante);
+        //mostrarModal(vacante);
+    }
+    
+    function obtenerVacante(empresa, selectedVacante) {
+        fetch('../datos.json')
+            .then(response => response.json())
+            .then(data => {
+                var empresaSeleccionada = data.empresas.find(emp => emp.nombre.toLowerCase().replace(' ', '') === empresa);
+                var vacanteSeleccionada = empresaSeleccionada.vacantes[selectedVacante];
+                console.log(vacanteSeleccionada);
+                mostrarModal(vacanteSeleccionada);
+            })
+            .catch(error => {
+                console.error('Error al obtener los datos:', error);
+            });
+    }
+    
+    
+    function mostrarModal(vacante) {
+        document.getElementById('modalImagen').src = vacante.imagen;
+        document.getElementById('modalTitle').textContent = vacante.nombre;
+        document.getElementById('modalRequisitos').textContent = vacante.requisitos;
+        // Aquí puedes mostrar tu modal de la forma que desees, por ejemplo:
+        document.getElementById('miModal').style.display = 'block';
+    }
+    
+    document.getElementById('closeButton').addEventListener('click', function() {
+        document.getElementById('miModal').style.display = 'none';
+    });
+    
+    </script>
+</body>
+</html>

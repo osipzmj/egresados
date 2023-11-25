@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EGRESADOS</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/seguimiento.css">
+</head>
+
+<body>
+  <script src="../js/modal.js"></script>
+  <header class="top-bar">
+    <div class="logo">
+      <img src="../img/logo.png" alt="Logo">
+      <div class="unv">
+        <span id="logo1">Universidad Tecnológica <br> del Norte de Guanajuato</span>
+      </div>
+    </div>
+    <div class="search-bar">
+      <button id="accessibility-btn" class="boton-accesibilidad">
+        <span class="contenido-boton">
+          <img src="../img/acess.png" alt="Accesibilidad" class="icono-accesibilidad">
+          <span class="texto-accesibilidad">Accesibilidad</span>
+        </span>
+      </button>
+      <button id="egresados-btn" class="boton-egresados">
+        <span class="contenido-boton">
+          <img src="../img/egresados.png" alt="Egresados" class="icono-egresados">
+          <span class="texto-egresados">Egresados</span>
+          <a href="index.html"></a>
+        </span>
+      </button>
+      <ul id="accessibility-list">
+        <li>Opción 1</li>
+        <li>Opción 2</li>
+        <li>Opción 3</li>
+      </ul>
+      <input type="text" placeholder="  Buscar">
+    </div>
+  </header>
+
+  <div class="side-menu">
+    <button onclick="location.href='seguimiento.html'">Seguimiento</button>
+    <button onclick="location.href='bolsa_trabajo.html'">Bolsa de trabajo</button>
+    <button onclick="location.href='educacion_continua.html'">Educación continua</button>
+  </div>
+
+  <!-- Sección de seguimiento -->
+  <h2 class="h2Seguimiento">Seguimiento</h2>
+  <h2 class="h2textSeguimiento">Queremos conocer más<br> de ti y puedas darnos tu<br> opinión acerca de los<br> servicios de la universidad</h2>
+  <img src="../img/megafono.png" alt="" class="megafono">
+
+  <div class="contenedor-imagen">
+    <img class="paso1" src="../img/paso1.png" alt="Paso 1">
+    <h2>Llena el formulario con tus datos</h2>
+  </div>
+
+  <div class="contenedor-imagen">
+    <img class="paso2" src="../img/paso2.png" alt="Paso 2">
+    <h2>Atento a tu correo nos contactaremos contigo</h2>
+  </div>
+
+  <div class="contenedor-imagen">
+    <img class="paso3" src="../img/paso3.png" alt="Paso 3">
+    <h2>Sigue las instrucciones</h2>
+  </div>
+
+  <!-- Botón para abrir el modal -->
+  <button onclick="abrirModal()" class="boton-modal">Iniciar proceso</button>
+
+  <!-- Modal -->
+  <div id="miModal" class="modal">
+    <div class="modal-content">
+      <h2>Datos a llenar</h2>
+      <form id="formulario">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre"><br><br>
+
+        <label for="apellidoPaterno">Apellido Paterno:</label>
+        <input type="text" id="apellidoPaterno" name="apellidoPaterno"><br><br>
+
+        <label for="apellidoMaterno">Apellido Materno:</label>
+        <input type="text" id="apellidoMaterno" name="apellidoMaterno"><br><br>
+
+        <label for="email">Correo Electrónico:</label>
+        <input type="email" id="email" name="email"><br><br>
+
+        <label for="telefono">Teléfono:</label>
+        <input type="tel" id="telefono" name="telefono"><br><br>
+
+        <button type="button" class="close-button" onclick="enviarFormulario()">Enviar</button>
+        <button type="button" class="close-button" onclick="cerrarModal()">Cerrar</button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    // Función para abrir el modal
+    function abrirModal() {
+      document.getElementById('miModal').style.display = 'block';
+      // Agregar el evento para cerrar al hacer clic fuera del modal
+      window.addEventListener('click', cerrarModalExterno);
+    }
+
+    // Función para cerrar el modal
+    function cerrarModal() {
+      document.getElementById('miModal').style.display = 'none';
+      limpiarCampos();
+      // Eliminar el evento cuando se cierra el modal
+      window.removeEventListener('click', cerrarModalExterno);
+    }
+
+    // Función para cerrar el modal al hacer clic fuera de él
+    function cerrarModalExterno(event) {
+      var modal = document.getElementById('miModal');
+      if (event.target === modal) {
+        modal.style.display = 'none';
+        limpiarCampos();
+        window.removeEventListener('click', cerrarModalExterno);
+      }
+    }
+
+    // Función para enviar el formulario y limpiar campos
+    function enviarFormulario() {
+      // Aquí puedes agregar lógica para enviar el formulario si es necesario
+      limpiarCampos();
+      cerrarModal();
+    }
+
+    // Función para limpiar los campos del formulario
+    function limpiarCampos() {
+      document.getElementById('formulario').reset();
+    }
+  </script>
+</body>
+
+</html>

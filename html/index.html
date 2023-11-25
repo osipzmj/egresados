@@ -1,0 +1,287 @@
+<!-- masterpage.html -->
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EGRESADOS</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/index.css">
+    <!-- Agrega más enlaces a CSS si es necesario para las páginas específicas -->
+</head>
+
+<body>
+    <header class="top-bar">
+        <div class="logo">
+            <img src="../img/logo.png" alt="Logo">
+            <div class="unv">
+                <span id="logo1">Universidad Tecnológica <br> del Norte de Guanajuato</span>
+            </div>
+        </div>
+        <div class="search-bar">
+            <button id="accessibility-btn" class="boton-accesibilidad">
+                <span class="contenido-boton">
+                    <img src="../img/acess.png" alt="Accesibilidad" class="icono-accesibilidad">
+                    <span class="texto-accesibilidad">Accesibilidad</span>
+                </span>
+            </button>
+            <button id="egresados-btn" onclick="location.href='index.html'" class="boton-egresados">
+                <span class="contenido-boton">
+                    <img src="../img/egresados.png" alt="Egresados" class="icono-egresados">
+                    <span class="texto-egresados">Egresados</span>
+                </span>
+            </button>
+            <ul id="accessibility-list">
+                <li>Opción 1</li>
+                <li>Opción 2</li>
+                <li>Opción 3</li>
+            </ul>
+            <input type="text" placeholder="  Buscar">
+        </div>
+    </header>
+
+    <div class="side-menu">
+        <button onclick="location.href='seguimiento.html'">Seguimiento</button>
+        <button onclick="location.href='bolsa_trabajo.html'">Bolsa de trabajo</button>
+        <button onclick="location.href='educacion_continua.html'">Educación continua</button>
+    </div>
+
+    <!-- Contenido específico de la página se insertará aquí -->
+    <div class="content">
+        <div class="content">
+            <h1 id="egs">EGRESADOS</h1>
+            <div class="por">
+            <img src="../img/portada.png" alt="Portada" class="cover-image">
+            </div>  
+            <div class="section">
+                <h2 id="srv">SERVICIOS</h2>
+                <div class="services-container">
+                    <div class="service">
+                        <img src="../img/servicio1.png" alt="Servicio 1">
+                        <div class="asrs">
+                            <p class="p1">Asesoría:</p>
+                            <p>
+                                - Talleres para buscadores activos de empleo <br>
+                               - Revisión de CV Tip's para búsqueda de empleo <br>
+                               - Bolsas de trabajo en linea <br>
+                               - Difusión de programas de apoyo al autoempleo <br>
+                            </p>  
+                        </div>
+                    </div>
+                    <div class="service">
+                        <img src="../img/servicio2.png" alt="Servicio 2">
+                        <div class="evts">
+                            <p class="p1">Apoyo para la <br>postulación de vacantes <br> registradas en BT.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="section">
+                <h2 id="evt">EVENTOS</h2>
+                <div class="divider-blue"></div>
+                <!-- ... (código HTML previo) ... -->
+    <div class="container-tarjetas">
+    <!-- Contenido de la tarjeta con un ID "miTarjeta" -->
+    <div class="tarjeta" id="miTarjeta"  onclick="abrirModal('miModal')">
+        <h3>Conferencias <br> de egresados</h3>
+        <img src="../img/conferencias.png" alt="Conferencias">
+      </div>
+      
+      <!-- Modal -->
+      <div class="modal" id="miModal">
+        <div class="modal-contenido">
+          <span class="cerrar-modal" onclick="cerrarModal('miModal')">&times;</span>
+          <h2 style="color: #c89c0b; text-align: center; font-weight: bold; font-size: 35px;">Proximas conferencias</h2>
+          <div class="confe">
+            <div class="conf1">
+                <p class="ptitle" style="color: #c89c0b; font-size: 18px; font-weight: 700; text-align: center; align-items: center;">El futuro de la inteligencia artificial</p>
+                <p>
+                    <span class="especialidad">Especialidad: </span>
+                    <span class="texto-ejemplo">Ejemplo</span>
+                </p>
+                <p>
+                    <span class="fecha">Fecha: </span>
+                    <span class="texto-ejemplo">Ejemplo</span>
+                </p>
+                <img src="../img/conf1.png" alt="Conferencia 1">
+                <p class="ptext">Sumérgete en un viaje hacia el futuro de la inteligencia artificial en nuestra conferencia.
+                     Exploraremos el fascinante mundo de la IA, analizando su evolución actual y las tendencias que marcarán el camino. 
+                     Desde aplicaciones prácticas hasta su impacto en la sociedad, descubrirás cómo la inteligencia artificial está dando forma a nuestro mañana 
+                     y cómo puedes ser parte de esta revolución tecnológica.</p>
+                     <button class="miBoton" onclick="cambiarEstado(this)">Inscribirme</button>
+            </div>
+            <div class="conf1">
+                <p class="ptitle" style="color: #c89c0b; font-size: 18px; font-weight: 700; text-align: center;">Impartir cursos de JavaScript</p>
+                <p>
+                    <span class="especialidad">Especialidad: </span>
+                    <span class="texto-ejemplo">Ejemplo</span>
+                </p>
+                <p>
+                    <span class="fecha">Fecha: </span>
+                    <span class="texto-ejemplo">Ejemplo</span>
+                </p>
+                <img src="../img/evento2.jpg" alt="Conferencia 2">
+                <p class="ptext">Explora las claves para enseñar JavaScript de manera efectiva en nuestra conferencia 'El Arte de Impartir Cursos de JavaScript'.
+                    Sumérgete en estrategias dinámicas y herramientas innovadoras que transformarán tu habilidad para enseñar.
+                    Aprende a cautivar a tus estudiantes, desde principiantes hasta avanzados, creando experiencias de aprendizaje envolventes y motivadoras. 
+                    Prepárate para convertirte en un instructor inspirador, capaz de desbloquear el potencial de tus alumnos y transmitir el fascinante mundo 
+                    del desarrollo web con pasión y claridad.
+                </p>
+                <button class="miBoton" onclick="cambiarEstado(this)">Inscribirme</button>
+            </div>
+            
+            
+            <div class="conf1">
+                <p  class="ptitle" style="color: #c89c0b; font-size: 18px; font-weight: 700; text-align: center;">Importancia de aprender Angular</p>
+                <p>
+                    <span class="especialidad">Especialidad: </span>
+                    <span class="texto-ejemplo">Procesos Industriales</span>
+                </p>
+                <p>
+                    <span class="fecha">Fecha: </span>
+                    <span class="texto-ejemplo">30 Diciembre 2023</span>
+                </p>
+                <img src="../img/evento3.jpg" alt="Conferencia 3">
+                <p class="ptext">Descubre la relevancia de dominar Angular en nuestro evento. Exploraremos cómo esta poderosa plataforma de desarrollo web ha revolucionado 
+                la creación de aplicaciones. Desde su estructura hasta su escalabilidad, aprenderás cómo Angular impulsa la eficiencia en el desarrollo
+                    y por qué es fundamental para cualquier profesional del mundo tecnológico moderno.</p>
+                    <button class="miBoton" onclick="cambiarEstado(this)">Inscribirme</button>
+            </div>
+            <div class="conf1">
+                <p  class="ptitle" style="color: #c89c0b; font-size: 18px; font-weight: 700; text-align: center;">¿Cómo entrenar una IA?</p>
+                <p>
+                    <span class="especialidad">Especialidad: </span>
+                    <span class="texto-ejemplo">Economico Administrativo</span>
+                </p>
+                <p>
+                    <span class="fecha">Fecha: </span>
+                    <span class="texto-ejemplo">05 Mayo 2024</span>
+                </p>
+                <img src="../img/evento4.jpg" alt="Conferencia 4">
+                <p class="ptext">Adéntrate en el proceso de entrenar una inteligencia artificial en nuestra sesión especializada.
+                    Exploraremos las estrategias clave y los métodos esenciales para entrenar modelos de IA, desde la recopilación de datos hasta el despliegue.
+                    Obtendrás una visión profunda de los conceptos fundamentales y las mejores prácticas para entrenar con éxito una IA en diversos campos.</p>
+                    <button class="miBoton" onclick="cambiarEstado(this)">Inscribirme</button>
+            </div>
+            <div class="conf1">
+                <p class="ptitle" style="color: #c89c0b; font-size: 18px; font-weight: 700; text-align: center;">Mejores formas de usar SCRUM</p>  
+                <p>
+                    <span class="especialidad">Especialidad: </span>
+                    <span class="texto-ejemplo">TICS</span>
+                </p>
+                <p>
+                    <span class="fecha">Fecha: </span>
+                    <span class="texto-ejemplo"> 10 Diciembre 2023</span>
+                </p>
+                <img src="../img/evento5.png" alt="Conferencia 5">
+                <p class="ptext">Explora las mejores prácticas en el uso de SCRUM durante nuestra conferencia especializada. 
+                    Analizaremos cómo esta metodología ágil impulsa la productividad y la eficiencia en el desarrollo de software. 
+                    Desde su implementación hasta su integración en equipos, descubrirás cómo aprovechar al máximo SCRUM para mejorar 
+                    la colaboración y la entrega de proyectos exitosos.</p>
+                    <button class="miBoton" onclick="cambiarEstado(this)">Inscribirme</button>
+            </div>
+            <div class="conf1">
+                <p class="ptitle" style="color: #c89c0b; font-size: 18px; font-weight: 700; text-align: center;">Emprender gracias a las TI</p> 
+                <p>
+                    <span class="especialidad">Especialidad: </span>
+                    <span class="texto-ejemplo">Ejemplo</span>
+                </p>
+                <p>
+                    <span class="fecha">Fecha: </span>
+                    <span class="texto-ejemplo">Ejemplo</span>
+                </p>
+                <img src="../img/evento6.jpg" alt="Conferencia 6">
+                <p class="ptext">Descubre cómo las Tecnologías de la Información (TI) pueden ser la base para emprender en nuestra conferencia. 
+                    Exploraremos cómo las TI son el motor impulsor de la innovación empresarial y cómo pueden ser el catalizador para iniciar un negocio.
+                    Desde la identificación de oportunidades hasta la implementación estratégica, aprenderás cómo emprender con éxito aprovechando 
+                    las herramientas y soluciones tecnológicas disponibles.</p>
+                    <button class="miBoton" onclick="cambiarEstado(this)">Inscribirme</button>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+      <!--******************************** TARJETA DE FERIA DE TRABAJO ******************************** -->
+      <div class="tarjeta" id="miTarjeta2" onclick="abrirModal('miModal2')">
+        <h3>Feria de <br>trabajo</h3>
+        <img style="width: 170px; height: 155px;" src="../img/feria_trabajo.png" alt="Feria de trabajo">
+      </div>
+      <div class="modal" id="miModal2">
+        <div class="modal-contenido">
+          <span class="cerrar-modal" onclick="cerrarModal('miModal2')">&times;</span>
+          <h2 style="color: black; font-weight: 300; margin-left: 30px; font-size: 50px; text-decoration: underline #c89c0b; text-decoration-thickness: 3px;
+          text-underline-offset: 15px;">Feria de trabajo</h2>
+          <div class="infoft">
+            <div class="feria1">
+                <img src="../img/img_feria.png" alt="Feria_Trabajo">
+                <p class="ptext" style="text-align: center; font-size: 20px; font-weight: 200;">¿Actualmente te encuentras desempleado, estas buscando un oportunidad para desarrollar tus habilidades, quieres encontrar una empresa en la cual tus habilidades sean aprovechadas?
+                    <br>
+                    La Universidad Tecnológica del Norte de Guanajuato te invita a la "Feria Nacional del Empleo para la Inclusion Laboral 2023"
+                     organizada por el Gobierno de México. </p>
+                    <button class="btn-info" onclick="abrirEnlace()">Más información</button>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+    </div>
+
+    <script src="../js/modal.js"></script>
+
+    <!-- Incluyendo el archivo de la página maestra -->
+ 
+   
+  
+  <!-- ... (resto del código) ... -->
+  <!--MODAL TARJETA CONFERENCIA-->
+  <script>
+    // Función para mostrar el modal al hacer clic en la tarjeta
+    function abrirModal(idModal) {
+      document.getElementById(idModal).style.display = 'flex';
+      // Agregar un event listener para cerrar el modal al hacer clic fuera de él
+      window.addEventListener('click', function(event) {
+        const modal = document.getElementById(idModal);
+        if (event.target === modal) {
+          modal.style.display = 'none';
+        }
+      });
+    }
+  
+    function cerrarModal(idModal) {
+      document.getElementById(idModal).style.display = 'none';
+    }
+  </script>
+<!--FIN DE MODAL TARJETA CONFERENCIA-->
+
+  <script>
+function cambiarEstado(boton) {
+    if (boton.innerHTML === 'Inscribirme') {
+        boton.innerHTML = 'Inscrito';
+        boton.classList.add('inscrito');
+    } else {
+        boton.innerHTML = 'Inscribirme';
+        boton.classList.remove('inscrito');
+    }
+}
+  </script>
+  <script>
+ function abrirEnlace() {
+  // URL que deseas abrir en una nueva ventana
+  var url = 'https://www.gob.mx/dgpyct/es/articulos/feria-nacional-del-empleo-para-la-inclusion-laboral-2023';
+
+  // Abre la URL en una nueva ventana
+  window.open(url, '_blank');
+}
+  </script>
+    <!-- Agrega referencias a scripts JS si es necesario para las páginas específicas -->
+
+</body>
+
+</html>
+
