@@ -220,23 +220,45 @@
       <div class="modal" id="miModal2">
         <div class="modal-contenido">
           <span class="cerrar-modal" onclick="cerrarModal('miModal2')">&times;</span>
-          <h2 style="color: black; font-weight: 300; margin-left: 30px; font-size: 50px; text-decoration: underline #c89c0b; text-decoration-thickness: 3px;
-          text-underline-offset: 15px;">Feria de trabajo</h2>
+          <h2 style="color: black; font-weight: 300; font-size: 50px; text-decoration: underline #c89c0b; text-decoration-thickness: 3px; text-underline-offset: 15px;">Feria de trabajo</h2>
           <div class="infoft">
             <div class="feria1">
-                <img src="../img/img_feria.png" alt="Feria_Trabajo">
-                <p class="ptext" style="text-align: center; font-size: 20px; font-weight: 200;">¿Actualmente te encuentras desempleado, estas buscando un oportunidad para desarrollar tus habilidades, quieres encontrar una empresa en la cual tus habilidades sean aprovechadas?
-                    <br>
-                    La Universidad Tecnológica del Norte de Guanajuato te invita a la "Feria Nacional del Empleo para la Inclusion Laboral 2023"
-                    organizada por el Gobierno de México. </p>
-                    <button class="btn-info" onclick="abrirEnlace()">Más información</button>
+                <br>
+              <div class="icono-texto">
+                <img src="../img/desempleo.png" alt="Icono Desempleado" style="width: 100px; height: 100px; float: left; margin-right: 20px;">
+                <p class="ptext">
+                  ¿Actualmente te encuentras <span style="font-weight: bold; color: #c89c0b;">desempleado</span>?
+                </p>
+              </div>
+              <div class="icono-texto">
+                <img src="../img/habilidades.png" alt="Icono Desarrollo" style="width: 100px; height: 100px; float: left; margin-right: 20px;">
+                <p class="ptext">
+                  ¿Estás buscando una oportunidad para <span style="font-weight: bold; color: #c89c0b;">desarrollar tus habilidades</span>?
+                </p>
+              </div>
+              <div class="icono-texto">
+                <img src="../img/empresa.png" alt="Icono Aprovechamiento" style="width: 100px; height: 100px; float: left; margin-right: 20px;">
+                <p class="ptext">
+                  ¿Quieres encontrar una empresa en la cual <span style="font-weight: bold; color: #c89c0b;">tus habilidades sean aprovechadas</span>?
+                </p>
+              </div>
+              <br>
+              <div style="clear: both;"></div>
+              <p class="ptext" style="text-align: center;">
+                La Universidad Tecnológica del Norte de Guanajuato te invita a la <br>
+                "<span style="font-weight: bold; color: #c89c0b;">Feria Nacional del Empleo para la Inclusión Laboral 2023</span>" <br>
+                organizada por el Gobierno de México.
+              </p>
+              <br>
+              <div class="btn-container">
+                <button class="btn-info" onclick="abrirEnlace()">Más información</button>
+              </div>              
             </div>
           </div>
         </div>
       </div>
-    </div>
     <div class="modal" id="limiteModal">
-        <div class="modal-contenido">
+        <div class="modal-contenidO">
           <p>Upss... Lo sentimos ⚠️</p>
           <p>Parece que has alcanzado el tamaño de fuente mínimo</p>
           <button onclick="cerrarModal('limiteModal')">Cerrar</button>
