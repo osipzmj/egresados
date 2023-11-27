@@ -31,15 +31,18 @@
                 </span>
               </button>
               
-              <div id="accessibility-menu" class="accessibility-menu" style="display: none;">
+              <div id="accessibility-menu" class="accessibility-menu" >
                 <!-- Contenido del menú de accesibilidad -->
                 <h3>Opciones de Accesibilidad</h3>
                 <ul>
-                  <li><button onclick="zoomIn()"><i class="fa-solid fa-plus"></i> Aumentar letra</button></li>
-                  <li> <button onclick="zoomOut()"><i class="fa-solid fa-minus"></i> Reducir letra</button></li>
-                  <!-- Agrega más opciones de accesibilidad aquí -->
+                    <li><button onclick="zoomIn()"><i class="fa-solid fa-plus"></i> Aumentar letra</button></li>
+                    <li><button onclick="zoomOut()"><i class="fa-solid fa-minus"></i> Reducir letra</button></li>
+                    <li><button onclick="readSelectedText()"><i class="fa-solid fa-volume-high"></i> Leer texto seleccionado</button></li>
+                    <li><button onmouseover="readContent()"><i class="fa-solid fa-volume-high"></i> Leer contenido completo</button></li>
+                    <li><button onclick="toggleReadingMode()"><i class="fa-solid fa-volume-high"></i> Leer con cursor</button></li>
+                    <!-- Agrega más opciones de accesibilidad aquí -->
                 </ul>
-              </div>
+            </div>                       
               
             <button id="egresados-btn" onclick="location.href='index.html'" class="boton-egresados">
                 <span class="contenido-boton">

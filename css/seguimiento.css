@@ -54,12 +54,21 @@ vertical-align: middle;
 margin-right: 90px;
 }
 
+
+
+
+
 /* Estilos para la imagen */
 .icono-accesibilidad {
   width: 30px; /* Tamaño deseado para la imagen */
   height: auto; /* Altura automática para mantener la proporción */
   margin-right: 10px; /* Espacio entre la imagen y el texto */
 }
+
+
+
+
+
 
 
 /* Estilos para el contenido del botón */
@@ -106,15 +115,6 @@ button {
   cursor: pointer;
 }
 
-#accessibility-list {
-  display: none;
-  position: absolute;
-  background-color: #fff;
-  border: 1px solid #ddd;
-  list-style: none;
-  padding: 5px;
-}
-
 .side-menu {
   background-color: #2d3a81;
   color: #fff;
@@ -138,6 +138,7 @@ button {
   border: 1px solid black;
   border-radius: 10px;
 }
+
 
 
 
@@ -186,6 +187,11 @@ button {
   /* Agregar otros estilos según sea necesario */
 }
 
+
+
+
+
+
    /* Estilos para las imágenes */
 .contenedor-imagen {
   position: relative;
@@ -194,6 +200,11 @@ button {
   top: 425px;
   margin: 25px; /* Espacio entre las imágenes */
 }
+
+
+
+
+
 
 /* Estilos para los textos debajo de las imágenes */
 .contenedor-imagen h2 {
@@ -207,6 +218,11 @@ button {
   margin-top: 10px; /* Espacio entre el texto y la imagen */
   max-width: 225px; /* Ancho máximo del h2 */
 }
+
+
+
+
+
 
 /* Estilos para las imágenes */
 .paso1, .paso2, .paso3, .paso4 {
@@ -236,6 +252,11 @@ margin-top: -50px;
 }
 
 
+
+
+
+
+
     /* Estilos para el modal */
     .modal {
       display: none;
@@ -259,6 +280,11 @@ margin-top: -50px;
       position: relative;
     }
 
+
+
+
+
+
     /* Estilos para los botones dentro del modal */
     .close-button {
       background-color: #ccc;
@@ -280,39 +306,19 @@ margin-top: -50px;
     }
 
     
-.accessibility-menu {
-  position: absolute;
-  top: 50px; /* Ajusta la posición vertical del menú */
-  right: 10px; /* Ajusta la posición horizontal del menú */
-  background-color: #fff;
-  border: 1px solid #ccc;
-  padding: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  z-index: 1000;
-}
 
-/* Estilos para el botón de accesibilidad */
-.boton-accesibilidad {
-  background-color: #2d3a81;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
-  cursor: pointer;
-}
 
-/* Estilos para el menú de accesibilidad */
-.accessibility-menu {
-  position: absolute;
-  top: 50px;
-  right: 10px;
-  background-color: #fff;
-  border: 1px solid #ccc;
-  padding: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  z-index: 1000;
+/* Estilos para la accesibilidad */
+#accessibility-menu {
   display: none;
+  position: absolute;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
   border-radius: 5px;
+  width: 200px; /* Ajusta el ancho del menú según tus necesidades */
 }
 
 .accessibility-menu h3 {
@@ -327,34 +333,28 @@ margin-top: -50px;
   margin: 0;
 }
 
-.accessibility-menu {
-  display: none;
-  position: absolute;
-  border-radius: 5px;
-  background-color: #fff; /* Cambiar el color de fondo del menú si es necesario */
-  border: 1px solid #ccc; /* Estilo del borde */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra */
-  padding: 10px; /* Espaciado interno */
-}
-
-.accessibility-menu ul {
-  list-style: none;
-  padding: 0;
-}
-
 .accessibility-menu button {
   background-color: #2d3a81;
   color: white;
   border: none;
-  padding: 8px 15px;
+  padding: 10px;
   margin-bottom: 5px;
   cursor: pointer;
   border-radius: 5px;
+  width: 100%; /* Ajusta el ancho de los botones para que coincida con el menú */
 }
 
 .accessibility-menu button:hover {
   background-color: #1e266d;
 }
+
+.boton-accesibilidad:hover {
+  background-color: #1e266d; /* Cambia el color de fondo al pasar el cursor sobre el botón de accesibilidad */
+}
+
+
+
+
 
 .modal-contenido p {
   font-family: 'Montserrat', sans-serif;
@@ -383,6 +383,12 @@ margin-top: -50px;
   border-radius: 5px;
   overflow-y: auto; /* Agrega desplazamiento vertical si el contenido excede el límite */
 }
+
+
+
+
+
+
 
 /* Estilos para cerrar el modal (se mantienen) */
 .cerrar-modal {
