@@ -40,6 +40,7 @@
                     <li><button onclick="readSelectedText()"><i class="fa-solid fa-volume-high"></i> Leer texto seleccionado</button></li>
                     <li><button onmouseover="readContent()"><i class="fa-solid fa-volume-high"></i> Leer contenido completo</button></li>
                     <li><button onclick="toggleReadingMode()"><i class="fa-solid fa-volume-high"></i> Leer con cursor</button></li>
+                    <li><button id="btnContraste">Activar alto contraste</button></li>
                     <!-- Agrega más opciones de accesibilidad aquí -->
                 </ul>
             </div>                       
@@ -261,10 +262,10 @@
         </div>
       </div>
     <div class="modal" id="limiteModal">
-        <div class="modal-contenidO">
+        <div class="modal-contenido">
           <p>Upss... Lo sentimos ⚠️</p>
           <p>Parece que has alcanzado el tamaño de fuente mínimo</p>
-          <button onclick="cerrarModal('limiteModal')">Cerrar</button>
+          <button onclick="cerrarModal('limiteModal')" style="border-radius: 10px; height: 40px; width: auto;">Cerrar</button>
         </div>
     </div>
 </body>

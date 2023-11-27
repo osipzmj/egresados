@@ -8,6 +8,8 @@ let currentUtterance = null;
 function zoomIn() {
     fontSize += increment;
     document.body.style.fontSize = fontSize + "px";
+    document.p.style.fontSize = fontSize + "px";
+    document.span.style.fontSize = fontSize + "px";
     modalShown = false; // Restablecer modalShown cuando se hace zoom in
 }
 
@@ -15,6 +17,8 @@ function zoomOut() {
     if (fontSize - increment >= minFontSize) {
         fontSize -= increment;
         document.body.style.fontSize = fontSize + "px";
+        document.p.style.fontSize = fontSize + "px";
+        document.span.style.fontSize = fontSize + "px";
     } else if (!modalShown) {
         modalShown = true;
         abrirModal('limiteModal');
@@ -96,3 +100,9 @@ function stopReading() {
         currentUtterance = null;
     }
 }
+
+const btnContraste = document.getElementById('btnContraste');
+
+    btnContraste.addEventListener('click', function() {
+      document.body.classList.toggle('alto-contraste');
+    });

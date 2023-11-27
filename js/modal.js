@@ -20,3 +20,10 @@ function abrirModal(idModal) {
     function cerrarModal(idModal) {
       document.getElementById(idModal).style.display = 'none';
     }
+
+
+    function cerrarMenu(idMenu) {
+      accessibilityMenu.style.display = 'none';
+    }
+
+    
