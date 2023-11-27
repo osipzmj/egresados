@@ -19,16 +19,43 @@
 </head>
 
 <body>
+    <header class="top-bar">
+        <div class="logo">
+            <img src="../img/logo_utng.png" alt="Logo" onclick="location.href='index.html'">
+        </div>
+        <div class="search-bar">
+            <button id="accessibility-btn" class="boton-accesibilidad" onclick="toggleAccessibility()">
+                <span class="contenido-boton">
+                  <img src="../img/acess.png" alt="Accesibilidad" class="icono-accesibilidad">
+                  <span class="texto-accesibilidad">Accesibilidad</span>
+                </span>
+              </button>
+              
+              <div id="accessibility-menu" class="accessibility-menu" style="display: none;">
+                <!-- Contenido del menú de accesibilidad -->
+                <h3>Opciones de Accesibilidad</h3>
+                <ul>
+                  <li><button onclick="zoomIn()"><i class="fa-solid fa-plus"></i> Aumentar letra</button></li>
+                  <li> <button onclick="zoomOut()"><i class="fa-solid fa-minus"></i> Reducir letra</button></li>
+                  <!-- Agrega más opciones de accesibilidad aquí -->
+                </ul>
+              </div>
+              
+            <button id="egresados-btn" onclick="location.href='index.html'" class="boton-egresados">
+                <span class="contenido-boton">
+                  <img src="../img/egresados.png" alt="Egresados" class="icono-egresados">
+                  <span id="texto-egresados" class="texto-egresados">Egresados</span>
+                </span>
+              </button>
+            <input type="text" placeholder="  Buscar">
+        </div>
+    </header>
 
-   <!--Codigo para obtener el contenido de plantilla.html sin afectar funciones o css-->>
-   <div id="contenido-master"></div>
-   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-   <script>
-     $(document).ready(function(){
-       $('#contenido-master').load('master.html');
-     });
-   </script>
-   
+    <div class="side-menu">
+        <button onclick="location.href='seguimiento.html'"><i class="fa-solid fa-graduation-cap fa-beat-fade"></i> Seguimiento</button>
+        <button onclick="location.href='bolsa_trabajo.html'"><i class="fa-solid fa-briefcase fa-beat-fade"></i> Bolsa de trabajo</button>
+        <button onclick="location.href='educacion_continua.html'"><i class="fa-solid fa-user-graduate fa-beat-fade"></i> Educación continua</button>   
+    </div>
 
 <!-- SECCION DE BOLSA DE TRABAJO -->
 
@@ -65,6 +92,13 @@
                 </table>
                 </div>
             </div>
+        </div>
+    </div>
+    <div class="modal" id="limiteModal">
+        <div class="modal-contenido">
+          <p>Upss... Lo sentimos ⚠️</p>
+          <p>Parece que has alcanzado el tamaño de fuente mínimo</p>
+          <button onclick="cerrarModal('limiteModal')">Cerrar</button>
         </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>

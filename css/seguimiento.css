@@ -140,23 +140,20 @@ button {
 }
 
 
-<<<<<<< HEAD
 
 
 
 
-=======
->>>>>>> 6f86d7d4ce23a93bbfac040d04e5274358b1fadb
 /*Seccion de seguimiento*/
 
 .h2Seguimiento {
   /* Estilos específicos para el h2 de Seguimiento */
-  font-size: 65px; /* Cambiar el tamaño de la fuente */
+  font-size: 30px; /* Cambiar el tamaño de la fuente */
   color: black; /* Cambiar el color del texto */
   text-align: left; /* Cambiar la alineación del texto */
   /* Propiedades de posición */
   position: absolute;
-  top: 175px; /* Distancia desde la parte superior */
+  top: 235px; /* Distancia desde la parte superior */
   left: 700px; /* Distancia desde la izquierda */
   right: 40px; /* Distancia desde la derecha */
   bottom: 10px; /* Distancia desde la parte inferior */
@@ -165,7 +162,7 @@ button {
 
 .h2textSeguimiento {
   /* Estilos específicos para el h2 de Seguimiento */
-  font-size: 35px; /* Cambiar el tamaño de la fuente */
+  font-size: 20   px; /* Cambiar el tamaño de la fuente */
   color: black; /* Cambiar el color del texto */
   text-align: left; /* Cambiar la alineación del texto */
   /* Propiedades de posición */
@@ -178,29 +175,15 @@ button {
   /* Agregar otros estilos según necesites */
 }
 
-@keyframes moverRotar {
-  0% {
-    transform: translateX(0) rotate(0deg);
-  }
-  50% {
-    transform: translateX(-20px) rotate(-10deg);
-  }
-  100% {
-    transform: translateX(0) rotate(0deg);
-  }
-}
-
-
 .megafono {
   /* Estilos para la clase megafono */
-  animation: moverRotar 2s ease-in-out infinite; /* Aplicar la animación */
   position: absolute; /* Se posiciona de forma absoluta */
-  top: 200px; /* Distancia desde la parte superior */
-  left: 400px; /* Distancia desde la izquierda */
+  top: 250px; /* Distancia desde la parte superior */
+  left: 450px; /* Distancia desde la izquierda */
   right: 150px; /* Distancia desde la derecha */
   bottom: 50px; /* Distancia desde la parte inferior */
-  width: 300px; /* Ancho del elemento */
-  height: 300px; /* Altura del elemento */
+  width: 200px; /* Ancho del elemento */
+  height: 200px; /* Altura del elemento */
   /* Agregar otros estilos según sea necesario */
 }
 
@@ -214,7 +197,7 @@ button {
   position: relative;
   display: inline-block;
   left: 400px;
-  top: 800px;
+  top: 425px;
   margin: 25px; /* Espacio entre las imágenes */
 }
 
@@ -261,8 +244,8 @@ margin-top: -50px;
   display: inline-block;
   font-size: 16px;
   position: absolute;
-  top: 1300px; /* Ajusta la posición vertical del botón */
-  left: 740px; /* Ajusta la posición horizontal del botón */
+  top: 850px; /* Ajusta la posición vertical del botón */
+  left: 700px; /* Ajusta la posición horizontal del botón */
   cursor: pointer;
   border: none;
   border-radius: 5px;
@@ -394,23 +377,19 @@ margin-top: -50px;
 
 .modal-contenido {
   background-color: #fff;
-  width: 500px; /* Ancho fijo */
-  max-width: 250vw; /* Límite máximo relativo al ancho de la ventana */
-  max-height: 100vh; /* Límite máximo relativo a la altura de la ventana */
+  max-width: 90%; /* Limita el ancho del contenido */
+  max-height: 90%; /* Limita la altura del contenido */
   padding: 20px;
-  border-radius: 20px; /* Aumenta el valor para esquinas más redondas */
+  border-radius: 5px;
   overflow-y: auto; /* Agrega desplazamiento vertical si el contenido excede el límite */
 }
 
 
 
-<<<<<<< HEAD
 
 
 
 
-=======
->>>>>>> 6f86d7d4ce23a93bbfac040d04e5274358b1fadb
 /* Estilos para cerrar el modal (se mantienen) */
 .cerrar-modal {
   color: #aaa;
@@ -425,236 +404,3 @@ margin-top: -50px;
   text-decoration: none;
   cursor: pointer;
 }
-
-
-
-#formulario {
-  display: flex;
-  flex-direction: column;
-}
-
-#nombre,
-#apellidoPaterno,
-#apellidoMaterno,
-#email,
-#telefono {
-  margin-bottom: 0px;
-  padding: 6px;
-  border-radius: 100px;
-  border: 2px solid #ccc;
-  max-width: 20vw; /* Límite máximo relativo al ancho de la ventana */
-  /* Otros estilos que desees aplicar */
-}
-
-.modal-contenido h2 {
-  font-size: 35px; /* Tamaño de letra para el h2 */
-  text-align: center; /* Centra el texto horizontalmente */
-  margin: 5mm; /* Ajusta el margen para centrar el elemento */
-}
-
-.modal-contenido label {
-  font-size: 20px; /* Tamaño de letra para los labels */
-}
-
-
-
-
-/*Estilos de los circulos para migajas de pan*/
-.circle1 {
-  position: absolute;
-  top: 142px; /* Ajusta la distancia desde la parte superior */
-  right: 550px; /* Ajusta la distancia desde el borde derecho */
-  width: 60px; /* Ancho del círculo */
-  height: 60px; /* Altura del círculo */
-  background-color: #DDF2FD;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.circle1 p {
-  margin: 0;
-  font-size: 20px; /* Tamaño del texto dentro del círculo */
-}
-
-
-.circle1-1 {
-  position: absolute;
-  top: 210px; /* Ajusta la distancia desde la parte superior */
-  right: 573px; /* Ajusta la distancia desde el borde derecho */
-  width: 15px; /* Ancho del círculo */
-  height: 15px; /* Altura del círculo */
-  background-color: #DDF2FD;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.circle1-1 p {
-  margin: 0;
-  font-size: 20px; /* Tamaño del texto dentro del círculo */
-}
-
-
-
-.circle2 {
-  position: absolute;
-  top: 230px; /* Ajusta la distancia desde la parte superior */
-  right: 550px; /* Ajusta la distancia desde el borde derecho */
-  width: 60px; /* Ancho del círculo */
-  height: 60px; /* Altura del círculo */
-  background-color: #DDF2FD;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.circle2 p {
-  margin: 0;
-  font-size: 20px; /* Tamaño del texto dentro del círculo */
-}
-
-.circle1-2 {
-  position: absolute;
-  top: 300px; /* Ajusta la distancia desde la parte superior */
-  right: 573px; /* Ajusta la distancia desde el borde derecho */
-  width: 15px; /* Ancho del círculo */
-  height: 15px; /* Altura del círculo */
-  background-color: #DDF2FD;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.circle1-2 p {
-  margin: 0;
-  font-size: 20px; /* Tamaño del texto dentro del círculo */
-}
-
-
-
-
-
-.circle3 {
-  position: absolute;
-  top: 325px; /* Ajusta la distancia desde la parte superior */
-  right: 550px; /* Ajusta la distancia desde el borde derecho */
-  width: 60px; /* Ancho del círculo */
-  height: 60px; /* Altura del círculo */
-  background-color: #DDF2FD;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.circle3 p {
-  margin: 0;
-  font-size: 20px; /* Tamaño del texto dentro del círculo */
-}
-
-.circle1-3 {
-  position: absolute;
-  top: 395px; /* Ajusta la distancia desde la parte superior */
-  right: 573px; /* Ajusta la distancia desde el borde derecho */
-  width: 15px; /* Ancho del círculo */
-  height: 15px; /* Altura del círculo */
-  background-color: #DDF2FD;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.circle1-3 p {
-  margin: 0;
-  font-size: 20px; /* Tamaño del texto dentro del círculo */
-}
-
-
-
-
-.circle4 {
-  position: absolute;
-  top: 420px; /* Ajusta la distancia desde la parte superior */
-  right: 550px; /* Ajusta la distancia desde el borde derecho */
-  width: 60px; /* Ancho del círculo */
-  height: 60px; /* Altura del círculo */
-  background-color: #DDF2FD;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.circle4 p {
-  margin: 0;
-  font-size: 20px; /* Tamaño del texto dentro del círculo */
-}
-.circle1-4 {
-  position: absolute;
-  top: 490px; /* Ajusta la distancia desde la parte superior */
-  right: 573px; /* Ajusta la distancia desde el borde derecho */
-  width: 15px; /* Ancho del círculo */
-  height: 15px; /* Altura del círculo */
-  background-color: #DDF2FD;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.circle1-4 p {
-  margin: 0;
-  font-size: 20px; /* Tamaño del texto dentro del círculo */
-}
-
-
-
-.circle5 {
-  position: absolute;
-  top: 510px; /* Ajusta la distancia desde la parte superior */
-  right: 550px; /* Ajusta la distancia desde el borde derecho */
-  width: 60px; /* Ancho del círculo */
-  height: 60px; /* Altura del círculo */
-  background-color: #DDF2FD;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.circle5 p {
-  margin: 0;
-  font-size: 20px; /* Tamaño del texto dentro del círculo */
-}
-
-.circle1-5 {
-  position: absolute;
-  top: 210px; /* Ajusta la distancia desde la parte superior */
-  right: 573px; /* Ajusta la distancia desde el borde derecho */
-  width: 15px; /* Ancho del círculo */
-  height: 15px; /* Altura del círculo */
-  background-color: #DDF2FD;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.circle1-5 p {
-  margin: 0;
-  font-size: 20px; /* Tamaño del texto dentro del círculo */
-}
-
-
-
-
-
-
-
-

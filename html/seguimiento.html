@@ -19,26 +19,49 @@
 </head>
 
 <body>
-  <!--Codigo para obtener el contenido de plantilla.html sin afectar funciones o css-->>
-  <div id="contenido-master"></div>
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script>
-    $(document).ready(function(){
-      $('#contenido-master').load('master.html');
-    });
-  </script>
+    <header class="top-bar">
+        <div class="logo">
+            <img src="../img/logo_utng.png" alt="Logo" onclick="location.href='index.html'">
+        </div>
+        <div class="search-bar">
+            <button id="accessibility-btn" class="boton-accesibilidad" onclick="toggleAccessibility()">
+                <span class="contenido-boton">
+                  <img src="../img/acess.png" alt="Accesibilidad" class="icono-accesibilidad">
+                  <span class="texto-accesibilidad">Accesibilidad</span>
+                </span>
+              </button>
+              
+              <div id="accessibility-menu" class="accessibility-menu" style="display: none;">
+                <!-- Contenido del menú de accesibilidad -->
+                <h3>Opciones de Accesibilidad</h3>
+                <ul>
+                  <li><button onclick="zoomIn()"><i class="fa-solid fa-plus"></i> Aumentar letra</button></li>
+                  <li> <button onclick="zoomOut()"><i class="fa-solid fa-minus"></i> Reducir letra</button></li>
+                  <!-- Agrega más opciones de accesibilidad aquí -->
+                </ul>
+              </div>
+              
+            <button id="egresados-btn" onclick="location.href='index.html'" class="boton-egresados">
+                <span class="contenido-boton">
+                  <img src="../img/egresados.png" alt="Egresados" class="icono-egresados">
+                  <span id="texto-egresados" class="texto-egresados">Egresados</span>
+                </span>
+              </button>
+            <input type="text" placeholder="  Buscar">
+        </div>
+    </header>
 
+    <div class="side-menu">
+        <button onclick="location.href='seguimiento.html'"><i class="fa-solid fa-graduation-cap fa-beat-fade"></i> Seguimiento</button>
+        <button onclick="location.href='bolsa_trabajo.html'"><i class="fa-solid fa-briefcase fa-beat-fade"></i> Bolsa de trabajo</button>
+        <button onclick="location.href='educacion_continua.html'"><i class="fa-solid fa-user-graduate fa-beat-fade"></i> Educación continua</button>   
+    </div>
 
   <!-- Sección de seguimiento -->
   <div style="margin-top: 15px;">
   <h2 class="h2Seguimiento">Seguimiento</h2>
   <h2 class="h2textSeguimiento">Queremos conocer más<br> de ti y puedas darnos tu<br> opinión acerca de los<br> servicios de la universidad</h2>
-
-  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="megafono">
-    <path stroke-linecap="round" stroke-linejoin="round" d="M10.34 15.84c-.688-.06-1.386-.09-2.09-.09H7.5a4.5 4.5 0 110-9h.75c.704 0 1.402-.03 2.09-.09m0 9.18c.253.962.584 1.892.985 2.783.247.55.06 1.21-.463 1.511l-.657.38c-.551.318-1.26.117-1.527-.461a20.845 20.845 0 01-1.44-4.282m3.102.069a18.03 18.03 0 01-.59-4.59c0-1.586.205-3.124.59-4.59m0 9.18a23.848 23.848 0 018.835 2.535M10.34 6.66a23.847 23.847 0 008.835-2.535m0 0A23.74 23.74 0 0018.795 3m.38 1.125a23.91 23.91 0 011.014 5.395m-1.014 8.855c-.118.38-.245.754-.38 1.125m.38-1.125a23.91 23.91 0 001.014-5.395m0-3.46c.495.413.811 1.035.811 1.73 0 .695-.316 1.317-.811 1.73m0-3.46a24.347 24.347 0 010 3.46" />
-  </svg>
-
-
+  <img src="../img/megafono.png" alt="" class="megafono">
 </div>
   <div class="contenedor-imagen">
     <img class="paso1" src="../img/paso1.png" alt="Paso 1">
@@ -56,10 +79,10 @@
   </div>
 
   <!-- Botón para abrir el modal -->
-    <button onclick="abrirModal('miModal')" class="boton-modal">Iniciar proceso</button>
+  <button onclick="abrirModal('miModal')" class="boton-modal">Iniciar proceso</button>
 
   <!-- Modal -->
-  <div id="miModal" class="modal" onclick="cerrarModalExterno(event)">
+  <div id="miModal" class="modal">
     <div class="modal-contenido">
       <h2>Datos a llenar</h2>
       <form id="formulario">
@@ -78,212 +101,45 @@
         <label for="telefono">Teléfono:</label>
         <input type="tel" id="telefono" name="telefono"><br><br>
 
-        <button type="button" class="close-button" onclick="enviarDatos()">Enviar</button>
-        <button type="button" class="close-button" onclick="cerrarYLimpiar()">Cerrar</button>
-          
-          <div class="circle1">
-              <p>1</p>
-          </div>
-          <div class="circle1-1">
-        </div>
-
-          <div class="circle2">
-            <p>2</p>
-        </div>
-        <div class="circle1-2">
-        </div>
-
-        <div class="circle3">
-          <p>3</p>
-      </div>
-      <div class="circle1-3">
-      </div>
-
-      <div class="circle4">
-        <p>4</p>
-    </div>
-    <div class="circle1-4">
-    </div>
-
-    <div class="circle5">
-      <p>5</p>
-  </div>
-  <div class="circle1-5">
-  </div>
+        <button type="button" class="close-button" onclick="enviarFormulario()">Enviar</button>
+        <button type="button" class="close-button" onclick="cerrarModal('miModal')">Cerrar</button>
       </form>
     </div>
   </div>
 
+  <div class="modal" id="limiteModal">
+    <div class="modal-contenido">
+      <p>Upss... Lo sentimos ⚠️</p>
+      <p>Parece que has alcanzado el tamaño de fuente mínimo</p>
+      <button onclick="cerrarModal('limiteModal')">Cerrar</button>
+    </div>
+</div>
 
   <script>
+    // Función para abrir el modal
+
+    // Función para cerrar el modal al hacer clic fuera de él
     function cerrarModalExterno(event) {
       var modal = document.getElementById('miModal');
       if (event.target === modal) {
         modal.style.display = 'none';
         limpiarCampos();
+        window.removeEventListener('click', cerrarModalExterno);
       }
     }
-  
+
+    // Función para enviar el formulario y limpiar campos
+    function enviarFormulario() {
+      // Aquí puedes agregar lógica para enviar el formulario si es necesario
+      limpiarCampos();
+      cerrarModal();
+    }
+
+    // Función para limpiar los campos del formulario
     function limpiarCampos() {
       document.getElementById('formulario').reset();
     }
   </script>
-
-  <script>
-    function cerrarYLimpiar() {
-      var modal = document.getElementById('miModal');
-      modal.style.display = 'none';
-      limpiarCampos();
-    }
-  
-    function enviarDatos() {
-      cerrarYLimpiar();
-      // Aquí podrías agregar la lógica para enviar los datos del formulario si es necesario
-    }
-  </script>
-
-
-
-
-<!--Codigo para migajas de pan-->>
-
-  <script>
-    // Obtener referencias a los campos del formulario
-const nombre = document.getElementById('nombre');
-const apellidoPaterno = document.getElementById('apellidoPaterno');
-const apellidoMaterno = document.getElementById('apellidoMaterno');
-const email = document.getElementById('email');
-const telefono = document.getElementById('telefono');
-const botonEnviar = document.querySelector('.close-button');
-const etiquetas = document.querySelectorAll('label');
-const modal = document.querySelector('.modal');
-const botonCerrarModal = document.querySelector('.close');
-
-// Función para comprobar si todos los campos están completos
-function verificarCamposCompletos() {
-  return (
-    nombre.value !== '' &&
-    apellidoPaterno.value !== '' &&
-    apellidoMaterno.value !== '' &&
-    email.value !== '' &&
-    telefono.value !== ''
-  );
-}
-
-// Función para aplicar estilos a los círculos según los campos completados
-function aplicarEstilosCirculos() {
-  const circle1 = document.querySelector('.circle1');
-  const circle1_1 = document.querySelector('.circle1-1');
-  const circle2 = document.querySelector('.circle2');
-  const circle1_2 = document.querySelector('.circle1-2');
-  const circle3 = document.querySelector('.circle3');
-  const circle1_3 = document.querySelector('.circle1-3');
-  const circle4 = document.querySelector('.circle4');
-  const circle1_4 = document.querySelector('.circle1-4');
-  const circle5 = document.querySelector('.circle5');
-  const circle1_5 = document.querySelector('.circle1-5');
-
-  if (nombre.value !== '') {
-    circle1.style.backgroundColor = '#9ADE7B';
-    circle1_1.style.backgroundColor = '#9ADE7B';
-  } else {
-    circle1.style.backgroundColor = '#DDF2FD';
-    circle1_1.style.backgroundColor = '#DDF2FD';
-  }
-
-  if (apellidoPaterno.value !== '') {
-    circle2.style.backgroundColor = '#9ADE7B';
-    circle1_2.style.backgroundColor = '#9ADE7B';
-  } else {
-    circle2.style.backgroundColor = '#DDF2FD';
-    circle1_2.style.backgroundColor = '#DDF2FD';
-  }
-
-  if (apellidoMaterno.value !== '') {
-    circle3.style.backgroundColor = '#9ADE7B';
-    circle1_3.style.backgroundColor = '#9ADE7B';
-  } else {
-    circle3.style.backgroundColor = '#DDF2FD';
-    circle1_3.style.backgroundColor = '#DDF2FD';
-  }
-
-  if (email.value !== '') {
-    circle4.style.backgroundColor = '#9ADE7B';
-    circle1_4.style.backgroundColor = '#9ADE7B';
-  } else {
-    circle4.style.backgroundColor = '#DDF2FD';
-    circle1_4.style.backgroundColor = '#DDF2FD';
-  }
-
-  if (telefono.value !== '') {
-    circle5.style.backgroundColor = '#9ADE7B';
-    circle1_5.style.backgroundColor = '#9ADE7B';
-  } else {
-    circle5.style.backgroundColor = '#DDF2FD';
-    circle1_5.style.backgroundColor = '#DDF2FD';
-  }
-}
-const circleSelectors = [
-    '.circle1', '.circle1-1',
-    '.circle2', '.circle1-2',
-    '.circle3', '.circle1-3',
-    '.circle4', '.circle1-4',
-    '.circle5', '.circle1-5'
-  ];
-// Función para habilitar o deshabilitar el botón de enviar según campos completados
-function manejarBotonEnviar() {
-  botonEnviar.disabled = !verificarCamposCompletos();
-}
-
-// Función para restablecer el color de las etiquetas al valor original
-function restablecerColorEtiquetas() {
-  circleSelectors.forEach(circleSelectors => {
-    circleSelectors.style.backgroundColor = '#DDF2FD';
-  });
-}
-
-// Event listeners para cada campo del formulario
-nombre.addEventListener('input', () => {
-  aplicarEstilosCirculos();
-  manejarBotonEnviar();
-});
-
-apellidoPaterno.addEventListener('input', () => {
-  aplicarEstilosCirculos();
-  manejarBotonEnviar();
-});
-
-apellidoMaterno.addEventListener('input', () => {
-  aplicarEstilosCirculos();
-  manejarBotonEnviar();
-});
-
-email.addEventListener('input', () => {
-  aplicarEstilosCirculos();
-  manejarBotonEnviar();
-});
-
-telefono.addEventListener('input', () => {
-  aplicarEstilosCirculos();
-  manejarBotonEnviar();
-});
-
-// Event listener para el botón de enviar
-botonEnviar.addEventListener('click', () => {
-  restablecerColorEtiquetas();
-});
-
-// Event listener para cerrar el modal
-botonCerrarModal.addEventListener('click', () => {
-  restablecerColorEtiquetas();
-  modal.style.display = 'none'; // Aquí cierras el modal (ajustar según tu implementación)
-});
-
-  </script>
-
-
-
-
 </body>
 
 </html>
