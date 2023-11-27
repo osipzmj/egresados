@@ -244,8 +244,13 @@ margin-top: -50px;
   display: inline-block;
   font-size: 16px;
   position: absolute;
+<<<<<<< HEAD
   top: 850px; /* Ajusta la posición vertical del botón */
   left: 700px; /* Ajusta la posición horizontal del botón */
+=======
+  top: 900px; /* Ajusta la posición vertical del botón */
+  left: 750px; /* Ajusta la posición horizontal del botón */
+>>>>>>> parent of 6f86d7d (Ajustes y avance migajas de pan)
   cursor: pointer;
   border: none;
   border-radius: 5px;
@@ -384,12 +389,15 @@ margin-top: -50px;
   overflow-y: auto; /* Agrega desplazamiento vertical si el contenido excede el límite */
 }
 
+<<<<<<< HEAD
 
 
 
 
 
 
+=======
+>>>>>>> parent of 6f86d7d (Ajustes y avance migajas de pan)
 /* Estilos para cerrar el modal (se mantienen) */
 .cerrar-modal {
   color: #aaa;
