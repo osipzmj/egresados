@@ -140,9 +140,6 @@ button {
 }
 
 
-
-
-
 /*Seccion de seguimiento*/
 
 .h2Seguimiento {
@@ -228,8 +225,8 @@ margin-top: -50px;
   display: inline-block;
   font-size: 16px;
   position: absolute;
-  top: 850px; /* Ajusta la posición vertical del botón */
-  left: 700px; /* Ajusta la posición horizontal del botón */
+  top: 900px; /* Ajusta la posición vertical del botón */
+  left: 750px; /* Ajusta la posición horizontal del botón */
   cursor: pointer;
   border: none;
   border-radius: 5px;
