@@ -16,6 +16,7 @@
     <script src="../js/botones.js"></script>
     <script src="../js/enlaces.js"></script>
     <script src="../js/busqueda.js"></script>
+    <script src="../js/carga.js"></script>
     <!-- Agrega más enlaces a CSS si es necesario para las páginas específicas -->
 </head>
 
@@ -75,7 +76,7 @@
         <div class="modal-contenido">
           <span class="cerrar-modal" onclick="cerrarModal('miModal')">&times;</span>
           <h2 style="color: #c89c0b; text-align: center; font-weight: bold; font-size: 35px;">Proximas conferencias</h2>
-          <div class="busquedaM">
+          <div class="busquedaM" onchange="realizarOperacion()">
             <!-- Barra de búsqueda y Select -->
             <input type="text" id="busqueda" placeholder="Buscar conferencia..." onkeyup="buscarConferencias()">
 
@@ -87,6 +88,11 @@
               <!-- Agrega más opciones de especialidades aquí -->
             </select>
           </div>
+          <!-- PANTALLA DE CARGA -->
+          <div class="overlay" id="overlay">
+            <div class="loading">Cargando...</div>
+          </div>
+          <!-- FIN PANTALLA DE CARGA -->
           <div class="confe">
             <div class="conf1">
                 <p class="ptitle" style="color: #c89c0b; font-size: 18px; font-weight: 700; text-align: center; align-items: center;">El futuro de la inteligencia artificial</p>

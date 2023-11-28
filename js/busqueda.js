@@ -15,7 +15,10 @@ function buscarConferencias() {
     }
   });
 }
+
 function filtrarPorEspecialidad() {
+  mostrarCarga(); // Mostrar la pantalla de carga antes de la operación
+
   const selectEspecialidad = document.getElementById('especialidad');
   const especialidadSeleccionada = selectEspecialidad.value.toUpperCase();
   const conferencias = document.querySelectorAll('.conf1');
@@ -30,6 +33,11 @@ function filtrarPorEspecialidad() {
       conferencia.style.display = 'none';
     }
   });
+
+  // Simulación de una demora de 2 segundos para la operación
+  setTimeout(function() {
+    ocultarCarga(); // Ocultar la pantalla de carga después de la operación
+  }, 1000);
 }
 
 
