@@ -241,4 +241,26 @@ button {
   /* Estilos de alto contraste */
   body.alto-contraste {
     background-color: black;
-    color: white;}
+    color: white;
+  }
+
+/*BARRA DE BUSQUEDA 28-NOV-2023*/
+
+#resultadosBusqueda {
+  position: absolute;
+  background-color: white;
+  border: 1px solid #ccc;
+  width: 200px;
+  z-index: 1;
+}
+
+#resultadosBusqueda a {
+  display: block;
+  padding: 5px 10px;
+  text-decoration: none;
+  color: #333;
+}
+
+#resultadosBusqueda a:hover {
+  background-color: #f4f4f4;
+}

@@ -45,7 +45,6 @@ function toggleAccessibility() {
     }
 }
 
-// Cerrar el menú de accesibilidad si se hace clic fuera de él
 document.addEventListener('click', function(event) {
     const accessibilityMenu = document.getElementById("accessibility-menu");
     const accessibilityBtn = document.getElementById("accessibility-btn");
@@ -53,6 +52,7 @@ document.addEventListener('click', function(event) {
         accessibilityMenu.style.display = "none";
     }
 });
+
 
 // Leer con selección:)
 

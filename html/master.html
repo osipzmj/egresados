@@ -10,6 +10,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../css/master.css">
+  <script src="../js/busqueda.js"></script>
 </head>
 
 <body>
@@ -45,7 +46,10 @@
               <span id="texto-egresados" class="texto-egresados">Egresados</span>
             </span>
           </button>
-        <input type="text" placeholder="  Buscar">
+          <input type="text" id="busqueda" placeholder="Buscar..." onkeyup="buscar()">
+          <div id="resultadosBusqueda" style="display: none;"></div>
+          
+          
     </div>
 </header>
 
