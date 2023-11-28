@@ -8,22 +8,31 @@ let currentUtterance = null;
 function zoomIn() {
     fontSize += increment;
     document.body.style.fontSize = fontSize + "px";
-    document.p.style.fontSize = fontSize + "px";
-    document.span.style.fontSize = fontSize + "px";
+
+    var elementsToZoom = document.querySelectorAll("p, h1, h2, h3, h4, h5, button, span, div");
+    elementsToZoom.forEach(function(element) {
+        element.style.fontSize = fontSize + "px";
+    });
+
     modalShown = false; // Restablecer modalShown cuando se hace zoom in
 }
+
 
 function zoomOut() {
     if (fontSize - increment >= minFontSize) {
         fontSize -= increment;
         document.body.style.fontSize = fontSize + "px";
-        document.p.style.fontSize = fontSize + "px";
-        document.span.style.fontSize = fontSize + "px";
+
+        var elementsToZoom = document.querySelectorAll("p, h1, h2, h3, h4, h5, button, span, div");
+        elementsToZoom.forEach(function(element) {
+            element.style.fontSize = fontSize + "px";
+        });
     } else if (!modalShown) {
         modalShown = true;
         abrirModal('limiteModal');
     }
 }
+
 
 function toggleAccessibility() {
     const accessibilityMenu = document.getElementById("accessibility-menu");
@@ -35,6 +44,15 @@ function toggleAccessibility() {
         accessibilityMenu.style.left = `${accessibilityBtn.offsetLeft}px`;
     }
 }
+
+// Cerrar el menú de accesibilidad si se hace clic fuera de él
+document.addEventListener('click', function(event) {
+    const accessibilityMenu = document.getElementById("accessibility-menu");
+    const accessibilityBtn = document.getElementById("accessibility-btn");
+    if (!accessibilityBtn.contains(event.target) && !accessibilityMenu.contains(event.target)) {
+        accessibilityMenu.style.display = "none";
+    }
+});
 
 // Leer con selección:)
 

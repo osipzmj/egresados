@@ -150,15 +150,17 @@ button {
 }
 
 .accessibility-menu {
-    position: absolute;
-    top: 50px; /* Ajusta la posición vertical del menú */
-    right: 10px; /* Ajusta la posición horizontal del menú */
-    background-color: #fff;
-    border: 1px solid #ccc;
-    padding: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
-  }
+  position: fixed;
+  top: 20px; /* Puedes ajustar la distancia desde la parte superior */
+  right: 20px; /* Puedes ajustar la distancia desde la derecha */
+  background-color: white;
+  padding: 10px;
+  border: 1px solid #ccc;
+  z-index: 9999; /* Ajusta el valor de z-index si es necesario */
+  /* Resto de estilos para el menú de accesibilidad */
+}
+  
+
   
   /* Estilos para el botón de accesibilidad */
   .boton-accesibilidad {
