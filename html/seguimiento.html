@@ -108,8 +108,6 @@
     <div class="circle5">
       <p>5</p>
   </div>
-  <div class="circle1-5">
-  </div>
       </form>
     </div>
   </div>
@@ -134,12 +132,17 @@
       var modal = document.getElementById('miModal');
       modal.style.display = 'none';
       limpiarCampos();
+      restablecerColorEtiquetas();
     }
   
     function enviarDatos() {
-      cerrarYLimpiar();
-      // Aquí podrías agregar la lógica para enviar los datos del formulario si es necesario
-    }
+  if (verificarCamposCompletos()) {
+    cerrarYLimpiar();
+    // Aquí podrías agregar la lógica para enviar los datos del formulario si es necesario
+  } else {
+    alert('Por favor completa todos los campos antes de enviar.');
+  }
+}
   </script>
 
 
@@ -147,142 +150,108 @@
 
 <!--Codigo para migajas de pan-->>
 
-  <script>
-    // Obtener referencias a los campos del formulario
-const nombre = document.getElementById('nombre');
-const apellidoPaterno = document.getElementById('apellidoPaterno');
-const apellidoMaterno = document.getElementById('apellidoMaterno');
-const email = document.getElementById('email');
-const telefono = document.getElementById('telefono');
-const botonEnviar = document.querySelector('.close-button');
-const etiquetas = document.querySelectorAll('label');
-const modal = document.querySelector('.modal');
-const botonCerrarModal = document.querySelector('.close');
+<script>
+        // Obtener referencias a los campos del formulario
+        const nombre = document.getElementById('nombre');
+        const apellidoPaterno = document.getElementById('apellidoPaterno');
+        const apellidoMaterno = document.getElementById('apellidoMaterno');
+        const email = document.getElementById('email');
+        const telefono = document.getElementById('telefono');
+        const botonEnviar = document.querySelector('.close-button');
+        const etiquetas = document.querySelectorAll('label');
+        const modal = document.querySelector('.modal');
+        const botonCerrarModal = document.querySelector('.close');
 
-// Función para comprobar si todos los campos están completos
-function verificarCamposCompletos() {
-  return (
-    nombre.value !== '' &&
-    apellidoPaterno.value !== '' &&
-    apellidoMaterno.value !== '' &&
-    email.value !== '' &&
-    telefono.value !== ''
-  );
+        // Función para comprobar si todos los campos están completos
+        function verificarCamposCompletos() {
+            return (
+                nombre.value !== '' &&
+                apellidoPaterno.value !== '' &&
+                apellidoMaterno.value !== '' &&
+                email.value !== '' &&
+                telefono.value !== ''
+            );
+        }
+
+        // Función para aplicar estilos a los círculos según los campos completados
+        function aplicarEstilosCirculos() {
+            const circleSelectors = [
+                '.circle1', '.circle1-1',
+                '.circle2', '.circle1-2',
+                '.circle3', '.circle1-3',
+                '.circle4', '.circle1-4',
+                '.circle5', '.circle1-5'
+            ];
+
+            const circles = {
+                nombre: ['.circle1', '.circle1-1'],
+                apellidoPaterno: ['.circle2', '.circle1-2'],
+                apellidoMaterno: ['.circle3', '.circle1-3'],
+                email: ['.circle4', '.circle1-4'],
+                telefono: ['.circle5', '.circle1-5']
+            };
+
+            for (let field in circles) {
+                const [circle, circle1] = circles[field];
+                const value = field === 'telefono' ? telefono.value : eval(field + '.value');
+
+                if (value !== '') {
+                    document.querySelector(circle).style.backgroundColor = '#9ADE7B';
+                    document.querySelector(circle1).style.backgroundColor = '#9ADE7B';
+                } else {
+                    document.querySelector(circle).style.backgroundColor = '#DDF2FD';
+                    document.querySelector(circle1).style.backgroundColor = '#DDF2FD';
+                }
+            }
+        }
+
+        // Función para habilitar o deshabilitar el botón de enviar según campos completados
+        function manejarBotonEnviar() {
+            botonEnviar.disabled = !verificarCamposCompletos();
+        }
+
+        // Función para restablecer el color de las etiquetas al valor original
+        function restablecerColorEtiquetas() {
+    const circleSelectors = [
+        '.circle1', '.circle1-1',
+        '.circle2', '.circle1-2',
+        '.circle3', '.circle1-3',
+        '.circle4', '.circle1-4',
+        '.circle5', '.circle1-5'
+    ];
+
+    circleSelectors.forEach(selector => {
+        // Restablecer el color solo cuando se cierra el modal
+        if (modal.style.display === 'none') {
+            document.querySelector(selector).style.backgroundColor = '#DDF2FD';
+        }
+    });
 }
 
-// Función para aplicar estilos a los círculos según los campos completados
-function aplicarEstilosCirculos() {
-  const circle1 = document.querySelector('.circle1');
-  const circle1_1 = document.querySelector('.circle1-1');
-  const circle2 = document.querySelector('.circle2');
-  const circle1_2 = document.querySelector('.circle1-2');
-  const circle3 = document.querySelector('.circle3');
-  const circle1_3 = document.querySelector('.circle1-3');
-  const circle4 = document.querySelector('.circle4');
-  const circle1_4 = document.querySelector('.circle1-4');
-  const circle5 = document.querySelector('.circle5');
-  const circle1_5 = document.querySelector('.circle1-5');
+        // Event listeners para cada campo del formulario
+        const camposFormulario = [nombre, apellidoPaterno, apellidoMaterno, email, telefono];
 
-  if (nombre.value !== '') {
-    circle1.style.backgroundColor = '#9ADE7B';
-    circle1_1.style.backgroundColor = '#9ADE7B';
-  } else {
-    circle1.style.backgroundColor = '#DDF2FD';
-    circle1_1.style.backgroundColor = '#DDF2FD';
-  }
-
-  if (apellidoPaterno.value !== '') {
-    circle2.style.backgroundColor = '#9ADE7B';
-    circle1_2.style.backgroundColor = '#9ADE7B';
-  } else {
-    circle2.style.backgroundColor = '#DDF2FD';
-    circle1_2.style.backgroundColor = '#DDF2FD';
-  }
-
-  if (apellidoMaterno.value !== '') {
-    circle3.style.backgroundColor = '#9ADE7B';
-    circle1_3.style.backgroundColor = '#9ADE7B';
-  } else {
-    circle3.style.backgroundColor = '#DDF2FD';
-    circle1_3.style.backgroundColor = '#DDF2FD';
-  }
-
-  if (email.value !== '') {
-    circle4.style.backgroundColor = '#9ADE7B';
-    circle1_4.style.backgroundColor = '#9ADE7B';
-  } else {
-    circle4.style.backgroundColor = '#DDF2FD';
-    circle1_4.style.backgroundColor = '#DDF2FD';
-  }
-
-  if (telefono.value !== '') {
-    circle5.style.backgroundColor = '#9ADE7B';
-    circle1_5.style.backgroundColor = '#9ADE7B';
-  } else {
-    circle5.style.backgroundColor = '#DDF2FD';
-    circle1_5.style.backgroundColor = '#DDF2FD';
-  }
-}
-const circleSelectors = [
-    '.circle1', '.circle1-1',
-    '.circle2', '.circle1-2',
-    '.circle3', '.circle1-3',
-    '.circle4', '.circle1-4',
-    '.circle5', '.circle1-5'
-  ];
-// Función para habilitar o deshabilitar el botón de enviar según campos completados
-function manejarBotonEnviar() {
-  botonEnviar.disabled = !verificarCamposCompletos();
-}
-
-// Función para restablecer el color de las etiquetas al valor original
-function restablecerColorEtiquetas() {
-  circleSelectors.forEach(circleSelectors => {
-    circleSelectors.style.backgroundColor = '#DDF2FD';
+  camposFormulario.forEach(campo => {
+    campo.addEventListener('input', () => {
+      aplicarEstilosCirculos();
+      manejarBotonEnviar();
+    });
   });
-}
 
-// Event listeners para cada campo del formulario
-nombre.addEventListener('input', () => {
-  aplicarEstilosCirculos();
+        // Event listener para el botón de enviar
+  botonEnviar.addEventListener('click', () => {
+    restablecerColorEtiquetas();
+  });
+
+  // Event listener para cerrar el modal
+  botonCerrarModal.addEventListener('click', () => {
+    restablecerColorEtiquetas();
+    modal.style.display = 'none'; // Cierras el modal aquí (ajustar según tu implementación)
+  });
+
+  // Llamar a la función para asegurarse de que el botón esté deshabilitado al cargar la página
   manejarBotonEnviar();
-});
-
-apellidoPaterno.addEventListener('input', () => {
-  aplicarEstilosCirculos();
-  manejarBotonEnviar();
-});
-
-apellidoMaterno.addEventListener('input', () => {
-  aplicarEstilosCirculos();
-  manejarBotonEnviar();
-});
-
-email.addEventListener('input', () => {
-  aplicarEstilosCirculos();
-  manejarBotonEnviar();
-});
-
-telefono.addEventListener('input', () => {
-  aplicarEstilosCirculos();
-  manejarBotonEnviar();
-});
-
-// Event listener para el botón de enviar
-botonEnviar.addEventListener('click', () => {
-  restablecerColorEtiquetas();
-});
-
-// Event listener para cerrar el modal
-botonCerrarModal.addEventListener('click', () => {
-  restablecerColorEtiquetas();
-  modal.style.display = 'none'; // Aquí cierras el modal (ajustar según tu implementación)
-});
-
-  </script>
-
-
-
+    </script>
 
 </body>
 

@@ -313,9 +313,6 @@ margin-top: -50px;
   font-size: 20px; /* Tamaño de letra para los labels */
 }
 
-
-
-
 /*Estilos de los circulos para migajas de pan*/
 .circle1 {
   position: absolute;
@@ -353,7 +350,6 @@ margin-top: -50px;
   margin: 0;
   font-size: 20px; /* Tamaño del texto dentro del círculo */
 }
-
 
 
 .circle2 {
@@ -489,25 +485,6 @@ margin-top: -50px;
   margin: 0;
   font-size: 20px; /* Tamaño del texto dentro del círculo */
 }
-
-.circle1-5 {
-  position: absolute;
-  top: 210px; /* Ajusta la distancia desde la parte superior */
-  right: 573px; /* Ajusta la distancia desde el borde derecho */
-  width: 15px; /* Ancho del círculo */
-  height: 15px; /* Altura del círculo */
-  background-color: #DDF2FD;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.circle1-5 p {
-  margin: 0;
-  font-size: 20px; /* Tamaño del texto dentro del círculo */
-}
-
 
 
 
