@@ -1,5 +1,7 @@
 function buscarConferencias() {
   // Obtener el valor del input de búsqueda y convertirlo a mayúsculas
+  mostrarCarga();
+
   const input = document.getElementById('busqueda');
   const filter = input.value.toUpperCase();
 
@@ -18,6 +20,10 @@ function buscarConferencias() {
           conferencia.style.display = 'none';
       }
   });
+
+  setTimeout(function() {
+    ocultarCarga(); // Ocultar la pantalla de carga después de la operación
+  }, 1000);
 }
 
 
@@ -51,7 +57,7 @@ function filtrarPorEspecialidad() {
 
 
 
-function buscar() {
+function buscarMaster() {
 
   const contenido = [
     { ruta: '../html/bolsa_trabajo.html', nombre: 'Bolsa de trabajo' },
@@ -60,22 +66,27 @@ function buscar() {
     { ruta: '../html/seguimiento.html', nombre: 'Seguimiento' }
     // Agrega más archivos según sea necesario
   ];
-  
-  const input = document.getElementById('busqueda');
-  const resultados = document.getElementById('resultadosBusqueda');
+
+  const input = document.getElementById('busquedaMaster');
+  const resultados = document.getElementById('resultadosBusquedaMaster');
 
   const filtro = input.value.toLowerCase();
   const coincidencias = contenido.filter(item => item.nombre.toLowerCase().includes(filtro));
 
-  if (coincidencias.length > 0) {
-    resultados.innerHTML = '';
-    coincidencias.forEach(resultado => {
-      const link = document.createElement('a');
-      link.href = resultado.ruta;
-      link.textContent = resultado.nombre;
-      resultados.appendChild(link);
-    });
-    resultados.style.display = 'block';
+  if (filtro !== '') {
+    if (coincidencias.length > 0) {
+      resultados.innerHTML = '';
+      coincidencias.forEach(resultado => {
+        const link = document.createElement('a');
+          mostrarCarga();
+        link.href = resultado.ruta;
+        link.textContent = resultado.nombre;
+        resultados.appendChild(link);
+      });
+      resultados.style.display = 'block';
+    } else {
+      resultados.style.display = 'none';
+    }
   } else {
     resultados.style.display = 'none';
   }

@@ -149,19 +149,6 @@ button {
     border-radius: 10px;
 }
 
-.accessibility-menu {
-  position: fixed;
-  top: 20px; /* Puedes ajustar la distancia desde la parte superior */
-  right: 20px; /* Puedes ajustar la distancia desde la derecha */
-  background-color: white;
-  padding: 10px;
-  border: 1px solid #ccc;
-  z-index: 9999; /* Ajusta el valor de z-index si es necesario */
-  /* Resto de estilos para el menú de accesibilidad */
-}
-  
-
-  
   /* Estilos para el botón de accesibilidad */
   .boton-accesibilidad {
     background-color: #2d3a81;
@@ -182,7 +169,7 @@ button {
     padding: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     z-index: 1000;
-    display: none;
+    display: block;
     border-radius: 5px;
   }
   
@@ -199,13 +186,16 @@ button {
   }
   
   .accessibility-menu {
-    display: none;
     position: absolute;
+    top: 50px;
+    right: 10px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
     border-radius: 5px;
-    background-color: #fff; /* Cambiar el color de fondo del menú si es necesario */
-    border: 1px solid #ccc; /* Estilo del borde */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra */
-    padding: 10px; /* Espaciado interno */
+    display: none; /* Inicialmente oculto */
   }
   
   .accessibility-menu ul {
@@ -246,7 +236,7 @@ button {
 
 /*BARRA DE BUSQUEDA 28-NOV-2023*/
 
-#resultadosBusqueda {
+#resultadosBusquedaMaster {
   position: absolute;
   background-color: white;
   border: 1px solid #ccc;
@@ -254,15 +244,17 @@ button {
   z-index: 1;
 }
 
-#resultadosBusqueda a {
+#resultadosBusquedaMaster a {
   display: block;
   padding: 5px 10px;
   text-decoration: none;
   color: #333;
+  font-family: 'Montserrat', sans-serif;
 }
 
-#resultadosBusqueda a:hover {
+#resultadosBusquedaMaster a:hover {
   background-color: #f4f4f4;
+  font-family: 'Montserrat', sans-serif;
 }
 
 

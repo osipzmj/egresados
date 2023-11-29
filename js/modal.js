@@ -3,6 +3,7 @@ function abrirModal(idModal) {
   limpiarCampos();
   document.getElementById(idModal).style.display = 'flex';
   // Agregar un event listener para cerrar el modal al hacer clic fuera de él
+  
   window.addEventListener('click', function(event) {
     const modal = document.getElementById(idModal);
     if (event.target === modal) {
@@ -31,3 +32,5 @@ function abrirModal(idModal) {
       document.getElementById('busqueda').value = '';
       document.getElementById('especialidad').selectedIndex = 0;
     }
+
+ 

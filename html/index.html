@@ -65,9 +65,9 @@
 
           <!-- Modal -->
           <div class="modal" id="miModal">
-            <div class="modal-contenido">
+            <div class="modal-contenido" id="miConf">
               <span class="cerrar-modal" onclick="cerrarModal('miModal')">&times;</span>
-              <h2 style="color: #c89c0b; text-align: center; font-weight: bold; font-size: 35px;">Proximas conferencias
+              <h2 id="confProx" style="color: #c89c0b; text-align: center; font-weight: bold; font-size: 35px;">Proximas conferencias
               </h2>
               <div class="busquedaM">               
                 <input type="text" id="busqueda" placeholder="Buscar conferencia..." onkeyup="buscarConferencias()">
@@ -79,6 +79,9 @@
                   <!-- Agrega más opciones de especialidades aquí -->
                 </select>
               </div>
+              <!-- <div id="pantallaCarga" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(255, 255, 255, 0.7); z-index: 9999;">
+                <p style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">Cargando...</p>
+            </div> -->
               <!-- PANTALLA DE CARGA -->
               <div class="overlay" id="overlay">
                 <div class="loading">Cargando...</div>

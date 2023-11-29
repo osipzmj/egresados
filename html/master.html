@@ -10,9 +10,6 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../css/master.css">
-  <script src="../js/busqueda.js"></script>
-  <script src="../js/carga.js"></script>
-  <script src="../js/migas.js"></script>
 </head>
 
 <body>
@@ -32,28 +29,27 @@
 
 
 
-    <div class="search-bar" onchange="mostrarCarga()">
-        <button id="accessibility-btn" class="boton-accesibilidad" onclick="toggleAccessibility()">
-            <span class="contenido-boton">
-              <img src="../img/acess.png" alt="Accesibilidad" class="icono-accesibilidad">
-              <span class="texto-accesibilidad">Accesibilidad</span>
-            </span>
-          </button>
-          
-          <div id="accessibility-menu" class="accessibility-menu" style="display: none;">
-            <!-- Contenido del menú de accesibilidad -->
-            <h3>Opciones de Accesibilidad</h3>
-            <ul>
-                <li><button onclick="zoomIn(), zoomIn2()"><i class="fa-solid fa-plus"></i> Aumentar letra</button></li>
-                <li><button onclick="zoomOut(), zoomOut2()"><i class="fa-solid fa-minus"></i> Reducir letra</button></li>
-                <li><button onclick="readSelectedText()"><i class="fa-solid fa-volume-high"></i> Leer texto seleccionado</button></li>
-                <li><button onclick="toggleReadingMode()"><i class="fa-solid fa-volume-high"></i> Leer con cursor</button></li>
-                <li><button onclick="toggleContrastMode()"><i class="fa-solid fa-adjust"></i> Modo de contraste</button></li>
-                <li><button onclick="startListening()"><i class="fa-solid fa-microphone"></i> Reconocimiento de Voz</button></li></button>
-                               
-                <!-- Agrega más opciones de accesibilidad aquí -->
-            </ul>
-        </div>                       
+<div class="search-bar">
+  <button id="accessibility-btn" class="boton-accesibilidad" onclick="toggleAccessibility()">
+    <span class="contenido-boton">
+      <img src="../img/acess.png" alt="Accesibilidad" class="icono-accesibilidad">
+      <span class="texto-accesibilidad">Accesibilidad</span>
+    </span>
+  </button>
+
+  <div id="accessibility-menu" class="accessibility-menu" style="display: none;">
+    <!-- Contenido del menú de accesibilidad -->
+    <h3>Opciones de Accesibilidad</h3>
+    <ul>
+      <li><button onclick="zoomIn(), zoomIn2()"><i class="fa-solid fa-plus"></i> Aumentar letra</button></li>
+      <li><button onclick="zoomOut(), zoomOut2()"><i class="fa-solid fa-minus"></i> Reducir letra</button></li>
+      <li><button onclick="readSelectedText()"><i class="fa-solid fa-volume-high"></i> Leer texto seleccionado</button></li>
+      <li><button onclick="toggleReadingMode()"><i class="fa-solid fa-volume-high"></i> Leer con cursor</button></li>
+      <li><button onclick="toggleContrastMode()"><i class="fa-solid fa-adjust"></i> Modo de contraste</button></li>
+      <li><button onclick="startListening()"><i class="fa-solid fa-microphone"></i> Reconocimiento de Voz</button></li></button>
+      <!-- Agrega más opciones de accesibilidad aquí -->
+    </ul>
+  </div>                      
       
         <button id="egresados-btn" onclick="location.href='index.html'"  class="boton-egresados">
             <span class="contenido-boton">
@@ -61,15 +57,15 @@
               <span id="texto-egresados" class="texto-egresados">Egresados</span>
             </span>
           </button>
-          <input type="text" id="busqueda" placeholder="Buscar..." onkeyup="buscar()">
-          <div id="resultadosBusqueda" style="display: none;"></div>  
-    </div>
+          <input type="text" id="busquedaMaster" placeholder="Buscar..." onkeyup="buscarMaster()">
+          <div id="resultadosBusquedaMaster" style="display: none;"></div>  
+</div>
 </header>
 
 <div class="side-menu">
 
   <button onclick="location.href='index.html'"><i class="fa-solid fa-house fa-beat-fade"></i> Inicio</button>
-  <button onclick="location.href='seguimiento.html'"><i class="fa-solid fa-graduation-cap fa-beat-fade"></i> Seguimiento</button>
+  <button onclick="location.href='seguimiento.html'" ><i class="fa-solid fa-graduation-cap fa-beat-fade"></i> Seguimiento</button>
   <button onclick="location.href='bolsa_trabajo.html'"><i class="fa-solid fa-briefcase fa-beat-fade"></i> Bolsa de trabajo</button>
   <button onclick="location.href='educacion_continua.html'"><i class="fa-solid fa-user-graduate fa-beat-fade"></i> Educación continua</button>
 </div>
@@ -151,10 +147,42 @@ actualizarHistorial(pageTitle);
 </script>
 
 
-
+-->
 </body>
-<!-- <div class="overlay" id="overlay">
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const button = document.querySelector('.boton-accesibilidad');
+  const menu = document.querySelector('.accessibility-menu');
+
+  button.addEventListener('click', function(event) {
+    event.stopPropagation(); // Evita la propagación del evento al hacer clic en el botón
+    if (menu.style.display === 'block') {
+      menu.style.display = 'none';
+    } else {
+      menu.style.display = 'block';
+    }
+  });
+
+  // Cerrar el menú al hacer clic fuera del botón pero no del menú
+  document.addEventListener('click', function(event) {
+    if (menu.style.display === 'block' && event.target !== button && !menu.contains(event.target)) {
+      menu.style.display = 'none';
+    }
+  });
+});
+</script>
+  <script src="../js/busqueda.js"></script>
+  <script src="../js/carga.js"></script>
+  <script src="../js/migas.js"></script>
+<!-- 
+  <div class="overlay" id="overlay">
   <div class="loading">Cargando...</div>
-</div> -->
+</div> 
+-->
 
 </html>
+
+<!-- egresadosBtn.addEventListener('blur', () => {
+  egresadosBtn.classList.remove('focus'); // Quita la clase de enfoque
+}); -->

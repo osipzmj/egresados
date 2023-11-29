@@ -185,6 +185,10 @@ recognition.onresult = function (event) {
         window.location.href = "/html/educacion_continua.html";
     } else if (transcript.includes("inicio")) {
         window.location.href = "/html/index.html";
+    } else if (transcript.includes("eventos")) {
+        window.location.href = "/html/index.html#evt";
+    } else if (transcript.includes("conferencias")) {
+        abrirModal('miModal');
     } 
 };
 
