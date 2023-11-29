@@ -43,10 +43,9 @@
             <!-- Contenido del menú de accesibilidad -->
             <h3>Opciones de Accesibilidad</h3>
             <ul>
-                <li><button onclick="zoomIn()"><i class="fa-solid fa-plus"></i> Aumentar letra</button></li>
-                <li><button onclick="zoomOut()"><i class="fa-solid fa-minus"></i> Reducir letra</button></li>
+                <li><button onclick="zoomIn(), zoomIn2()"><i class="fa-solid fa-plus"></i> Aumentar letra</button></li>
+                <li><button onclick="zoomOut(), zoomOut2()"><i class="fa-solid fa-minus"></i> Reducir letra</button></li>
                 <li><button onclick="readSelectedText()"><i class="fa-solid fa-volume-high"></i> Leer texto seleccionado</button></li>
-                <li><button onmouseover="readContent()"><i class="fa-solid fa-volume-high"></i> Leer contenido completo</button></li>
                 <li><button onclick="toggleReadingMode()"><i class="fa-solid fa-volume-high"></i> Leer con cursor</button></li>
                 <li><button id="btnContraste">Activar alto contraste</button></li>
                 <!-- Agrega más opciones de accesibilidad aquí -->

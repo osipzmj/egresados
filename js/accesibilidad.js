@@ -1,4 +1,5 @@
 let fontSize = 16; // Tamaño de fuente base en px
+let fontSize2 = 80;
 const increment = 2; // Incremento/decremento en px
 const minFontSize = 12; // Tamaño de fuente mínimo permitido
 let modalShown = false;
@@ -17,6 +18,17 @@ function zoomIn() {
     modalShown = false; // Restablecer modalShown cuando se hace zoom in
 }
 
+function zoomIn2() {
+    fontSize2 += increment;
+    document.body.style.fontSize = fontSize2 + "px";
+
+    var elementsToZoom = document.querySelectorAll("h1");
+    elementsToZoom.forEach(function(element) {
+        element.style.fontSize = fontSize2 + "px";
+    });
+
+    modalShown = false; // Restablecer modalShown cuando se hace zoom in
+}
 
 function zoomOut() {
     if (fontSize - increment >= minFontSize) {
@@ -33,6 +45,20 @@ function zoomOut() {
     }
 }
 
+function zoomOut2() {
+    if (fontSize2 - increment >= minFontSize) {
+        fontSize2 -= increment;
+        document.body.style.fontSize = fontSize2 + "px";
+
+        var elementsToZoom = document.querySelectorAll("h1");
+        elementsToZoom.forEach(function(element) {
+            element.style.fontSize = fontSize2 + "px";
+        });
+    } else if (!modalShown) {
+        modalShown = true;
+        abrirModal('limiteModal');
+    }
+}
 
 function toggleAccessibility() {
     const accessibilityMenu = document.getElementById("accessibility-menu");
