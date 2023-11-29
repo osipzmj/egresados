@@ -5,6 +5,7 @@ const minFontSize = 12; // Tamaño de fuente mínimo permitido
 let modalShown = false;
 let readingActive = false;
 let currentUtterance = null;
+let highContrastMode = false;
 
 function zoomIn() {
     fontSize += increment;
@@ -145,8 +146,45 @@ function stopReading() {
     }
 }
 
-const btnContraste = document.getElementById('btnContraste');
+// CONTRASTE
 
-    btnContraste.addEventListener('click', function() {
-      document.body.classList.toggle('alto-contraste');
-    });
+function toggleContrastMode() {
+    highContrastMode = !highContrastMode;
+
+    const body = document.body;
+
+    if (highContrastMode) {
+        body.style.backgroundColor = "black";
+        body.style.color = "white";
+    } else {
+        body.style.backgroundColor = "";
+        body.style.color = "";
+    }
+}
+  
+// VOZ
+
+const recognition = new window.webkitSpeechRecognition();
+
+recognition.onresult = function (event) {
+    const transcript = event.results[0][0].transcript;
+};
+
+function startListening() {
+    recognition.start();
+}
+
+recognition.onresult = function (event) {
+    const transcript = event.results[0][0].transcript.toLowerCase();
+
+    if (transcript.includes("seguimiento")) {
+        window.location.href = "/html/seguimiento.html";
+    } else if (transcript.includes("bolsa de trabajo")) {
+        window.location.href = "/html/bolsa_trabajo.html";
+    } else if (transcript.includes("educacion continua")) {
+        window.location.href = "/html/educacion_continua.html";
+    } else if (transcript.includes("inicio")) {
+        window.location.href = "/html/index.html";
+    } 
+};
+

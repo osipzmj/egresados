@@ -47,7 +47,9 @@
                 <li><button onclick="zoomOut(), zoomOut2()"><i class="fa-solid fa-minus"></i> Reducir letra</button></li>
                 <li><button onclick="readSelectedText()"><i class="fa-solid fa-volume-high"></i> Leer texto seleccionado</button></li>
                 <li><button onclick="toggleReadingMode()"><i class="fa-solid fa-volume-high"></i> Leer con cursor</button></li>
-                <li><button id="btnContraste">Activar alto contraste</button></li>
+                <li><button onclick="toggleContrastMode()"><i class="fa-solid fa-adjust"></i> Modo de contraste</button></li>
+                <li><button onclick="startListening()"><i class="fa-solid fa-microphone"></i> Reconocimiento de Voz</button></li></button>
+                               
                 <!-- Agrega más opciones de accesibilidad aquí -->
             </ul>
         </div>                       
@@ -131,8 +133,6 @@ mostrarMigasDePan();
     //sessionStorage.removeItem('historial');
 //});
 </script>
-
-
 
 
 </body>
