@@ -188,6 +188,10 @@ recognition.onresult = function (event) {
     } else if (transcript.includes("eventos")) {
         window.location.href = "/html/index.html#evt";
     } else if (transcript.includes("conferencias")) {
+        abrirModal('miModal1');
+    } else if (transcript.includes("feria de trabajo")) {
+        abrirModal('miModal2');
+    } else if (transcript.includes("iniciar proceso")) {
         abrirModal('miModal');
     } 
 };
