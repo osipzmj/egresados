@@ -279,5 +279,12 @@ button {
 }
 
 
+/* CSS BOTONES MENU LATERAL */
+
+.side-menu button.activo {
+  background-color: #c89c0b;
+  color: #fff;
+  /* Agrega otros estilos para indicar que el botón está activo */
+}
 
 

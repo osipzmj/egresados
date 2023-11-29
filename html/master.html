@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="../css/master.css">
   <script src="../js/busqueda.js"></script>
   <script src="../js/carga.js"></script>
+  <script src="../js/migas.js"></script>
 </head>
 
 <body>
@@ -64,9 +65,11 @@
 </header>
 
 <div class="side-menu">
-    <button onclick="location.href='seguimiento.html'"><i class="fa-solid fa-graduation-cap fa-beat-fade"></i> Seguimiento</button>
-    <button onclick="location.href='bolsa_trabajo.html'"><i class="fa-solid fa-briefcase fa-beat-fade"></i> Bolsa de trabajo</button>
-    <button onclick="location.href='educacion_continua.html'"><i class="fa-solid fa-user-graduate fa-beat-fade"></i> Educación continua</button>   
+
+  <button onclick="location.href='index.html'"><i class="fa-solid fa-house fa-beat-fade"></i> Inicio</button>
+  <button onclick="location.href='seguimiento.html'"><i class="fa-solid fa-graduation-cap fa-beat-fade"></i> Seguimiento</button>
+  <button onclick="location.href='bolsa_trabajo.html'"><i class="fa-solid fa-briefcase fa-beat-fade"></i> Bolsa de trabajo</button>
+  <button onclick="location.href='educacion_continua.html'"><i class="fa-solid fa-user-graduate fa-beat-fade"></i> Educación continua</button>
 </div>
     
 <div class="modal" id="limiteModal">
@@ -124,14 +127,26 @@ const pageTitle = document.title;
 actualizarHistorial(pageTitle);
 
 // Mostrar las migas de pan con los títulos de las páginas visitadas
-mostrarMigasDePan();
+// mostrarMigasDePan();
 
 // Borrar el historial al recargar la página
 //window.addEventListener('beforeunload', function () {
     //sessionStorage.removeItem('historial');
 //});
 </script>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+      const currentPage = window.location.pathname.split('/').pop();
+      const buttons = document.querySelectorAll('.side-menu button');
 
+      buttons.forEach(button => {
+        const href = button.getAttribute('onclick');
+        if (href && href.includes(currentPage)) {
+          button.classList.add('active');
+        }
+      });
+    });
+</script>
 
 
 
