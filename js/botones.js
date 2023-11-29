@@ -46,3 +46,10 @@ egresadosBtn.addEventListener('blur', () => {
 egresadosBtn.addEventListener('focus', () => {
   egresadosBtn.classList.add('focus'); // Agrega la clase de enfoque
 });
+
+
+//
+
+function toggleButton(button) {
+  button.classList.toggle("selected-button");
+}

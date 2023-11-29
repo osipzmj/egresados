@@ -45,16 +45,7 @@ h3{
 }
 .por{
     margin-top: -60px;
-}
-
-
-  /* Estilos para la imagen */
-  .icono-accesibilidad {
-    width: 30px; /* Tamaño deseado para la imagen */
-    height: auto; /* Altura automática para mantener la proporción */
-    margin-right: 10px; /* Espacio entre la imagen y el texto */
-  }
-  
+} 
   
   /* Estilos para el contenido del botón */
   .contenido-boton {
@@ -115,15 +106,6 @@ button {
     cursor: pointer;
 }
 
-#accessibility-list {
-    display: none;
-    position: absolute;
-    background-color: #fff;
-    border: 1px solid #ddd;
-    list-style: none;
-    padding: 5px;
-}
-
 .side-menu {
     background-color: #2d3a81;
     color: #fff;
@@ -150,60 +132,59 @@ button {
 }
 
   /* Estilos para el botón de accesibilidad */
-  .boton-accesibilidad {
-    background-color: #2d3a81;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
+
+  .icono-accesibilidad {
+    width: 30px; /* Tamaño deseado para la imagen */
+    height: auto; /* Altura automática para mantener la proporción */
+    margin-right: 10px; /* Espacio entre la imagen y el texto */
   }
-  
-  /* Estilos para el menú de accesibilidad */
-  .accessibility-menu {
+
+  #accessibility-list {
+    display: none;
     position: absolute;
-    top: 50px;
-    right: 10px;
     background-color: #fff;
-    border: 1px solid #ccc;
-    padding: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
-    display: block;
-    border-radius: 5px;
-  }
-  
-  .accessibility-menu h3 {
-    font-size: 18px;
-    margin-bottom: 10px;
-    color: #2d3a81;
-  }
-  
-  .accessibility-menu ul {
+    border: 1px solid #ddd;
     list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-  
+    padding: 5px;
+}
+
+.boton-accesibilidad {
+  background-color: #2d3a81;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
   .accessibility-menu {
-    position: absolute;
-    top: 50px;
-    right: 10px;
-    background-color: #fff;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: #9e9e9e;
     border: 1px solid #ccc;
     padding: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     z-index: 1000;
     border-radius: 5px;
     display: none; /* Inicialmente oculto */
-  }
-  
-  .accessibility-menu ul {
+    width: 4%;
+    margin-top: 97px;
+}
+
+.accessibility-menu h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #2d3a81;
+}
+
+.accessibility-menu ul {
     list-style: none;
     padding: 0;
-  }
-  
-  .accessibility-menu button {
+    margin: 0;
+}
+
+.accessibility-menu button {
     background-color: #2d3a81;
     color: white;
     border: none;
@@ -211,12 +192,32 @@ button {
     margin-bottom: 5px;
     cursor: pointer;
     border-radius: 5px;
-  }
-  
-  .accessibility-menu button:hover {
+    width: 100%; /* Hace que todos los botones tengan el mismo ancho */
+}
+
+.accessibility-menu button:hover {
     background-color: #1e266d;
-  }
+}
+
+.accessibility-menu .close-button {
+  background-color: #e74c3c; /* Color de fondo diferente para el botón de cerrar */
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  margin-bottom: 5px;
+  cursor: pointer;
+  border-radius: 5px;
+  width: 100%;
+}
+
+.accessibility-menu .close-button:hover {
+  background-color: #c0392b; /* Cambia el color de fondo al pasar el cursor */
+}
+
+
   
+  /*************************************************/
+
   .modal-contenido p {
     font-family: 'Montserrat', sans-serif;
     font-size: 20px;
@@ -280,6 +281,7 @@ button {
 }
 
 
+<<<<<<< Updated upstream
 
 
 
@@ -306,3 +308,10 @@ button {
 .footerText:hover {
   color: #2d3a81; /* Cambia el color del texto al pasar el ratón por encima */
 }
+=======
+.toggle-button.selected-button {
+  background-color: #1e266d; /* Cambia el color de fondo cuando está seleccionado */
+  color: #fff; /* Cambia el color del texto cuando está seleccionado */
+  /* Agrega otros estilos según sea necesario */
+}   
+>>>>>>> Stashed changes

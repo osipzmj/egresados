@@ -37,19 +37,20 @@
     </span>
   </button>
 
-  <div id="accessibility-menu" class="accessibility-menu" style="display: none;">
+  <div id="accessibility-menu" class="accessibility-menu">
     <!-- Contenido del menú de accesibilidad -->
-    <h3>Opciones de Accesibilidad</h3>
     <ul>
-      <li><button onclick="zoomIn(), zoomIn2()"><i class="fa-solid fa-plus"></i> Aumentar letra</button></li>
-      <li><button onclick="zoomOut(), zoomOut2()"><i class="fa-solid fa-minus"></i> Reducir letra</button></li>
-      <li><button onclick="readSelectedText()"><i class="fa-solid fa-volume-high"></i> Leer texto seleccionado</button></li>
-      <li><button onclick="toggleReadingMode()"><i class="fa-solid fa-volume-high"></i> Leer con cursor</button></li>
-      <li><button onclick="toggleContrastMode()"><i class="fa-solid fa-adjust"></i> Modo de contraste</button></li>
-      <li><button onclick="startListening()"><i class="fa-solid fa-microphone"></i> Reconocimiento de Voz</button></li></button>
+      <li><button onclick="closeAccessibilityMenu()" title="Cerrar" class="close-button"><i class="fa-solid fa-times"></i></button></li>
+      <li><button onclick="zoomIn(), zoomIn2(), toggleButton(this)" title="Aumentar letra"><i class="fa-solid fa-plus"></i> A</button></li>
+      <li><button onclick="zoomOut(), zoomOut2()" title="Disminuir letra"><i class="fa-solid fa-minus"></i> A</button></li>
+      <li><button onclick="readSelectedText()" title="Leer texto seleccionado"><i class="fa-solid fa-volume-high"></i></button></li>
+      <li><button onclick="toggleReadingMode(), toggleButton(this)" title="Leer texto con cursor"><i class="fa-solid fa-volume-up"></i></button></li>
+      <li><button onclick="toggleContrastMode(), toggleButton(this)" title="Modo contraste"><i class="fa-solid fa-adjust"></i></button></li>
+      <li><button onclick="startListening()" title="Hablar para redirigir"><i class="fa-solid fa-microphone"></i></button></li></button>
       <!-- Agrega más opciones de accesibilidad aquí -->
     </ul>
-  </div>                      
+  </div> 
+                    
       
         <button id="egresados-btn" onclick="location.href='index.html'"  class="boton-egresados">
             <span class="contenido-boton">
@@ -148,33 +149,13 @@ actualizarHistorial(pageTitle);
 
 
 -->
+
 </body>
 
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-  const button = document.querySelector('.boton-accesibilidad');
-  const menu = document.querySelector('.accessibility-menu');
-
-  button.addEventListener('click', function(event) {
-    event.stopPropagation(); // Evita la propagación del evento al hacer clic en el botón
-    if (menu.style.display === 'block') {
-      menu.style.display = 'none';
-    } else {
-      menu.style.display = 'block';
-    }
-  });
-
-  // Cerrar el menú al hacer clic fuera del botón pero no del menú
-  document.addEventListener('click', function(event) {
-    if (menu.style.display === 'block' && event.target !== button && !menu.contains(event.target)) {
-      menu.style.display = 'none';
-    }
-  });
-});
-</script>
   <script src="../js/busqueda.js"></script>
   <script src="../js/carga.js"></script>
   <script src="../js/migas.js"></script>
+  <script src="../js/botones.js"></script>
 <!-- 
   <div class="overlay" id="overlay">
   <div class="loading">Cargando...</div>
