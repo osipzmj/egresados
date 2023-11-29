@@ -2,364 +2,403 @@
 <html lang="es">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EGRESADOS</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="../css/index.css">
-    <script src="../js/accesibilidad.js"></script>
-    <script src="../js/modal.js"></script>
-    <script src="../js/botones.js"></script>
-    <script src="../js/enlaces.js"></script>
-    <script src="../js/busqueda.js"></script>
-    <script src="../js/carga.js"></script>
-    <!-- Agrega más enlaces a CSS si es necesario para las páginas específicas -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EGRESADOS</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="../css/index.css">
+  <script src="../js/accesibilidad.js"></script>
+  <script src="../js/modal.js"></script>
+  <script src="../js/botones.js"></script>
+  <script src="../js/enlaces.js"></script>
+  <script src="../js/busqueda.js"></script>
+  <script src="../js/carga.js"></script>
+  <!-- Agrega más enlaces a CSS si es necesario para las páginas específicas -->
 </head>
-
 <body>
   <!--Codigo para obtener el contenido de plantilla.html sin afectar funciones o css-->
   <div id="contenido-master"></div>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script>
-    $(document).ready(function(){
+    $(document).ready(function () {
       $('#contenido-master').load('master.html');
     });
   </script>
-  
-    <!-- Contenido específico de la página se insertará aquí -->
-    <div class="content">
-        <div class="content">
-            <h1 id="egs">EGRESADOS</h1>
-            <div class="por">
-            <img src="../img/portada.png" alt="Portada" class="cover-image">
-            </div>  
-            <div class="section">
-                <h2 id="srv">SERVICIOS</h2>
-                <div class="services-container">
-                    <div class="service">
-                        <img src="../img/servicio1.png" alt="Servicio 1">
-                        <div class="asrs">
-                            <p class="p1">Asesoría:</p>
-                            <p>
-                                - Talleres para buscadores activos de empleo <br>
-                               - Revisión de CV Tip's para búsqueda de empleo <br>
-                               - Bolsas de trabajo en linea <br>
-                               - Difusión de programas de apoyo al autoempleo <br>
-                            </p>  
-                        </div>
-                    </div>
-                    <div class="service">
-                        <img src="../img/servicio2.png" alt="Servicio 2">
-                        <div class="evts">
-                            <p class="p1">Apoyo para la <br>postulación de vacantes <br> registradas en BT.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="section">
-                <h2 id="evt">EVENTOS</h2>
-                <div class="divider-blue"></div>
-                <!-- ... (código HTML previo) ... -->
-    <div class="container-tarjetas">
-    <!-- Contenido de la tarjeta con un ID "miTarjeta" -->
-    <div class="tarjeta" id="miTarjeta"  onclick="abrirModal('miModal')">
-        <h3>Conferencias <br> de egresados</h3>
-        <img src="../img/conferencias.png" alt="Conferencias">
-      </div>
-      
-      <!-- Modal -->
-      <div class="modal" id="miModal">
-        <div class="modal-contenido">
-          <span class="cerrar-modal" onclick="cerrarModal('miModal')">&times;</span>
-          <h2 style="color: #c89c0b; text-align: center; font-weight: bold; font-size: 35px;">Proximas conferencias</h2>
-          <div class="busquedaM" onchange="realizarOperacion()">
-            <!-- Barra de búsqueda y Select -->
-            <input type="text" id="busqueda" placeholder="Buscar conferencia..." onkeyup="buscarConferencias()">
 
-            <select id="especialidad" onchange="filtrarPorEspecialidad()">
-              <option value="todas">Todas las especialidades</option>
-              <option value="Economico-Administrativo">Economico-Administrativo</option>
-              <option value="Procesos y Servicios">Procesos y Servicios</option>
-              <option value="TICS">Tecnologías de la Información y la Comunicación</option>
-              <!-- Agrega más opciones de especialidades aquí -->
-            </select>
+  <!-- Contenido específico de la página se insertará aquí -->
+  <div class="content">
+    <div class="content">
+      <h1 id="egs">EGRESADOS</h1>
+      <div class="por">
+        <img src="../img/portada.png" alt="Portada" class="cover-image">
+      </div>
+      <div class="section">
+        <h2 id="srv">SERVICIOS</h2>
+        <div class="services-container">
+          <div class="service">
+            <img src="../img/servicio1.png" alt="Servicio 1">
+            <div class="asrs">
+              <p class="p1">Asesoría:</p>
+              <p>
+                - Talleres para buscadores activos de empleo <br>
+                - Revisión de CV Tip's para búsqueda de empleo <br>
+                - Bolsas de trabajo en linea <br>
+                - Difusión de programas de apoyo al autoempleo <br>
+              </p>
+            </div>
           </div>
-          <!-- PANTALLA DE CARGA -->
-          <div class="overlay" id="overlay">
-            <div class="loading">Cargando...</div>
+          <div class="service">
+            <img src="../img/servicio2.png" alt="Servicio 2">
+            <div class="evts">
+              <p class="p1">Apoyo para la <br>postulación de vacantes <br> registradas en BT.</p>
+            </div>
           </div>
-          <!-- FIN PANTALLA DE CARGA -->
-          <div class="confe">
-            <div class="conf1">
-                <p class="ptitle" style="color: #c89c0b; font-size: 18px; font-weight: 700; text-align: center; align-items: center;">El futuro de la inteligencia artificial</p>
-                <p>
+        </div>
+      </div>
+      <div class="section">
+        <h2 id="evt">EVENTOS</h2>
+        <div class="divider-blue"></div>
+        <!-- ... (código HTML previo) ... -->
+        <div class="container-tarjetas">
+          <!-- Contenido de la tarjeta con un ID "miTarjeta" -->
+          <div class="tarjeta" id="miTarjeta" onclick="abrirModal('miModal')">
+            <h3>Conferencias <br> de egresados</h3>
+            <img src="../img/conferencias.png" alt="Conferencias">
+          </div>
+
+          <!-- Modal -->
+          <div class="modal" id="miModal">
+            <div class="modal-contenido">
+              <span class="cerrar-modal" onclick="cerrarModal('miModal')">&times;</span>
+              <h2 style="color: #c89c0b; text-align: center; font-weight: bold; font-size: 35px;">Proximas conferencias
+              </h2>
+              <div class="busquedaM">
+                <input type="text" id="busqueda" placeholder="Buscar conferencia..." onkeyup="buscarConferencias()">
+                <select id="especialidad" onchange="filtrarPorEspecialidad()">
+                  <option value="todas">Todas las especialidades</option>
+                  <option value="Economico-Administrativo">Economico-Administrativo</option>
+                  <option value="Procesos y Servicios">Procesos y Servicios</option>
+                  <option value="TICS">Tecnologías de la Información y la Comunicación</option>
+                  <!-- Agrega más opciones de especialidades aquí -->
+                </select>
+              </div>
+              <!-- PANTALLA DE CARGA -->
+              <div class="overlay" id="overlay">
+                <div class="loading">Cargando...</div>
+              </div>
+              <!-- FIN PANTALLA DE CARGA -->
+              <div class="confe">
+                <div class="conf1">
+                  <p class="ptitle"
+                    style="color: #c89c0b; font-size: 18px; font-weight: 700; text-align: center; align-items: center;">
+                    El futuro de la inteligencia artificial</p>
+                  <p>
                     <span class="especialidad">Especialidad: </span>
                     <span class="texto-ejemplo">Economico-Administrativo</span>
-                </p>
-                <p>
+                  </p>
+                  <p>
                     <span class="fecha">Fecha: </span>
                     <span class="texto-ejemplo">01-Enero-2024</span>
-                </p>
-                <img src="../img/conf1.png" alt="Conferencia 1">
-                <p class="ptext">Sumérgete en un viaje hacia el futuro de la inteligencia artificial en nuestra conferencia.
-                     Exploraremos el fascinante mundo de la IA, analizando su evolución actual y las tendencias que marcarán el camino. 
-                     Desde aplicaciones prácticas hasta su impacto en la sociedad, descubrirás cómo la inteligencia artificial está dando forma a nuestro mañana 
-                     y cómo puedes ser parte de esta revolución tecnológica.</p>
-                     <button class="miBoton" onclick="mostrarFormulario()">Inscribirme</button>
-                     <div id="formulario" class="modal">
-                       <div class="modal-contenido">
-                         <span class="close" onclick="cerrarModal('formulario')">&times;</span>
-                         <form id="miFormulario">
-                           <!-- Aquí van los campos del formulario -->
-                           <input type="text" id="nombre" placeholder="Nombre Completo">
-                           <input type="email" id="email" placeholder="Correo electrónico">
-                           <input type="tel" id="telefono" placeholder="Telefono">
-                           <button type="submit" onclick="enviarFormulario(event)">Registrar</button>
-                         </form>
-                       </div>
-                     </div>
+                  </p>
+                  <img src="../img/conf1.png" alt="Conferencia 1">
+                  <p class="ptext">Sumérgete en un viaje hacia el futuro de la inteligencia artificial en nuestra
+                    conferencia.
+                    Exploraremos el fascinante mundo de la IA, analizando su evolución actual y las tendencias que
+                    marcarán el camino.
+                    Desde aplicaciones prácticas hasta su impacto en la sociedad, descubrirás cómo la inteligencia
+                    artificial está dando forma a nuestro mañana
+                    y cómo puedes ser parte de esta revolución tecnológica.</p>
+                  <button class="miBoton" onclick="mostrarFormulario()">Inscribirme</button>
+                  <div id="formulario" class="modal">
+                    <div class="modal-contenido">
+                      <span class="close" onclick="cerrarModal('formulario')">&times;</span>
+                      <form id="miFormulario">
+                        <!-- Aquí van los campos del formulario -->
+                        <input type="text" id="nombre" placeholder="Nombre Completo">
+                        <input type="email" id="email" placeholder="Correo electrónico">
+                        <input type="tel" id="telefono" placeholder="Telefono">
+                        <button type="submit" onclick="enviarFormulario(event)">Registrar</button>
+                      </form>
+                    </div>
+                  </div>
 
-                     <div id="miModalInscrito" class="modal">
-                       <div class="modal-contenido">
-                         <span class="close" onclick="cerrarModal('miModalInscrito')">&times;</span>
-                         <p>Tus datos se han registrado correctamente <br>Esperamos contar con tu asistencia <br>Gracias por seguir siendo parte de la UTNG</p>
-                       </div>
-                     </div>
-            </div>
-            <div class="conf1">
-                <p class="ptitle" style="color: #c89c0b; font-size: 18px; font-weight: 700; text-align: center;">Impartir cursos de JavaScript</p>
-                <p>
+                  <div id="miModalInscrito" class="modal">
+                    <div class="modal-contenido">
+                      <span class="close" onclick="cerrarModal('miModalInscrito')">&times;</span>
+                      <p>Tus datos se han registrado correctamente <br>Esperamos contar con tu asistencia <br>Gracias
+                        por seguir siendo parte de la UTNG</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="conf1">
+                  <p class="ptitle" style="color: #c89c0b; font-size: 18px; font-weight: 700; text-align: center;">
+                    Impartir cursos de JavaScript</p>
+                  <p>
                     <span class="especialidad">Especialidad: </span>
                     <span class="texto-ejemplo">Procesos y Servicios</span>
-                </p>
-                <p>
+                  </p>
+                  <p>
                     <span class="fecha">Fecha: </span>
                     <span class="texto-ejemplo">10-Dic-2023</span>
-                </p>
-                <img src="../img/evento2.jpg" alt="Conferencia 2">
-                <p class="ptext">Explora las claves para enseñar JavaScript de manera efectiva en nuestra conferencia 'El Arte de Impartir Cursos de JavaScript'.
-                    Sumérgete en estrategias dinámicas y herramientas innovadoras que transformarán tu habilidad para enseñar.
-                    Aprende a cautivar a tus estudiantes, desde principiantes hasta avanzados, creando experiencias de aprendizaje envolventes y motivadoras. 
-                    Prepárate para convertirte en un instructor inspirador, capaz de desbloquear el potencial de tus alumnos y transmitir el fascinante mundo 
+                  </p>
+                  <img src="../img/evento2.jpg" alt="Conferencia 2">
+                  <p class="ptext">Explora las claves para enseñar JavaScript de manera efectiva en nuestra conferencia
+                    'El Arte de Impartir Cursos de JavaScript'.
+                    Sumérgete en estrategias dinámicas y herramientas innovadoras que transformarán tu habilidad para
+                    enseñar.
+                    Aprende a cautivar a tus estudiantes, desde principiantes hasta avanzados, creando experiencias de
+                    aprendizaje envolventes y motivadoras.
+                    Prepárate para convertirte en un instructor inspirador, capaz de desbloquear el potencial de tus
+                    alumnos y transmitir el fascinante mundo
                     del desarrollo web con pasión y claridad.
-                </p>
-                <button class="miBoton" onclick="mostrarFormulario()">Inscribirme</button>
-                <div id="formulario" class="modal">
-                  <div class="modal-contenido">
-                    <span class="close" onclick="cerrarModal('formulario')">&times;</span>
-                    <form id="miFormulario">
-                      <!-- Aquí van los campos del formulario -->
-                      <input type="text" id="nombre" placeholder="Nombre Completo">
-                      <input type="email" id="email" placeholder="Correo electrónico">
-                      <input type="tel" id="telefono" placeholder="Telefono">
-                      <button type="submit" onclick="enviarFormulario(event)">Registrar</button>
-                    </form>
+                  </p>
+                  <button class="miBoton" onclick="mostrarFormulario()">Inscribirme</button>
+                  <div id="formulario" class="modal">
+                    <div class="modal-contenido">
+                      <span class="close" onclick="cerrarModal('formulario')">&times;</span>
+                      <form id="miFormulario">
+                        <!-- Aquí van los campos del formulario -->
+                        <input type="text" id="nombre" placeholder="Nombre Completo">
+                        <input type="email" id="email" placeholder="Correo electrónico">
+                        <input type="tel" id="telefono" placeholder="Telefono">
+                        <button type="submit" onclick="enviarFormulario(event)">Registrar</button>
+                      </form>
+                    </div>
+                  </div>
+
+                  <div id="miModalInscrito" class="modal">
+                    <div class="modal-contenido">
+                      <span class="close" onclick="cerrarModal('miModalInscrito')">&times;</span>
+                      <p>Tus datos se han registrado correctamente <br>Esperamos contar con tu asistencia <br>Gracias
+                        por seguir siendo parte de la UTNG</p>
+                    </div>
                   </div>
                 </div>
 
-                <div id="miModalInscrito" class="modal">
-                  <div class="modal-contenido">
-                    <span class="close" onclick="cerrarModal('miModalInscrito')">&times;</span>
-                    <p>Tus datos se han registrado correctamente <br>Esperamos contar con tu asistencia <br>Gracias por seguir siendo parte de la UTNG</p>
-                  </div>
-                </div>
-            </div>
-            
-            
-            <div class="conf1">
-                <p  class="ptitle" style="color: #c89c0b; font-size: 18px; font-weight: 700; text-align: center;">Importancia de aprender Angular</p>
-                <p>
+                <div class="conf1">
+                  <p class="ptitle" style="color: #c89c0b; font-size: 18px; font-weight: 700; text-align: center;">
+                    Importancia de aprender Angular</p>
+                  <p>
                     <span class="especialidad">Especialidad: </span>
                     <span class="texto-ejemplo">Procesos Industriales</span>
-                </p>
-                <p>
+                  </p>
+                  <p>
                     <span class="fecha">Fecha: </span>
                     <span class="texto-ejemplo">30 Diciembre 2023</span>
-                </p>
-                <img src="../img/evento3.jpg" alt="Conferencia 3">
-                <p class="ptext">Descubre la relevancia de dominar Angular en nuestro evento. Exploraremos cómo esta poderosa plataforma de desarrollo web ha revolucionado 
-                la creación de aplicaciones. Desde su estructura hasta su escalabilidad, aprenderás cómo Angular impulsa la eficiencia en el desarrollo
+                  </p>
+                  <img src="../img/evento3.jpg" alt="Conferencia 3">
+                  <p class="ptext">Descubre la relevancia de dominar Angular en nuestro evento. Exploraremos cómo esta
+                    poderosa plataforma de desarrollo web ha revolucionado
+                    la creación de aplicaciones. Desde su estructura hasta su escalabilidad, aprenderás cómo Angular
+                    impulsa la eficiencia en el desarrollo
                     y por qué es fundamental para cualquier profesional del mundo tecnológico moderno.</p>
-                    <button class="miBoton" onclick="mostrarFormulario()">Inscribirme</button>
-                    <div id="formulario" class="modal">
-                      <div class="modal-contenido">
-                        <span class="close" onclick="cerrarModal('formulario')">&times;</span>
-                        <form id="miFormulario">
-                          <!-- Aquí van los campos del formulario -->
-                          <input type="text" id="nombre" placeholder="Nombre Completo">
-                          <input type="email" id="email" placeholder="Correo electrónico">
-                          <input type="tel" id="telefono" placeholder="Telefono">
-                          <button type="submit" onclick="enviarFormulario(event)">Registrar</button>
-                        </form>
-                      </div>
+                  <button class="miBoton" onclick="mostrarFormulario()">Inscribirme</button>
+                  <div id="formulario" class="modal">
+                    <div class="modal-contenido">
+                      <span class="close" onclick="cerrarModal('formulario')">&times;</span>
+                      <form id="miFormulario">
+                        <!-- Aquí van los campos del formulario -->
+                        <input type="text" id="nombre" placeholder="Nombre Completo">
+                        <input type="email" id="email" placeholder="Correo electrónico">
+                        <input type="tel" id="telefono" placeholder="Telefono">
+                        <button type="submit" onclick="enviarFormulario(event)">Registrar</button>
+                      </form>
                     </div>
+                  </div>
 
-                    <div id="miModalInscrito" class="modal">
-                      <div class="modal-contenido">
-                        <span class="close" onclick="cerrarModal('miModalInscrito')">&times;</span>
-                        <p>Tus datos se han registrado correctamente <br>Esperamos contar con tu asistencia <br>Gracias por seguir siendo parte de la UTNG</p>
-                      </div>
+                  <div id="miModalInscrito" class="modal">
+                    <div class="modal-contenido">
+                      <span class="close" onclick="cerrarModal('miModalInscrito')">&times;</span>
+                      <p>Tus datos se han registrado correctamente <br>Esperamos contar con tu asistencia <br>Gracias
+                        por seguir siendo parte de la UTNG</p>
                     </div>
-            </div>
-            <div class="conf1">
-                <p  class="ptitle" style="color: #c89c0b; font-size: 18px; font-weight: 700; text-align: center;">¿Cómo entrenar una IA?</p>
-                <p>
+                  </div>
+                </div>
+                <div class="conf1">
+                  <p class="ptitle" style="color: #c89c0b; font-size: 18px; font-weight: 700; text-align: center;">¿Cómo
+                    entrenar una IA?</p>
+                  <p>
                     <span class="especialidad">Especialidad: </span>
                     <span class="texto-ejemplo">Economico Administrativo</span>
-                </p>
-                <p>
+                  </p>
+                  <p>
                     <span class="fecha">Fecha: </span>
                     <span class="texto-ejemplo">05 Mayo 2024</span>
-                </p>
-                <img src="../img/evento4.jpg" alt="Conferencia 4">
-                <p class="ptext">Adéntrate en el proceso de entrenar una inteligencia artificial en nuestra sesión especializada.
-                    Exploraremos las estrategias clave y los métodos esenciales para entrenar modelos de IA, desde la recopilación de datos hasta el despliegue.
-                    Obtendrás una visión profunda de los conceptos fundamentales y las mejores prácticas para entrenar con éxito una IA en diversos campos.</p>
-                    <button class="miBoton" onclick="mostrarFormulario()">Inscribirme</button>
-                    <div id="formulario" class="modal">
-                      <div class="modal-contenido">
-                        <span class="close" onclick="cerrarModal('formulario')">&times;</span>
-                        <form id="miFormulario">
-                          <!-- Aquí van los campos del formulario -->
-                          <input type="text" id="nombre" placeholder="Nombre Completo">
-                          <input type="email" id="email" placeholder="Correo electrónico">
-                          <input type="tel" id="telefono" placeholder="Telefono">
-                          <button type="submit" onclick="enviarFormulario(event)">Registrar</button>
-                        </form>
-                      </div>
+                  </p>
+                  <img src="../img/evento4.jpg" alt="Conferencia 4">
+                  <p class="ptext">Adéntrate en el proceso de entrenar una inteligencia artificial en nuestra sesión
+                    especializada.
+                    Exploraremos las estrategias clave y los métodos esenciales para entrenar modelos de IA, desde la
+                    recopilación de datos hasta el despliegue.
+                    Obtendrás una visión profunda de los conceptos fundamentales y las mejores prácticas para entrenar
+                    con éxito una IA en diversos campos.</p>
+                  <button class="miBoton" onclick="mostrarFormulario()">Inscribirme</button>
+                  <div id="formulario" class="modal">
+                    <div class="modal-contenido">
+                      <span class="close" onclick="cerrarModal('formulario')">&times;</span>
+                      <form id="miFormulario">
+                        <!-- Aquí van los campos del formulario -->
+                        <input type="text" id="nombre" placeholder="Nombre Completo">
+                        <input type="email" id="email" placeholder="Correo electrónico">
+                        <input type="tel" id="telefono" placeholder="Telefono">
+                        <button type="submit" onclick="enviarFormulario(event)">Registrar</button>
+                      </form>
                     </div>
+                  </div>
 
-                    <div id="miModalInscrito" class="modal">
-                      <div class="modal-contenido">
-                        <span class="close" onclick="cerrarModal('miModalInscrito')">&times;</span>
-                        <p>Tus datos se han registrado correctamente <br>Esperamos contar con tu asistencia <br>Gracias por seguir siendo parte de la UTNG</p>
-                      </div>
+                  <div id="miModalInscrito" class="modal">
+                    <div class="modal-contenido">
+                      <span class="close" onclick="cerrarModal('miModalInscrito')">&times;</span>
+                      <p>Tus datos se han registrado correctamente <br>Esperamos contar con tu asistencia <br>Gracias
+                        por seguir siendo parte de la UTNG</p>
                     </div>
-            </div>
-            <div class="conf1">
-                <p class="ptitle" style="color: #c89c0b; font-size: 18px; font-weight: 700; text-align: center;">Mejores formas de usar SCRUM</p>  
-                <p>
+                  </div>
+                </div>
+                <div class="conf1">
+                  <p class="ptitle" style="color: #c89c0b; font-size: 18px; font-weight: 700; text-align: center;">
+                    Mejores formas de usar SCRUM</p>
+                  <p>
                     <span class="especialidad">Especialidad: </span>
                     <span class="texto-ejemplo">TICS</span>
-                </p>
-                <p>
+                  </p>
+                  <p>
                     <span class="fecha">Fecha: </span>
                     <span class="texto-ejemplo"> 10 Diciembre 2023</span>
-                </p>
-                <img src="../img/evento5.png" alt="Conferencia 5">
-                <p class="ptext">Explora las mejores prácticas en el uso de SCRUM durante nuestra conferencia especializada. 
-                    Analizaremos cómo esta metodología ágil impulsa la productividad y la eficiencia en el desarrollo de software. 
-                    Desde su implementación hasta su integración en equipos, descubrirás cómo aprovechar al máximo SCRUM para mejorar 
+                  </p>
+                  <img src="../img/evento5.png" alt="Conferencia 5">
+                  <p class="ptext">Explora las mejores prácticas en el uso de SCRUM durante nuestra conferencia
+                    especializada.
+                    Analizaremos cómo esta metodología ágil impulsa la productividad y la eficiencia en el desarrollo de
+                    software.
+                    Desde su implementación hasta su integración en equipos, descubrirás cómo aprovechar al máximo SCRUM
+                    para mejorar
                     la colaboración y la entrega de proyectos exitosos.</p>
-                    <button class="miBoton" onclick="mostrarFormulario()">Inscribirme</button>
-                    <div id="formulario" class="modal">
-                      <div class="modal-contenido">
-                        <span class="close" onclick="cerrarModal('formulario')">&times;</span>
-                        <form id="miFormulario">
-                          <!-- Aquí van los campos del formulario -->
-                          <input type="text" id="nombre" placeholder="Nombre Completo">
-                          <input type="email" id="email" placeholder="Correo electrónico">
-                          <input type="tel" id="telefono" placeholder="Telefono">
-                          <button type="submit" onclick="enviarFormulario(event)">Registrar</button>
-                        </form>
-                      </div>
+                  <button class="miBoton" onclick="mostrarFormulario()">Inscribirme</button>
+                  <div id="formulario" class="modal">
+                    <div class="modal-contenido">
+                      <span class="close" onclick="cerrarModal('formulario')">&times;</span>
+                      <form id="miFormulario">
+                        <!-- Aquí van los campos del formulario -->
+                        <input type="text" id="nombre" placeholder="Nombre Completo">
+                        <input type="email" id="email" placeholder="Correo electrónico">
+                        <input type="tel" id="telefono" placeholder="Telefono">
+                        <button type="submit" onclick="enviarFormulario(event)">Registrar</button>
+                      </form>
                     </div>
+                  </div>
 
-                    <div id="miModalInscrito" class="modal">
-                      <div class="modal-contenido">
-                        <span class="close" onclick="cerrarModal('miModalInscrito')">&times;</span>
-                        <p>Tus datos se han registrado correctamente <br>Esperamos contar con tu asistencia <br>Gracias por seguir siendo parte de la UTNG</p>
-                      </div>
+                  <div id="miModalInscrito" class="modal">
+                    <div class="modal-contenido">
+                      <span class="close" onclick="cerrarModal('miModalInscrito')">&times;</span>
+                      <p>Tus datos se han registrado correctamente <br>Esperamos contar con tu asistencia <br>Gracias
+                        por seguir siendo parte de la UTNG</p>
                     </div>
-            </div>
-            <div class="conf1">
-                <p class="ptitle" style="color: #c89c0b; font-size: 18px; font-weight: 700; text-align: center;">Emprender gracias a las TI</p> 
-                <p>
+                  </div>
+                </div>
+                <div class="conf1">
+                  <p class="ptitle" style="color: #c89c0b; font-size: 18px; font-weight: 700; text-align: center;">
+                    Emprender gracias a las TI</p>
+                  <p>
                     <span class="especialidad">Especialidad: </span>
                     <span class="texto-ejemplo">TICS</span>
-                </p>
-                <p>
+                  </p>
+                  <p>
                     <span class="fecha">Fecha: </span>
                     <span class="texto-ejemplo">12-Feb-2024</span>
-                </p>
-                <img src="../img/evento6.jpg" alt="Conferencia 6">
-                <p class="ptext">Descubre cómo las Tecnologías de la Información (TI) pueden ser la base para emprender en nuestra conferencia. 
-                    Exploraremos cómo las TI son el motor impulsor de la innovación empresarial y cómo pueden ser el catalizador para iniciar un negocio.
-                    Desde la identificación de oportunidades hasta la implementación estratégica, aprenderás cómo emprender con éxito aprovechando 
+                  </p>
+                  <img src="../img/evento6.jpg" alt="Conferencia 6">
+                  <p class="ptext">Descubre cómo las Tecnologías de la Información (TI) pueden ser la base para
+                    emprender en nuestra conferencia.
+                    Exploraremos cómo las TI son el motor impulsor de la innovación empresarial y cómo pueden ser el
+                    catalizador para iniciar un negocio.
+                    Desde la identificación de oportunidades hasta la implementación estratégica, aprenderás cómo
+                    emprender con éxito aprovechando
                     las herramientas y soluciones tecnológicas disponibles.</p>
-                    <button class="miBoton" onclick="mostrarFormulario()">Inscribirme</button>
-                        <div id="formulario" class="modal">
-                          <div class="modal-contenido">
-                            <span class="close" onclick="cerrarModal('formulario')">&times;</span>
-                            <form id="miFormulario">
-                              <!-- Aquí van los campos del formulario -->
-                              <input type="text" id="nombre" placeholder="Nombre Completo">
-                              <input type="email" id="email" placeholder="Correo electrónico">
-                              <input type="tel" id="telefono" placeholder="Telefono">
-                              <button type="submit" onclick="enviarFormulario(event)">Registrar</button>
-                            </form>
-                          </div>
-                        </div>
+                  <button class="miBoton" onclick="mostrarFormulario()">Inscribirme</button>
+                  <div id="formulario" class="modal">
+                    <div class="modal-contenido">
+                      <span class="close" onclick="cerrarModal('formulario')">&times;</span>
+                      <form id="miFormulario">
+                        <!-- Aquí van los campos del formulario -->
+                        <input type="text" id="nombre" placeholder="Nombre Completo">
+                        <input type="email" id="email" placeholder="Correo electrónico">
+                        <input type="tel" id="telefono" placeholder="Telefono">
+                        <button type="submit" onclick="enviarFormulario(event)">Registrar</button>
+                      </form>
+                    </div>
+                  </div>
 
-                        <div id="miModalInscrito" class="modal">
-                          <div class="modal-contenido">
-                            <span class="close" onclick="cerrarModal('miModalInscrito')">&times;</span>
-                            <p>Tus datos se han registrado correctamente <br>Esperamos contar con tu asistencia <br>Gracias por seguir siendo parte de la UTNG</p>
-                          </div>
-                        </div>
+                  <div id="miModalInscrito" class="modal">
+                    <div class="modal-contenido">
+                      <span class="close" onclick="cerrarModal('miModalInscrito')">&times;</span>
+                      <p>Tus datos se han registrado correctamente <br>Esperamos contar con tu asistencia <br>Gracias
+                        por seguir siendo parte de la UTNG</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-      </div>
-      
-      <!--*********** TARJETA DE FERIA DE TRABAJO *********** -->
-      <div class="tarjeta" id="miTarjeta2" onclick="abrirModal('miModal2')">
-        <h3>Feria de <br>trabajo</h3>
-        <img style="width: 170px; height: 155px;" src="../img/feria_trabajo.png" alt="Feria de trabajo">
-      </div>
-      <div class="modal" id="miModal2">
-        <div class="modal-contenido">
-          <span class="cerrar-modal" onclick="cerrarModal('miModal2')">&times;</span>
-          <h2 style="color: black; font-weight: 300; font-size: 50px; text-decoration: underline #c89c0b; text-decoration-thickness: 3px; text-underline-offset: 15px;">Feria de trabajo</h2>
-          <div class="infoft">
-            <div class="feria1">
-                <br>
-              <div class="icono-texto">
-                <img src="../img/desempleo.png" alt="Icono Desempleado" style="width: 100px; height: 100px; float: left; margin-right: 20px;">
-                <p class="ptext">
-                  ¿Actualmente te encuentras <span style="font-weight: bold; color: #c89c0b;">desempleado</span>?
-                </p>
+
+          <!--*********** TARJETA DE FERIA DE TRABAJO *********** -->
+          <div class="tarjeta" id="miTarjeta2" onclick="abrirModal('miModal2')">
+            <h3>Feria de <br>trabajo</h3>
+            <img style="width: 170px; height: 155px;" src="../img/feria_trabajo.png" alt="Feria de trabajo">
+          </div>
+          <div class="modal" id="miModal2">
+            <div class="modal-contenido">
+              <span class="cerrar-modal" onclick="cerrarModal('miModal2')">&times;</span>
+              <h2
+                style="color: black; font-weight: 300; font-size: 50px; text-decoration: underline #c89c0b; text-decoration-thickness: 3px; text-underline-offset: 15px;">
+                Feria de trabajo</h2>
+              <div class="infoft">
+                <div class="feria1">
+                  <br>
+                  <div class="icono-texto">
+                    <img src="../img/desempleo.png" alt="Icono Desempleado"
+                      style="width: 100px; height: 100px; float: left; margin-right: 20px;">
+                    <p class="ptext">
+                      ¿Actualmente te encuentras <span style="font-weight: bold; color: #c89c0b;">desempleado</span>?
+                    </p>
+                  </div>
+                  <div class="icono-texto">
+                    <img src="../img/habilidades.png" alt="Icono Desarrollo"
+                      style="width: 100px; height: 100px; float: left; margin-right: 20px;">
+                    <p class="ptext">
+                      ¿Estás buscando una oportunidad para <span style="font-weight: bold; color: #c89c0b;">desarrollar
+                        tus habilidades</span>?
+                    </p>
+                  </div>
+                  <div class="icono-texto">
+                    <img src="../img/empresa.png" alt="Icono Aprovechamiento"
+                      style="width: 100px; height: 100px; float: left; margin-right: 20px;">
+                    <p class="ptext">
+                      ¿Quieres encontrar una empresa en la cual <span style="font-weight: bold; color: #c89c0b;">tus
+                        habilidades sean aprovechadas</span>?
+                    </p>
+                  </div>
+                  <br>
+                  <div style="clear: both;"></div>
+                  <p class="ptext" style="text-align: center;">
+                    La Universidad Tecnológica del Norte de Guanajuato te invita a la <br>
+                    "<span style="font-weight: bold; color: #c89c0b;">Feria Nacional del Empleo para la Inclusión
+                      Laboral 2023</span>" <br>
+                    organizada por el Gobierno de México.
+                  </p>
+                  <br>
+                  <div class="btn-container">
+                    <button class="btn-info" onclick="abrirEnlace()">Más información</button>
+                  </div>
+                </div>
               </div>
-              <div class="icono-texto">
-                <img src="../img/habilidades.png" alt="Icono Desarrollo" style="width: 100px; height: 100px; float: left; margin-right: 20px;">
-                <p class="ptext">
-                  ¿Estás buscando una oportunidad para <span style="font-weight: bold; color: #c89c0b;">desarrollar tus habilidades</span>?
-                </p>
-              </div>
-              <div class="icono-texto">
-                <img src="../img/empresa.png" alt="Icono Aprovechamiento" style="width: 100px; height: 100px; float: left; margin-right: 20px;">
-                <p class="ptext">
-                  ¿Quieres encontrar una empresa en la cual <span style="font-weight: bold; color: #c89c0b;">tus habilidades sean aprovechadas</span>?
-                </p>
-              </div>
-              <br>
-              <div style="clear: both;"></div>
-              <p class="ptext" style="text-align: center;">
-                La Universidad Tecnológica del Norte de Guanajuato te invita a la <br>
-                "<span style="font-weight: bold; color: #c89c0b;">Feria Nacional del Empleo para la Inclusión Laboral 2023</span>" <br>
-                organizada por el Gobierno de México.
-              </p>
-              <br>
-              <div class="btn-container">
-                <button class="btn-info" onclick="abrirEnlace()">Más información</button>
-              </div>              
             </div>
           </div>
-        </div>
-      </div>
-    </body>
+</body>
+
 </html>

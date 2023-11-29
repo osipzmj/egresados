@@ -1,6 +1,7 @@
 function mostrarCarga() {
     // Mostrar la pantalla de carga
     document.getElementById("overlay").style.display = "flex";
+    setTimeout(ocultarCarga, 1000);
   }
 
   // Función para capturar los clics en los botones

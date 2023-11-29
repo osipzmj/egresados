@@ -1,5 +1,6 @@
 // Función para mostrar el modal al hacer clic en la tarjeta
 function abrirModal(idModal) {
+  limpiarCampos();
   document.getElementById(idModal).style.display = 'flex';
   // Agregar un event listener para cerrar el modal al hacer clic fuera de él
   window.addEventListener('click', function(event) {
@@ -26,4 +27,7 @@ function abrirModal(idModal) {
       accessibilityMenu.style.display = 'none';
     }
 
-    
+    function limpiarCampos() {
+      document.getElementById('busqueda').value = '';
+      document.getElementById('especialidad').selectedIndex = 0;
+    }
