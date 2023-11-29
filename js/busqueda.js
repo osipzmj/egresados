@@ -1,20 +1,25 @@
-/*BUSQUEDA CONFERENCIAS*/
 function buscarConferencias() {
+  // Obtener el valor del input de búsqueda y convertirlo a mayúsculas
   const input = document.getElementById('busqueda');
   const filter = input.value.toUpperCase();
+
+  // Obtener todos los elementos con la clase 'conf1'
   const conferencias = document.querySelectorAll('.conf1');
 
+  // Iterar sobre cada elemento y mostrar/ocultar según la búsqueda
   conferencias.forEach(conferencia => {
-    const titulo = conferencia.querySelector('.ptitle');
-    const textoConferencia = titulo.textContent || titulo.innerText;
+      const titulo = conferencia.querySelector('.ptitle');
+      const textoConferencia = titulo.textContent || titulo.innerText;
 
-    if (textoConferencia.toUpperCase().indexOf(filter) > -1) {
-      conferencia.style.display = '';
-    } else {
-      conferencia.style.display = 'none';
-    }
+      // Mostrar elementos que coincidan con el texto de búsqueda y ocultar los demás
+      if (textoConferencia.toUpperCase().indexOf(filter) > -1) {
+          conferencia.style.display = '';
+      } else {
+          conferencia.style.display = 'none';
+      }
   });
 }
+
 
 function filtrarPorEspecialidad() {
   mostrarCarga(); // Mostrar la pantalla de carga antes de la operación
@@ -43,16 +48,19 @@ function filtrarPorEspecialidad() {
 
 /*BUSQUEDA MASTER*/
 
-const contenido = [
-  { ruta: '../html/bolsa_trabajo.html', nombre: 'Bolsa de trabajo' },
-  { ruta: '../html/educacion_continua.html', nombre: 'Educación continua' },
-  { ruta: '../html/index.html', nombre: 'Inicio' },
-  { ruta: '../html/seguimiento.html', nombre: 'Seguimiento' }
-  // Agrega más archivos según sea necesario
-];
+
 
 
 function buscar() {
+
+  const contenido = [
+    { ruta: '../html/bolsa_trabajo.html', nombre: 'Bolsa de trabajo' },
+    { ruta: '../html/educacion_continua.html', nombre: 'Educación continua' },
+    { ruta: '../html/index.html', nombre: 'Inicio' },
+    { ruta: '../html/seguimiento.html', nombre: 'Seguimiento' }
+    // Agrega más archivos según sea necesario
+  ];
+  
   const input = document.getElementById('busqueda');
   const resultados = document.getElementById('resultadosBusqueda');
 

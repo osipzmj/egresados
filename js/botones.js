@@ -1,48 +1,38 @@
-function mostrarFormulario() {
-  abrirModal('formulario');
-  limpiarFormulario();
+function mostrarFormulario(formularioId) {
+  abrirModal(formularioId);
+  limpiarFormulario(formularioId);
 }
 
-function enviarFormulario(event) {
-  event.preventDefault(); // Evita el envío por defecto del formulario
-  // Aquí puedes procesar los datos del formulario si es necesario
-  // Por ejemplo:
-  // var nombre = document.getElementById('nombre').value;
-  // var email = document.getElementById('email').value;
-  
-  // Simulación de envío exitoso del formulario después de 2 segundos
+function enviarFormulario(event, formularioId, modalInscritoId) {
+  event.preventDefault();
+
   setTimeout(function() {
-    cerrarModal('formulario');
-    mostrarModalInscrito();
+    cerrarModal(formularioId);
+    mostrarModalInscrito(modalInscritoId);
     cambiarEstadoBoton();
   }, 2000);
 }
 
-
-function cambiarEstadoBoton() {
-  var boton = document.querySelector('.miBoton');
+function cambiarEstadoBoton(botonId) {
+  var boton = document.querySelector('#' + botonId);
   boton.innerHTML = 'Inscrito';
   boton.classList.add('inscrito');
 }
 
-function mostrarModalInscrito() {
-  abrirModal('miModalInscrito');
+function mostrarModalInscrito(modalInscritoId) {
+  abrirModal(modalInscritoId);
 
-  // Agregar un event listener para cerrar el modal al hacer clic fuera de él
-  var modalInscrito = document.getElementById('miModalInscrito');
+  var modalInscrito = document.getElementById(modalInscritoId);
   modalInscrito.addEventListener('click', function(event) {
     if (event.target === modalInscrito) {
-      cerrarModal('miModalInscrito');
+      cerrarModal(modalInscritoId);
     }
   });
 }
 
-function limpiarFormulario() {
-  document.getElementById('miFormulario').reset();
+function limpiarFormulario(formularioId) {
+  document.getElementById(formularioId).reset();
 }
-// Resto de tu código para abrir/cerrar modales (abrirModal y cerrarModal)
-// ...
-
 
 // Obtener el botón por su ID
 const egresadosBtn = document.getElementById('egresados-btn');

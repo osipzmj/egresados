@@ -11,13 +11,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="../css/index.css">
-    <script src="../js/accesibilidad.js"></script>
-    <script src="../js/modal.js"></script>
-    <script src="../js/botones.js"></script>
-    <script src="../js/enlaces.js"></script>
-    <script src="../js/busqueda.js"></script>
-    <script src="../js/carga.js"></script>
-    <!-- Agrega más enlaces a CSS si es necesario para las páginas específicas -->
 </head>
 <body>
   <!--Codigo para obtener el contenido de plantilla.html sin afectar funciones o css-->
@@ -76,7 +69,7 @@
               <span class="cerrar-modal" onclick="cerrarModal('miModal')">&times;</span>
               <h2 style="color: #c89c0b; text-align: center; font-weight: bold; font-size: 35px;">Proximas conferencias
               </h2>
-              <div class="busquedaM">
+              <div class="busquedaM">               
                 <input type="text" id="busqueda" placeholder="Buscar conferencia..." onkeyup="buscarConferencias()">
                 <select id="especialidad" onchange="filtrarPorEspecialidad()">
                   <option value="todas">Todas las especialidades</option>
@@ -91,6 +84,9 @@
                 <div class="loading">Cargando...</div>
               </div>
               <!-- FIN PANTALLA DE CARGA -->
+
+              <!-- PRIMERA CONFERENCIA -->
+
               <div class="confe">
                 <div class="conf1">
                   <p class="ptitle"
@@ -112,28 +108,30 @@
                     Desde aplicaciones prácticas hasta su impacto en la sociedad, descubrirás cómo la inteligencia
                     artificial está dando forma a nuestro mañana
                     y cómo puedes ser parte de esta revolución tecnológica.</p>
-                  <button class="miBoton" onclick="mostrarFormulario()">Inscribirme</button>
-                  <div id="formulario" class="modal">
-                    <div class="modal-contenido">
-                      <span class="close" onclick="cerrarModal('formulario')">&times;</span>
-                      <form id="miFormulario">
-                        <!-- Aquí van los campos del formulario -->
-                        <input type="text" id="nombre" placeholder="Nombre Completo">
-                        <input type="email" id="email" placeholder="Correo electrónico">
-                        <input type="tel" id="telefono" placeholder="Telefono">
-                        <button type="submit" onclick="enviarFormulario(event)">Registrar</button>
-                      </form>
+                    <button class="miBoton" onclick="mostrarFormulario('formulario1')">Inscribirme</button>
+                    <div id="formulario1" class="modal">
+                      <div class="modal-contenido">
+                        <span class="close" onclick="cerrarModal()">&times;</span>
+                        <form id="formularioConf1">
+                          <!-- Aquí van los campos del formulario -->
+                          <input type="text" placeholder="Nombre Completo">
+                          <input type="email" placeholder="Correo electrónico">
+                          <input type="tel" placeholder="Telefono">
+                          <button type="submit" onclick="enviarFormulario(event, 'formularioConf1', 'conf1Modal')">Registrar</button>
+                        </form>
+                      </div>
                     </div>
-                  </div>
-
-                  <div id="miModalInscrito" class="modal">
+                  <div id="conf1Modal" class="modal">
                     <div class="modal-contenido">
-                      <span class="close" onclick="cerrarModal('miModalInscrito')">&times;</span>
+                      <span class="close" onclick="cerrarModal('conf1Modal')">&times;</span>
                       <p>Tus datos se han registrado correctamente <br>Esperamos contar con tu asistencia <br>Gracias
                         por seguir siendo parte de la UTNG</p>
                     </div>
                   </div>
                 </div>
+
+                <!-- SEGUNDA CONFERENCIA -->
+
                 <div class="conf1">
                   <p class="ptitle" style="color: #c89c0b; font-size: 18px; font-weight: 700; text-align: center;">
                     Impartir cursos de JavaScript</p>
@@ -156,28 +154,29 @@
                     alumnos y transmitir el fascinante mundo
                     del desarrollo web con pasión y claridad.
                   </p>
-                  <button class="miBoton" onclick="mostrarFormulario()">Inscribirme</button>
-                  <div id="formulario" class="modal">
+                  <button class="miBoton" onclick="mostrarFormulario('formulario2')">Inscribirme</button>
+                  <div id="formulario2" class="modal">
                     <div class="modal-contenido">
-                      <span class="close" onclick="cerrarModal('formulario')">&times;</span>
-                      <form id="miFormulario">
+                      <span class="close" onclick="cerrarModal('formulario2')">&times;</span>
+                      <form id="fomularioConf2">
                         <!-- Aquí van los campos del formulario -->
-                        <input type="text" id="nombre" placeholder="Nombre Completo">
-                        <input type="email" id="email" placeholder="Correo electrónico">
-                        <input type="tel" id="telefono" placeholder="Telefono">
-                        <button type="submit" onclick="enviarFormulario(event)">Registrar</button>
+                        <input type="text"  placeholder="Nombre Completo">
+                        <input type="email" placeholder="Correo electrónico">
+                        <input type="tel" placeholder="Telefono">
+                        <button type="submit" onclick="enviarFormulario(event, 'formularioConf2', 'conf2Modal')">Registrar</button>
                       </form>
                     </div>
                   </div>
-
-                  <div id="miModalInscrito" class="modal">
+                  <div id="conf2Modal" class="modal">
                     <div class="modal-contenido">
-                      <span class="close" onclick="cerrarModal('miModalInscrito')">&times;</span>
+                      <span class="close" onclick="cerrarModal('conf2Modal')">&times;</span>
                       <p>Tus datos se han registrado correctamente <br>Esperamos contar con tu asistencia <br>Gracias
                         por seguir siendo parte de la UTNG</p>
                     </div>
                   </div>
                 </div>
+
+                <!-- CONFERENCIA 3 -->
 
                 <div class="conf1">
                   <p class="ptitle" style="color: #c89c0b; font-size: 18px; font-weight: 700; text-align: center;">
@@ -196,28 +195,31 @@
                     la creación de aplicaciones. Desde su estructura hasta su escalabilidad, aprenderás cómo Angular
                     impulsa la eficiencia en el desarrollo
                     y por qué es fundamental para cualquier profesional del mundo tecnológico moderno.</p>
-                  <button class="miBoton" onclick="mostrarFormulario()">Inscribirme</button>
-                  <div id="formulario" class="modal">
+                  <button class="miBoton" onclick="mostrarFormulario('formulario3')">Inscribirme</button>
+                  <div id="formulario3" class="modal">
                     <div class="modal-contenido">
-                      <span class="close" onclick="cerrarModal('formulario')">&times;</span>
-                      <form id="miFormulario">
+                      <span class="close" onclick="cerrarModal('formulario3')">&times;</span>
+                      <form id="fomularioConf3">
                         <!-- Aquí van los campos del formulario -->
-                        <input type="text" id="nombre" placeholder="Nombre Completo">
-                        <input type="email" id="email" placeholder="Correo electrónico">
-                        <input type="tel" id="telefono" placeholder="Telefono">
+                        <input type="text" placeholder="Nombre Completo">
+                        <input type="email" placeholder="Correo electrónico">
+                        <input type="tel" placeholder="Telefono">
                         <button type="submit" onclick="enviarFormulario(event)">Registrar</button>
+                        <button type="submit" onclick="enviarFormulario(event, 'formularioConf3', 'conf3Modal')">Registrar</button>
                       </form>
                     </div>
                   </div>
-
-                  <div id="miModalInscrito" class="modal">
+                  <div id="conf3Modal" class="modal">
                     <div class="modal-contenido">
-                      <span class="close" onclick="cerrarModal('miModalInscrito')">&times;</span>
+                      <span class="close" onclick="cerrarModal('conf3Modal')">&times;</span>
                       <p>Tus datos se han registrado correctamente <br>Esperamos contar con tu asistencia <br>Gracias
                         por seguir siendo parte de la UTNG</p>
                     </div>
                   </div>
                 </div>
+
+                <!-- CONFERENCIA 4 -->
+
                 <div class="conf1">
                   <p class="ptitle" style="color: #c89c0b; font-size: 18px; font-weight: 700; text-align: center;">¿Cómo
                     entrenar una IA?</p>
@@ -236,28 +238,30 @@
                     recopilación de datos hasta el despliegue.
                     Obtendrás una visión profunda de los conceptos fundamentales y las mejores prácticas para entrenar
                     con éxito una IA en diversos campos.</p>
-                  <button class="miBoton" onclick="mostrarFormulario()">Inscribirme</button>
-                  <div id="formulario" class="modal">
+                  <button class="miBoton" onclick="mostrarFormulario('formulario4')">Inscribirme</button>
+                  <div id="formulario4" class="modal">
                     <div class="modal-contenido">
-                      <span class="close" onclick="cerrarModal('formulario')">&times;</span>
-                      <form id="miFormulario">
+                      <span class="close" onclick="cerrarModal('formulario4')">&times;</span>
+                      <form id="fomularioConf4">
                         <!-- Aquí van los campos del formulario -->
-                        <input type="text" id="nombre" placeholder="Nombre Completo">
-                        <input type="email" id="email" placeholder="Correo electrónico">
-                        <input type="tel" id="telefono" placeholder="Telefono">
-                        <button type="submit" onclick="enviarFormulario(event)">Registrar</button>
+                        <input type="text" placeholder="Nombre Completo">
+                        <input type="email" placeholder="Correo electrónico">
+                        <input type="tel" placeholder="Telefono">
+                        <button type="submit" onclick="enviarFormulario(event, 'formularioConf4', 'conf4Modal')">Registrar</button>
                       </form>
                     </div>
                   </div>
-
-                  <div id="miModalInscrito" class="modal">
+                  <div id="conf4Modal" class="modal">
                     <div class="modal-contenido">
-                      <span class="close" onclick="cerrarModal('miModalInscrito')">&times;</span>
+                      <span class="close" onclick="cerrarModal('conf4Modal')">&times;</span>
                       <p>Tus datos se han registrado correctamente <br>Esperamos contar con tu asistencia <br>Gracias
                         por seguir siendo parte de la UTNG</p>
                     </div>
                   </div>
                 </div>
+
+                <!-- CONFERENCIA 5 -->
+
                 <div class="conf1">
                   <p class="ptitle" style="color: #c89c0b; font-size: 18px; font-weight: 700; text-align: center;">
                     Mejores formas de usar SCRUM</p>
@@ -277,28 +281,30 @@
                     Desde su implementación hasta su integración en equipos, descubrirás cómo aprovechar al máximo SCRUM
                     para mejorar
                     la colaboración y la entrega de proyectos exitosos.</p>
-                  <button class="miBoton" onclick="mostrarFormulario()">Inscribirme</button>
-                  <div id="formulario" class="modal">
+                  <button class="miBoton" onclick="mostrarFormulario('formulario5')">Inscribirme</button>
+                  <div id="formulario5" class="modal">
                     <div class="modal-contenido">
-                      <span class="close" onclick="cerrarModal('formulario')">&times;</span>
-                      <form id="miFormulario">
+                      <span class="close" onclick="cerrarModal('formulario5')">&times;</span>
+                      <form id="fomularioConf5">
                         <!-- Aquí van los campos del formulario -->
-                        <input type="text" id="nombre" placeholder="Nombre Completo">
-                        <input type="email" id="email" placeholder="Correo electrónico">
-                        <input type="tel" id="telefono" placeholder="Telefono">
-                        <button type="submit" onclick="enviarFormulario(event)">Registrar</button>
+                        <input type="text" placeholder="Nombre Completo">
+                        <input type="email" placeholder="Correo electrónico">
+                        <input type="tel" placeholder="Telefono">
+                        <button type="submit" onclick="enviarFormulario(event, 'formularioConf5', 'conf5Modal')">Registrar</button>
                       </form>
                     </div>
                   </div>
-
-                  <div id="miModalInscrito" class="modal">
+                  <div id="conf5Modal" class="modal">
                     <div class="modal-contenido">
-                      <span class="close" onclick="cerrarModal('miModalInscrito')">&times;</span>
+                      <span class="close" onclick="cerrarModal('conf5Modal')">&times;</span>
                       <p>Tus datos se han registrado correctamente <br>Esperamos contar con tu asistencia <br>Gracias
                         por seguir siendo parte de la UTNG</p>
                     </div>
                   </div>
                 </div>
+
+                <!-- CONFERENCIA 6 -->
+
                 <div class="conf1">
                   <p class="ptitle" style="color: #c89c0b; font-size: 18px; font-weight: 700; text-align: center;">
                     Emprender gracias a las TI</p>
@@ -318,23 +324,22 @@
                     Desde la identificación de oportunidades hasta la implementación estratégica, aprenderás cómo
                     emprender con éxito aprovechando
                     las herramientas y soluciones tecnológicas disponibles.</p>
-                  <button class="miBoton" onclick="mostrarFormulario()">Inscribirme</button>
-                  <div id="formulario" class="modal">
+                  <button class="miBoton" onclick="mostrarFormulario('formulario6')">Inscribirme</button>
+                  <div id="formulario6" class="modal">
                     <div class="modal-contenido">
-                      <span class="close" onclick="cerrarModal('formulario')">&times;</span>
-                      <form id="miFormulario">
+                      <span class="close" onclick="cerrarModal('formulario6')">&times;</span>
+                      <form id="fomularioConf56">
                         <!-- Aquí van los campos del formulario -->
-                        <input type="text" id="nombre" placeholder="Nombre Completo">
-                        <input type="email" id="email" placeholder="Correo electrónico">
-                        <input type="tel" id="telefono" placeholder="Telefono">
-                        <button type="submit" onclick="enviarFormulario(event)">Registrar</button>
+                        <input type="text" placeholder="Nombre Completo">
+                        <input type="email" placeholder="Correo electrónico">
+                        <input type="tel" placeholder="Telefono">
+                        <button type="submit" onclick="enviarFormulario(event, 'formularioConf6', 'conf6Modal')">Registrar</button>
                       </form>
                     </div>
                   </div>
-
-                  <div id="miModalInscrito" class="modal">
+                  <div id="conf6Modal" class="modal">
                     <div class="modal-contenido">
-                      <span class="close" onclick="cerrarModal('miModalInscrito')">&times;</span>
+                      <span class="close" onclick="cerrarModal('conf6Modal')">&times;</span>
                       <p>Tus datos se han registrado correctamente <br>Esperamos contar con tu asistencia <br>Gracias
                         por seguir siendo parte de la UTNG</p>
                     </div>
@@ -343,6 +348,7 @@
               </div>
             </div>
           </div>
+          <!-- FIN CONFERENCIAS -->
 
           <!--*********** TARJETA DE FERIA DE TRABAJO *********** -->
           <div class="tarjeta" id="miTarjeta2" onclick="abrirModal('miModal2')">
@@ -398,5 +404,11 @@
             </div>
           </div>
 </body>
-
+<script src="../js/accesibilidad.js"></script>
+<script src="../js/modal.js"></script>
+<script src="../js/botones.js"></script>
+<script src="../js/enlaces.js"></script>
+<script src="../js/busqueda.js"></script>
+<script src="../js/carga.js"></script>
+<script src="../js/conferencias.js"></script>
 </html>
