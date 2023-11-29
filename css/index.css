@@ -73,7 +73,7 @@ align-items: flex-start; /* Alinea las tarjetas al principio / / Espacio entre l
   padding: 10px;
   text-align: center;
   color: #c89c0b;
-  border: 1px solid black;
+  border: 1px solid #9e9e9e;
   border-radius: 5px;
   margin-left: 30px;
   cursor: pointer;
@@ -117,7 +117,6 @@ align-items: flex-start; /* Alinea las tarjetas al principio / / Espacio entre l
 
 /* Estilos para cerrar el modal (se mantienen) */
 .cerrar-modal {
-  color: #000;
   font-size: 28px;
   font-weight: bold;
   cursor: pointer;
@@ -158,7 +157,7 @@ width: 100%;
 
 /* Estilos de las conferencias */
 .conf1 {
-  border: solid black;
+  border: solid #9e9e9e;
   border-radius: 10px;
   margin-bottom: 30px;
   border-width: 1px;
@@ -175,12 +174,12 @@ width: 100%;
   width: auto;
   align-items: start;
   font-size: 14px;
-  border-color: black;
+  border-color: #9e9e9e;
   border-width: 20px;
   background: #9e9e9e;
   padding: 10px;
   font-family: 'Montserrat', sans-serif;
-  border: 1px solid black;
+  border: 1px solid #9e9e9e;
   border-radius: 10px;
   font-family: 'Montserrat', sans-serif;
   margin-left: 30px;
@@ -218,7 +217,7 @@ margin-bottom:50px;
 }
 
 .texto-ejemplo {
-color: black; /* Color para el texto de Ejemplo */
+
 font-family: 'Montserrat', sans-serif;
 display: flex;
 margin-left: 5px;
@@ -289,7 +288,7 @@ justify-content: center;
 .btn-info{
 border-radius: 10px; /* Define el radio de los bordes para hacerlos redondeados */
 padding: 10px 20px; /* Ajusta el relleno según sea necesario */
-border: 2px solid black; /* Borde de 2px sólido de color negro */
+border: 2px solid #9e9e9e; /* Borde de 2px sólido de color negro */
 background-color: #2d3a81   ; /* Color de fondo del botón */
 border-radius: 5px;
 color: black;
