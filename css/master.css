@@ -264,3 +264,20 @@ button {
 #resultadosBusqueda a:hover {
   background-color: #f4f4f4;
 }
+
+
+/* Estilos para las migas de pan */
+.migasDePan {
+  position: absolute;
+  top: 20px;
+  left: 350px;
+}
+
+.h2Migas {
+  display: inline-block;
+  margin-right: 10px; /* Espacio entre los títulos */
+}
+
+
+
+
