@@ -280,3 +280,29 @@ button {
 }
 
 
+
+
+
+.simFooter {
+  background-color: #c89c0b; /* Color negro */
+  height: 70px; /* Alto */
+  position: absolute; /* Posición absoluta para modificar */
+  top: 190%; /* Alineación en la parte inferior */
+  left: 0; /* Alineación a la izquierda */
+  width: 100%; /* Ancho del div que ocupa toda la página */
+}
+
+.footerText {
+  display: block;
+  text-align: left;
+  font-size: 28px;
+  margin-left: 45%;
+  margin-top: 20px;
+  text-decoration: none; 
+  color: white; /* Establece el color del texto en blanco */
+  transition: color 0.3s ease;
+}
+
+.footerText:hover {
+  color: #2d3a81; /* Cambia el color del texto al pasar el ratón por encima */
+}

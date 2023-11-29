@@ -1,0 +1,269 @@
+html, body {
+    height: 100%;
+    margin: 0;
+  }
+  
+  body {
+    flex-direction: column;
+    height: 10}
+    .accessibility-menu {
+        position: absolute;
+        top: 50px; /* Ajusta la posición vertical del menú */
+        right: 10px; /* Ajusta la posición horizontal del menú */
+        background-color: #fff;
+        border: 1px solid #ccc;
+        padding: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+      }
+      
+      /* Estilos para el botón de accesibilidad */
+      .boton-accesibilidad {
+        background-color: #2d3a81;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      
+      /* Estilos para el menú de accesibilidad */
+      .accessibility-menu {
+        position: absolute;
+        top: 50px;
+        right: 10px;
+        background-color: #fff;
+        border: 1px solid #ccc;
+        padding: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+        display: none;
+        border-radius: 5px;
+      }
+      
+      .accessibility-menu h3 {
+        font-size: 18px;
+        margin-bottom: 10px;
+        color: #2d3a81;
+      }
+      
+      .accessibility-menu ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+      
+      .accessibility-menu {
+        display: none;
+        position: absolute;
+        border-radius: 5px;
+        background-color: #fff; /* Cambiar el color de fondo del menú si es necesario */
+        border: 1px solid #ccc; /* Estilo del borde */
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra */
+        padding: 10px; /* Espaciado interno */
+      }
+      
+      .accessibility-menu ul {
+        list-style: none;
+        padding: 0;
+      }
+      
+      .accessibility-menu button {
+        background-color: #2d3a81;
+        color: white;
+        border: none;
+        padding: 8px 15px;
+        margin-bottom: 5px;
+        cursor: pointer;
+        border-radius: 5px;
+      }
+      
+      .accessibility-menu button:hover {
+        background-color: #1e266d;
+      }
+      
+      .modal-contenido p {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 20px;
+      }
+
+      .modal {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        justify-content: center;
+        align-items: center;
+        overflow: auto; /* Permite desplazamiento si el contenido es mayor que el tamaño del modal */
+      }
+      
+      .modal-contenido {
+        background-color: #fff;
+        width: 500px; /* Ancho fijo */
+        max-width: 250vw; /* Límite máximo relativo al ancho de la ventana */
+        max-height: 100vh; /* Límite máximo relativo a la altura de la ventana */
+        padding: 20px;
+        border-radius: 20px; /* Aumenta el valor para esquinas más redondas */
+        overflow-y: auto; /* Agrega desplazamiento vertical si el contenido excede el límite */
+      }
+
+
+
+
+
+
+
+/***** Colors & Sizes *****/
+:root {
+    --color-primary: #0088CE;
+    --color-primary-tint: #FFF;
+    --color-accent: #005399;
+    --color-accent-tint: #FFF;
+    --color-line: #ccc;
+  
+    --item-width: 200px;
+    --item-gap: 50px;
+  }
+  /***** Vertical Sitemap *****/
+  .vsitemap {
+    text-align: left; /* Alinea el sitemap a la izquierda */
+    margin-top: 125px;
+    margin-left: 225px; /* Margen izquierdo para separar del borde */
+  }
+  
+  .vsitemap  * {
+    box-sizing: border-box;
+  }
+  .vsitemap ul {
+    margin: 0 var(--item-gap);
+    list-style: none;
+    padding: 0;
+  }
+  .vsitemap ul > li {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    margin: 0 0 calc(var(--item-gap) / 2);
+    position: relative;
+  }
+  .vsitemap ul > li:before {
+    content: "";
+    position: absolute;
+    top: 1em;
+    height: 1px;
+    left: calc(-1 * var(--item-gap) / 2);
+    width: calc(var(--item-gap) / 2);
+    background: var(--color-line);
+  }
+  
+  /* Draw Line */
+  .vsitemap ul > li:first-child:before {
+    width: var(--item-gap);
+    left: calc(-1 * var(--item-gap));
+  }
+  .vsitemap ul li:after {
+    content: "";
+    position: absolute;
+    top: calc(-1 * var(--item-gap));
+    left: calc((var(--item-gap) / 2) - var(--item-gap));
+    bottom: 0;
+    width: 1px;
+    background: var(--color-line);
+  }
+  .vsitemap ul li:first-child:after {
+    top: 1em;
+  }
+  .vsitemap ul li:last-child:after {
+    bottom: auto;
+    height: calc(var(--item-gap) + 1em);
+  }
+  .vsitemap ul li:only-child:after {
+    display: none;
+  }
+  
+  /* Box Item */
+  .vsitemap small {
+    line-height: 1.5em;
+    position: relative;
+    font-size: 0.8em;
+  }
+  .vsitemap a {
+    line-height: 1.5em;
+    display: block;
+    text-decoration: none;
+    padding: 0.5em;
+    border-radius: 3px;
+    width: var(--item-width);
+    transition: background-color 0.4s;
+  }
+  .vsitemap a, 
+  .vsitemap a:visited {
+    background: var(--color-primary);
+    color:var(--color-primary-tint);
+  }
+  .vsitemap a:hover, 
+  .vsitemap a:active {
+    background: var(--color-accent);
+    color: var(--color-accent-tint);
+  }
+  
+  /* Responsive */
+  /* tablet */
+  @media only screen and (max-width: 768px) {
+    .vsitemap > ul > li > ul > li ul li{
+      flex-direction: column;
+    }
+    .vsitemap > ul > li > ul > li ul li ul{
+      margin-top: calc(var(--item-gap)/2);
+    }
+    .vsitemap > ul > li > ul > li > ul li:after {
+      left: calc(-1 * var(--item-gap)/2);
+    }
+    .vsitemap > ul > li > ul > li > ul > li li:first-child:before {
+      width: calc(var(--item-gap)/2);
+      left: calc(-1 * var(--item-gap)/2);
+    }
+    .vsitemap > ul > li > ul > li > ul > li li:first-child:after{
+      top: calc(-1 * var(--item-gap)/2);
+    }
+    .vsitemap > ul > li > ul > li > ul > li li:only-child:after {
+      display: block;
+      height: calc(var(--item-gap)/2 + 1em);
+    }
+  }
+  /* mobile */
+  @media only screen and (max-width: 576px) {
+    .vsitemap > ul > li ul li{
+      flex-direction: column;
+    }
+    .vsitemap > ul > li ul li ul{
+      margin-top: calc(var(--item-gap)/2);
+    }
+    .vsitemap > ul > li > ul li:after {
+      left: calc(-1 * var(--item-gap)/2);
+    }
+    .vsitemap > ul > li > ul > li li:first-child:before {
+      width: calc(var(--item-gap)/2);
+      left: calc(-1 * var(--item-gap)/2);
+    }
+    .vsitemap > ul > li > ul > li li:first-child:after{
+      top: calc(-1 * var(--item-gap)/2);
+    }
+    .vsitemap > ul > li > ul > li li:only-child:after {
+      display: block;
+      height: calc(var(--item-gap)/2 + 1em);
+    }
+  }
+  
+  /***** End Vertical Sitemap *****/
+
+
+  .textsiteMap {
+  text-align: center; /* Alinea el texto del h1 al centro */
+  margin-bottom: 20px; /* Espacio en la parte inferior para separar del sitemap */
+  /* Otras propiedades de estilo que desees aplicar */
+}

@@ -321,3 +321,22 @@ box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Agrega una sombra al botón */
   color: white;
   font-size: 24px;
 }
+
+
+
+.pruebaPosicion {
+  /* Ejemplo de ajuste de posición */
+  top: 1100px; /* Coloca el h2 50px por encima de su posición normal */
+  position: absolute; /* Cambia la posición a relativa para permitir el z-index */
+  left: 550px;
+  opacity: 0;
+}
+
+
+.pruebaPosicion2 {
+  /* Ejemplo de ajuste de posición */
+  top: 1100px; /* Coloca el h2 50px por encima de su posición normal */
+  position: absolute; /* Cambia la posición a relativa para permitir el z-index */
+  left: 1150px;
+  opacity: 0;
+}
