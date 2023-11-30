@@ -281,7 +281,6 @@ button {
 }
 
 
-<<<<<<< Updated upstream
 
 
 
@@ -308,10 +307,8 @@ button {
 .footerText:hover {
   color: #2d3a81; /* Cambia el color del texto al pasar el ratón por encima */
 }
-=======
 .toggle-button.selected-button {
   background-color: #1e266d; /* Cambia el color de fondo cuando está seleccionado */
   color: #fff; /* Cambia el color del texto cuando está seleccionado */
   /* Agrega otros estilos según sea necesario */
 }   
->>>>>>> Stashed changes
