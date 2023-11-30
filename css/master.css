@@ -312,3 +312,24 @@ button {
   color: #fff; /* Cambia el color del texto cuando está seleccionado */
   /* Agrega otros estilos según sea necesario */
 }   
+
+/* BOTÓN FLOTANTE */
+
+  .boton-flotante {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #2d3a81;
+    color: white;
+    border: none;
+    height: auto;
+    width: 50px;
+    border-radius: 50%;
+    padding: 12px;
+    font-size: 20px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 999; /* Ajusta este valor según sea necesario para asegurarte de que esté por encima de simFooter */
+  }
+

@@ -1,0 +1,20 @@
+
+.preguntas-frecuentes{
+    padding: 20px;
+    display:block;
+    left: 0;
+    height: auto;
+    width: 60vw;
+    align-items: center;
+    justify-content: center;
+    background-color: #c89c0b;
+    color: #fff;
+    font-size: 1.2rem;
+    margin-top: 50px;
+    bottom: 0;
+    margin-bottom: 50px;
+    margin-left: 25vw;
+  }
+  .preguntas-frecuentes details{
+    margin-bottom: 20px;
+  }

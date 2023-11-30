@@ -10,11 +10,11 @@ function enviarFormulario(event, formularioId, modalInscritoId) {
     cerrarModal(formularioId);
     mostrarModalInscrito(modalInscritoId);
     cambiarEstadoBoton();
-  }, 2000);
+  }, 1000);
 }
 
 function cambiarEstadoBoton(botonId) {
-  var boton = document.querySelector('#' + botonId);
+  var boton = document.querySelector('.miBoton');
   boton.innerHTML = 'Inscrito';
   boton.classList.add('inscrito');
 }
@@ -53,3 +53,25 @@ egresadosBtn.addEventListener('focus', () => {
 function toggleButton(button) {
   button.classList.toggle("selected-button");
 }
+
+//
+
+  function miFuncion() {
+    // Aquí puedes agregar el código que deseas ejecutar cuando se hace clic en el botón
+    alert("¡Hola! Has hecho clic en el botón flotante.");
+  }
+
+
+  //
+  function redirigirYMostrarInfo(url) {
+    // Redirige a la URL especificada
+    window.location.href = url;
+
+    // Muestra información diferente según la URL
+    if (url === 'index.html') {
+     url== 'preguntas.html'
+    } else if (url === 'seguimiento.html') {
+      url== 'bolsa_trabajo.html'
+    }
+    // Añade más condiciones según tus necesidades
+  }
