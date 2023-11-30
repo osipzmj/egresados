@@ -76,7 +76,7 @@ document.addEventListener('click', function(event) {
     const accessibilityMenu = document.getElementById("accessibility-menu");
     const accessibilityBtn = document.getElementById("accessibility-btn");
     if (!accessibilityBtn.contains(event.target) && !accessibilityMenu.contains(event.target)) {
-        accessibilityMenu.style.display = "block";
+        accessibilityMenu.style.display = "absolute";
     }
 });
   

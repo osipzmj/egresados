@@ -41,11 +41,11 @@
     <!-- Contenido del menú de accesibilidad -->
     <ul>
       <li><button onclick="closeAccessibilityMenu()" title="Cerrar" class="close-button"><i class="fa-solid fa-times"></i></button></li>
-      <li><button onclick="zoomIn(), zoomIn2(), toggleButton(this)" title="Aumentar letra"><i class="fa-solid fa-plus"></i> A</button></li>
+      <li><button onclick="zoomIn(), zoomIn2()" title="Aumentar letra"><i class="fa-solid fa-plus"></i> A</button></li>
       <li><button onclick="zoomOut(), zoomOut2()" title="Disminuir letra"><i class="fa-solid fa-minus"></i> A</button></li>
       <li><button onclick="readSelectedText()" title="Leer texto seleccionado"><i class="fa-solid fa-volume-high"></i></button></li>
-      <li><button onclick="toggleReadingMode(), toggleButton(this)" title="Leer texto con cursor"><i class="fa-solid fa-volume-up"></i></button></li>
-      <li><button onclick="toggleContrastMode(), toggleButton(this)" title="Modo contraste"><i class="fa-solid fa-adjust"></i></button></li>
+      <li><button onclick="toggleReadingMode()" title="Leer texto con cursor"><i class="fa-solid fa-volume-up"></i></button></li>
+      <li><button onclick="toggleContrastMode()" title="Modo contraste"><i class="fa-solid fa-adjust"></i></button></li>
       <li><button onclick="startListening()" title="Hablar para redirigir"><i class="fa-solid fa-microphone"></i></button></li></button>
       <!-- Agrega más opciones de accesibilidad aquí -->
     </ul>
@@ -155,7 +155,6 @@ actualizarHistorial(pageTitle);
   <script src="../js/busqueda.js"></script>
   <script src="../js/carga.js"></script>
   <script src="../js/migas.js"></script>
-  <script src="../js/botones.js"></script>
 <!-- 
   <div class="overlay" id="overlay">
   <div class="loading">Cargando...</div>
