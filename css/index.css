@@ -32,7 +32,14 @@
 .service img {
   width: 150px;
   margin-right: 20px;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+  box-shadow: 1px 10px 20px rgba(0, 0, 0, .5); /* Sombra suave */
 }
+
+.service:hover img {
+  transform: scale(1.2) rotate(360deg); /* Ajusta el efecto de escala y rotación */
+  }
 
 #evt{
   background: #2d3a81;
@@ -200,7 +207,14 @@ display: block;
 margin-left: auto;
 margin-right: auto;
 box-shadow: 1px 10px 20px rgba(0, 0, 0, .5); /* Sombra suave */
+border-radius: 50%;
+transition: transform 0.3s ease;
 }
+
+.conf1:hover img {
+  transform: scale(1.2) rotate(360deg); /* Ajusta el efecto de escala y rotación */
+  }
+
 .conf1 span {
 display: block; /* Para que cada línea esté en una línea separada */
 text-align: right; /* Alineación a la derecha */
@@ -236,11 +250,14 @@ margin-bottom:50px;
 
 .ptext img {
 transition: width 0.3s ease-in-out, height 0.3s ease-in-out;
+border-radius: 50%;
+transition: transform 0.3s ease;
 }
 
 .ptext img:hover {
 width: 20px; /* Ajusta el tamaño al pasar el ratón sobre la imagen */
 height: 20px; /* Ajusta el tamaño al pasar el ratón sobre la imagen */
+transform: scale(1.2) rotate(360deg);
 }
 
 .icono-texto {
@@ -274,7 +291,13 @@ display: block;
 margin-left: auto;
 margin-right: auto;
 box-shadow: 1px 10px 20px rgba(0, 0, 0, .5);
+border-radius: 50%;
+transition: transform 0.3s ease;
 }
+
+.feria1:hover img {
+  transform: scale(1.2) rotate(360deg); /* Ajusta el efecto de escala y rotación */
+  }
 
 .btn-info:hover {
 background-color: #535dd1; /* Cambia el color de fondo al pasar el ratón */
