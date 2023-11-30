@@ -1,191 +1,106 @@
+*{
+  font-family: 'Montserrat', sans-serif;
+}
 html, body {
-    height: 100%;
-    margin: 0;
+  height: auto;
+  max-height: 3000px;
+  margin: 0;
 }
 
 body {
-    flex-direction: column;
-    height: 100%;
-}
-.content {
-    padding: 20px;
-    flex: 1;
-    margin-left: 100px; 
+  flex-direction: column;
+  height: auto;
 }
 
+h1{
+  font-size: 3rem;
+}
+
+
+
+.content {
+  flex: 1;
+  margin-left: 42vw; 
+  padding-top: 0vh;
+  padding: 1vh;
+}
+.contenido{
+  padding-top: 10vh;
+}
+.empresas{
+  display: grid;
+  align-content: center;
+  align-items: center;
+  }
 
 .empresas table {
-    margin-top: 20px;
-    border-collapse: collapse;
-    font-family: 'Montserrat', sans-serif;
+  margin-left: 15vw;
+  margin-top: 20px;
+  border-collapse: separate;
+  border-spacing: 20px;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .empresas td {
-    padding: 10px;
-    font-family: 'Montserrat', sans-serif;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+
+  padding: 10px;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .modal {
-    display: none;
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0, 0, 0, 0.4);
-    align-items: center;
-    justify-content: center;
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  padding-top: 40vh;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+  align-items: center;
+  justify-content: center;
 }
 
 .modal-dialog {
-    background-color: #fefefe;
-    padding: 20px;
-    border: 1px solid #888;
-    max-width: 600px;
-    margin: auto;
-    font-family: 'Montserrat', sans-serif;
+  background-color: #fefefe;
+  padding: 20px;
+  border: 1px solid #888;
+  max-width: 600px;
+
+  margin: auto;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .modal-content {
-    display: flex;
-    align-items: center;
-    font-family: 'Montserrat', sans-serif;
+  display: flex;
+  height: 40vh;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .modal-content img {
-    max-width: 200px;
-    height: auto;
+  max-width: 200px;
+  height: auto;
 }
-
-footer {
-    text-align: center;
-    padding: 10px;
-    background-color: #c89c0b;
-    color: #fff;
-    font-family: 'Montserrat', sans-serif;
+.preguntas-frecuentes{
+  padding: 20px;
+  display:block;
+  left: 0;
+  height: auto;
+  width: 60vw;
+  align-items: center;
+  justify-content: center;
+  background-color: #c89c0b;
+  color: #fff;
+  font-size: 1.2rem;
+  margin-top: 50px;
+  bottom: 0;
+  margin-bottom: 50px;
+  margin-left: 25vw;
 }
-.content{
-    margin-left: 400px;
+.preguntas-frecuentes details{
+  margin-bottom: 20px;
 }
-
-
-.accessibility-menu {
-    position: absolute;
-    top: 50px; /* Ajusta la posición vertical del menú */
-    right: 10px; /* Ajusta la posición horizontal del menú */
-    background-color: #fff;
-    border: 1px solid #ccc;
-    padding: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
-  }
-  
-  /* Estilos para el botón de accesibilidad */
-  .boton-accesibilidad {
-    background-color: #2d3a81;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-
-  .modal {
-    display: none;
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    justify-content: center;
-    align-items: center;
-    overflow: auto; /* Permite desplazamiento si el contenido es mayor que el tamaño del modal */
-  }
-  
-  .modal-contenido {
-    background-color: #fff;
-    max-width: 90%; /* Limita el ancho del contenido */
-    max-height: 90%; /* Limita la altura del contenido */
-    padding: 20px;
-    border-radius: 5px;
-    overflow-y: auto; /* Agrega desplazamiento vertical si el contenido excede el límite */
-  }
-  
-  /* Estilos para cerrar el modal (se mantienen) */
-  .cerrar-modal {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-  }
-  
-  .cerrar-modal:hover,
-  .cerrar-modal:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
-  }
-  
-  /* Estilos para el menú de accesibilidad */
-  .accessibility-menu {
-    position: absolute;
-    top: 50px;
-    right: 10px;
-    background-color: #fff;
-    border: 1px solid #ccc;
-    padding: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
-    display: none;
-    border-radius: 5px;
-  }
-  
-  .accessibility-menu h3 {
-    font-size: 18px;
-    margin-bottom: 10px;
-    color: #2d3a81;
-  }
-  
-  .accessibility-menu ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-  
-  .accessibility-menu {
-    display: none;
-    position: absolute;
-    border-radius: 5px;
-    background-color: #fff; /* Cambiar el color de fondo del menú si es necesario */
-    border: 1px solid #ccc; /* Estilo del borde */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra */
-    padding: 10px; /* Espaciado interno */
-  }
-  
-  .accessibility-menu ul {
-    list-style: none;
-    padding: 0;
-  }
-  
-  .accessibility-menu button {
-    background-color: #2d3a81;
-    color: white;
-    border: none;
-    padding: 8px 15px;
-    margin-bottom: 5px;
-    cursor: pointer;
-    border-radius: 5px;
-  }
-  
-  .accessibility-menu button:hover {
-    background-color: #1e266d;
-  }
-  
-  .modal-contenido p {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 20px;
-  }

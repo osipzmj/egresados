@@ -1,62 +1,73 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
+    
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bolsa de trabajo</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/EstyleBolsadeTrabajo.css">
-    <script src="../js/accesibilidad.js"></script>
-    <script src="../js/modal.js"></script>
-    <script src="../js/botones.js"></script>
-    <script src="../js/enlaces.js"></script>
-    <!-- Agrega más enlaces a CSS si es necesario para las páginas específicas -->
 </head>
-
 <body>
+
     <!--Codigo para obtener el contenido de plantilla.html sin afectar funciones o css-->
   <div id="contenido-master"></div>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script>
-    $(document).ready(function(){
+    $(document).ready(function () {
       $('#contenido-master').load('master.html');
     });
   </script>
-
-<!-- SECCION DE BOLSA DE TRABAJO -->
+  
+  <div class="contenido">
 
     <div class="content">
-        <h1 id="egs">EGRESADOS</h1>
-
+        <h1>Bolsa de Trabajo</h1>
+    </div>
     <section class="empresas">
         <table>
             <tbody id="empresas-list">
             </tbody>
         </table>
     </section>
-
+  </div>
     <!-- Modal -->
     <div class="modal" id="miModal">
         <div class="modal-dialog">
             <div class="modal-content">
-                <div class="modal-header">
-                    <h4 class="modal-title" id="modalTitle"></h4>
-                    <button type="button" class="close" data-dismiss="modal" id="closeButton">&times;</button>
-                </div>
+                
                 <div class="modal-body" style="display: block; text-align: justify;">
                     <table style="width: 100%;">                   
                     <tbody>
-                        <tr>
-                            <td>
+                        <tr style="width: 100%;">
+                            <td style="width: 50%;">
                                 <img id="modalImagen"  alt="Imagen de la vacante" style="width: 200px; height: auto;">
-                            </td>
+                            </td> 
                             <td>
-                                <p id="modalRequisitos"></p>
+                                <table style="width: 100%;">
+                                    <tbody>
+                                        <tr>
+                                            <td style="width: 50%;">
+                                                <div class="modal-header">
+                                                    <h4 class="modal-title" id="modalTitle"></h4>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <p id="modalRequisitos"></p>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr style="width: 100%;">
+                            <td>
+                                <button type="button" class="close" data-dismiss="modal" id="closeButton">&times;</button>
                             </td>
                         </tr>
                     </tbody>
@@ -65,86 +76,59 @@
             </div>
         </div>
     </div>
+
+    <div class="preguntas-frecuentes">
+      <details>
+        <summary><strong>Preguntas Frecuentes</strong></summary>
+        <details>
+          <summary>¿Cómo puedo buscar trabajos en este sitio?</summary>
+          Puedes buscar trabajos utilizando nuestro motor de búsqueda en la página
+          principal. También ofrecemos opciones de filtrado avanzado para refinar
+          tus resultados.
+        </details>
+        <details>
+          <summary>¿Cómo postulo a un trabajo?</summary>
+          Una vez que encuentres un trabajo que te interese, haz clic en
+          "Postular" y sigue las instrucciones para enviar tu solicitud
+          directamente a la empresa.
+        </details>
+        <details>
+          <summary>¿Puedo cargar mi currículum en el sitio?</summary>
+          Sí, ofrecemos la opción de cargar tu currículum a tu perfil. Esto
+          facilita la aplicación a trabajos y permite a los reclutadores revisar
+          tu información de manera más eficiente.
+        </details>
+        <details>
+          <summary>¿Cómo funciona este sitio para buscar empleo?</summary>
+          En el apartado de Bolsa de Trabajo estarán las empresas con las que se
+          tiene un convenio para que nos proporcionen un listado con el perfil
+          profesional que están buscando.
+        </details>
+        <details>
+          <summary>¿Es gratuito utilizar este sitio para buscar empleo?</summary>
+          Es un servicio gratuito si eres o fuiste estudiante de la UTNG.
+        </details>
+        <details>
+          <summary>
+            ¿Es seguro cargar mi información personal y mi currículum en el sitio?
+          </summary>
+          Si, contamos con buena seguridad, garantizando que toda la información
+          que cargues que este sitio esta protegida
+        </details>
+        <details>
+          <summary>¿Puedo guardar trabajos para aplicar más tarde?</summary>
+          No, ya que nada asegura que la vacante en cuestión siga disponible
+        </details>
+        <details>
+          <summary>
+            ¿Hay opciones de retroalimentación para mejorar la plataforma?
+          </summary>
+          Si, estamos en constante cambio y tus opiniones nos importan
+        </details>
+      </details>
+      </div>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="../js/Codigo.js"></script>
-    <script>document.addEventListener("DOMContentLoaded", function() {
-        fetch('../datos.json')
-            .then(response => response.json())
-            .then(data => {
-                const empresasList = document.getElementById('empresas-list');
-                let empresaHTML = ''; // Inicializamos una cadena vacía para almacenar el HTML de las empresas
-    
-                data.empresas.forEach((empresa, index) => {
-                    if (index % 3 === 0) {
-                        // Si el índice es un múltiplo de 3, cerramos la fila anterior y comenzamos una nueva fila
-                        if (index !== 0) {
-                            empresaHTML += '</tr>'; // Cerramos la fila anterior
-                        }
-                        empresaHTML += '<tr>'; // Comenzamos una nueva fila
-                    }
-    
-                    // Agregamos la celda con la información de la empresa a la fila actual
-                    empresaHTML += `
-                        <td>
-                            <div class="${empresa.nombre.toLowerCase().replace(' ', '')}" data-teme="${empresa.nombre.toLowerCase().replace(' ', '')}">
-                                <img src="${empresa.imagen}" alt="${empresa.nombre}" style="width: 200px; height: auto;">
-                                <h3>${empresa.nombre}</h3>
-                                <section class="filter">
-                                    <label for="Emmpreza-select"></label>
-                                    <select class="size-select" onchange="obtenerEmpresaSeleccionada(this)">
-                                        <option value="all">Ver vacantes</option>
-                                        ${empresa.vacantes.map((vacante, index) => `<option value="${index}">${vacante.nombre}</option>`).join('')}
-                                    </select>
-                                </section>
-                            </div>
-                        </td>
-                    `;
-    
-                    if (index === data.empresas.length - 1) {
-                        // Si es la última empresa, cerramos la última fila
-                        empresaHTML += '</tr>';
-                    }
-                });
-    
-                empresasList.insertAdjacentHTML('beforeend', empresaHTML); // Insertamos el HTML generado en el contenedor de empresas
-            });
-    });
-    
-    
-    function obtenerEmpresaSeleccionada(selectedEmpresa) {
-        var empresa = selectedEmpresa.parentNode.parentNode.classList[0];
-        var selectedVacante = selectedEmpresa.value;
-        var vacante = obtenerVacante(empresa, selectedVacante);
-        //mostrarModal(vacante);
-    }
-    
-    function obtenerVacante(empresa, selectedVacante) {
-        fetch('../datos.json')
-            .then(response => response.json())
-            .then(data => {
-                var empresaSeleccionada = data.empresas.find(emp => emp.nombre.toLowerCase().replace(' ', '') === empresa);
-                var vacanteSeleccionada = empresaSeleccionada.vacantes[selectedVacante];
-                console.log(vacanteSeleccionada);
-                mostrarModal(vacanteSeleccionada);
-            })
-            .catch(error => {
-                console.error('Error al obtener los datos:', error);
-            });
-    }
-    
-    
-    function mostrarModal(vacante) {
-        document.getElementById('modalImagen').src = vacante.imagen;
-        document.getElementById('modalTitle').textContent = vacante.nombre;
-        document.getElementById('modalRequisitos').textContent = vacante.requisitos;
-        // Aquí puedes mostrar tu modal de la forma que desees, por ejemplo:
-        document.getElementById('miModal').style.display = 'block';
-    }
-    
-    document.getElementById('closeButton').addEventListener('click', function() {
-        document.getElementById('miModal').style.display = 'none';
-    });
-    
-    </script>
 </body>
+
 </html>
