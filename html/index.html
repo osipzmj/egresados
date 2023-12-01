@@ -26,9 +26,16 @@
   <div class="content">
     <div class="content">
       <h1 id="egs">EGRESADOS</h1>
-      <div class="por">
+      <div class="section">
+        <p class="interes" style="margin-top: -40px; margin-bottom: 1px; font-size: 20px;">En la Universidad Tecnológica del Norte de Guanajuato te recordamos continuamente y nos interesa saber sobre ti, <br>
+          en esta sección encontrarás información referente a empresas, bolsa de trabajo, eventos diseñados para ti, entre otros; <br>
+          porque nos importas te queremos seguir teniendo entre nosotros, recuerda que una vez eres águila seguiras siendo águila.
+        </p>
+        </div>
+      <div class="por" style="margin-top: 20px;">
         <img src="../img/portada.png" alt="Portada" class="cover-image">
       </div>
+     
       <div class="section">
         <h2 id="srv">SERVICIOS</h2>
         <div class="services-container">
@@ -407,7 +414,25 @@
           </div>
 
           <button class="boton-flotante" onclick="location.href='preguntas-index.html'"><i class="fa-solid fa-circle-info fa-beat-fade"></i></button>
-
+          <script>
+            // JavaScript para reiniciar la animación al quitar y volver a agregar la clase
+            document.addEventListener('DOMContentLoaded', function () {
+                var interesParrafo = document.querySelector('.interes');
+    
+                function reiniciarAnimacion() {
+                    interesParrafo.classList.remove('aparecer');
+                    // Necesario para reiniciar la animación
+                    void interesParrafo.offsetWidth;
+                    interesParrafo.classList.add('aparecer');
+                }
+    
+                // Ejecutar la función al cargar la página
+                reiniciarAnimacion();
+    
+                // También puedes reiniciar la animación en respuesta a eventos adicionales, si es necesario
+                // interesParrafo.addEventListener('click', reiniciarAnimacion);
+            });
+        </script>
 </body>
 <script src="../js/accesibilidad.js"></script>
 <script src="../js/modal.js"></script>

@@ -75,3 +75,20 @@ function toggleButton(button) {
     }
     // Añade más condiciones según tus necesidades
   }
+
+  document.addEventListener('DOMContentLoaded', function () {
+    var interesParrafo = document.querySelector('.interes');
+
+    function reiniciarAnimacion() {
+        interesParrafo.classList.remove('aparecer');
+        // Necesario para reiniciar la animación
+        void interesParrafo.offsetWidth;
+        interesParrafo.classList.add('aparecer');
+    }
+
+    // Ejecutar la función al cargar la página
+    reiniciarAnimacion();
+
+    // También puedes reiniciar la animación en respuesta a eventos adicionales, si es necesario
+    // interesParrafo.addEventListener('click', reiniciarAnimacion);
+});
