@@ -59,13 +59,18 @@ function filtrarPorEspecialidad() {
 
 function buscarMaster() {
 
-  const contenido = [
-    { ruta: '../html/bolsa_trabajo.html', nombre: 'Bolsa de trabajo' },
-    { ruta: '../html/educacion_continua.html', nombre: 'Educación continua' },
-    { ruta: '../html/index.html', nombre: 'Inicio' },
-    { ruta: '../html/seguimiento.html', nombre: 'Seguimiento' }
-    // Agrega más archivos según sea necesario
-  ];
+    const contenido = [
+      { ruta: '../html/bolsa_trabajo.html', nombre: 'Bolsa de trabajo' },
+      { ruta: '../html/educacion_continua.html', nombre: 'Educación continua' },
+      { ruta: '../html/index.html', nombre: 'Inicio' },
+      { ruta: '../html/seguimiento.html', nombre: 'Seguimiento' },
+       { ruta: '../html/index.html#evt', nombre: 'Feria de trabajo' },
+       { ruta: '../html/index.html#evt', nombre: 'Conferencias' },
+       { ruta: '../html/index.html#evt', nombre: 'Eventos' },
+       { ruta: '../html/index.html#srv', nombre: 'Servicios' },
+      
+      // Agrega más archivos según sea necesario
+    ];
 
   const input = document.getElementById('busquedaMaster');
   const resultados = document.getElementById('resultadosBusquedaMaster');
