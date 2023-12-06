@@ -112,7 +112,7 @@
     </div>
   </div>
 
-
+  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
   <script>
     function cerrarModalExterno(event) {
       var modal = document.getElementById('miModal');
@@ -129,6 +129,9 @@
   </script>
 
   <script>
+    // Inicializa EmailJS con tu User ID
+    emailjs.init("GpAo9FTT3gbIpzbKF");
+
     function cerrarYLimpiar() {
       var modal = document.getElementById('miModal');
       modal.style.display = 'none';
@@ -138,12 +141,35 @@
   
     function enviarDatos() {
   if (verificarCamposCompletos()) {
-    cerrarYLimpiar();
-    // Aquí podrías agregar la lógica para enviar los datos del formulario si es necesario
+    // Obtén los valores de los campos del formulario
+    const nombre = document.getElementById('nombre').value;
+    const apellidoPaterno = document.getElementById('apellidoPaterno').value;
+    const apellidoMaterno = document.getElementById('apellidoMaterno').value;
+    const email = document.getElementById('email').value;
+
+    // Envía el formulario a través de EmailJS
+    emailjs.send("service_758rgv4", "template_y4m4fdb", {
+      nombre: nombre,
+      apellidoPaterno: apellidoPaterno,
+      apellidoMaterno: apellidoMaterno,
+      email: email,
+      from_name: nombre + ' ' + apellidoPaterno + ' ' + apellidoMaterno, // Combina el nombre completo para el campo from_name
+      to_email: email // Utiliza el email como destinatario en el template
+    })
+    .then(function(response) {
+      console.log('Correo enviado con éxito', response);
+      cerrarYLimpiar();
+      // Aquí podrías mostrar un mensaje de éxito o redirigir a otra página
+    }, function(error) {
+      console.error('Error al enviar el correo', error);
+      // Aquí podrías mostrar un mensaje de error al usuario
+      alert('Hubo un error al enviar el correo. Por favor, inténtalo de nuevo.');
+    });
   } else {
     alert('Por favor completa todos los campos antes de enviar.');
   }
 }
+
   </script>
 
 
