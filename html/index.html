@@ -26,15 +26,72 @@
   <div class="content">
     <div class="content">
       <h1 id="egs">EGRESADOS</h1>
-      <div class="section" style="margin-top: 20px;">
-        <p class="interes" style="margin-top: -40px;  font-size: 20px;">En la Universidad Tecnológica del Norte de Guanajuato te recordamos continuamente y nos interesa saber sobre ti, <br>
-          en esta sección encontrarás información referente a empresas, bolsa de trabajo, eventos diseñados para ti, entre otros; <br>
-          porque nos importas te queremos seguir teniendo entre nosotros, recuerda que una vez eres águila seguiras siendo águila.
-        </p>
+      <div class="carousel">
+        <div class="slides">
+          <div class="imageCarousel" style="background-image: url('../img/portada.png');"></div>
+          <div class="imageCarousel" style="background-image: url('../img/Santander.jpeg');"></div>
+          <div class="imageCarousel" style="background-image: url('../img/logo.png');"></div>
         </div>
-      <div class="por" style="margin-top: 20px;">
-        <img src="../img/portada.png" alt="Portada" class="cover-image">
+        <input type="radio" id="slide1" name="slide" checked>
+        <input type="radio" id="slide2" name="slide">
+        <input type="radio" id="slide3" name="slide">
+        <label for="slide1"></label>
+        <label for="slide2"></label>
+        <label for="slide3"></label>
       </div>
+
+      <script>
+     const radios = document.querySelectorAll('input[type="radio"]');
+const slides = document.querySelectorAll('.slides > .imageCarousel');
+const labels = document.querySelectorAll('label');
+
+let index = 0;
+let interval;
+
+// Agregar clase 'active' al primer label al iniciar
+labels[0].classList.add('active');
+
+function changeSlide(newIndex) {
+  index = newIndex;
+  slides.forEach((slide, slideIndex) => {
+    slide.style.transform = `translateX(-${index * 100}%)`;
+    radios[slideIndex].checked = slideIndex === index;
+  });
+
+  // Cambiar la clase 'active' según el slide actual
+  labels.forEach((label, labelIndex) => {
+    if (labelIndex === index) {
+      label.classList.add('active');
+    } else {
+      label.classList.remove('active');
+    }
+  });
+}
+
+function startInterval() {
+  interval = setInterval(() => {
+    index = (index + 1) % slides.length;
+    changeSlide(index);
+  }, 5000); // Cambio cada 5 segundos
+}
+
+startInterval();
+
+radios.forEach((radio, radioIndex) => {
+  radio.addEventListener('click', () => {
+    clearInterval(interval); // Detiene el cambio automático al hacer clic
+    index = radioIndex;
+    changeSlide(index);
+    startInterval(); // Restablece el intervalo después del clic
+  });
+});
+
+
+      </script>
+
+      
+      
+      
      
       <div class="section">
         <h2 id="srv">SERVICIOS</h2>
@@ -215,7 +272,6 @@
                         <input type="email" placeholder="Correo electrónico">
                         <input type="tel" placeholder="Telefono">
                         <button type="submit" onclick="enviarFormulario(event)">Registrar</button>
-                        <button type="submit" onclick="enviarFormulario(event, 'formularioConf3', 'conf3Modal')">Registrar</button>
                       </form>
                     </div>
                   </div>

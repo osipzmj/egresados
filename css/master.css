@@ -111,7 +111,7 @@ button {
     color: #fff;
     padding: 10px;
     position: absolute;
-    height: 180%;
+    height: 187%;
     width: 200px;
     overflow-y: auto;
     transition: margin-left 0.3s; 
@@ -288,7 +288,7 @@ button {
   background-color: #c89c0b; /* Color negro */
   height: 70px; /* Alto */
   position: absolute; /* Posición absoluta para modificar */
-  top: 190%; /* Alineación en la parte inferior */
+  top: 200%; /* Alineación en la parte inferior */
   left: 0; /* Alineación a la izquierda */
   width: 100%; /* Ancho del div que ocupa toda la página */
 }

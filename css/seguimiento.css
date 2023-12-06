@@ -88,15 +88,19 @@ body {
   margin-top: 10px; /* Espacio entre el texto y la imagen */
   max-width: 225px; /* Ancho máximo del h2 */
 }
+.contenedor-imagen img {
+  transition: transform 0.5s ease; /* Agrega transición para suavizar el efecto */
+}
+
+.contenedor-imagen:hover img {
+  transform: scale(1.2); /* Escala la imagen al 110% al pasar el ratón por encima */
+}
 
 /* Estilos para las imágenes */
-.paso1, .paso2, .paso3, .paso4 {
+.paso1, .paso2, .paso3 {
   width: 200px;
   height: auto;
 }
-
-
-
 
   /* Estilos para el botón */
 .boton-modal {
